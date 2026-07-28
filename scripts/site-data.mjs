@@ -67,18 +67,18 @@ export const FACTS = {
 
 export const HOME = {
   metaTitle: 'Ambreen Qureshi | Founder & Managing Director, Amber Homes Real Estate',
-  metaDesc: 'Ambreen Qureshi is the Founder and Managing Director of Amber Homes Real Estate, a RERA-licensed Dubai brokerage (est. 2017) Platinum Agency for Meraas, Nakheel & Dubai Holding for four consecutive years (2022–2025). Featured by RAKBANK in “She Means Business”.',
+  metaDesc: 'Ambreen Qureshi is the Founder and Managing Director of Amber Homes Real Estate, a RERA-licensed Dubai brokerage (est. 2017) Platinum Agency for Meraas, Nakheel & Dubai Holding for 4 Consecutive Years (2022–2025). Featured by RAKBANK in “She Means Business”.',
   hero: {
     eyebrow: 'Founder & Managing Director · Amber Homes Real Estate',
     tagline: 'Building an award-recognised Dubai real estate company through disciplined operations, client care and long-term leadership.',
-    recognition: 'Featured by RAKBANK in “She Means Business” · Platinum Agency for Meraas, Nakheel & Dubai Holding — four consecutive years, 2022–2025',
+    recognition: 'Featured by RAKBANK in “She Means Business” · Platinum Agency for Meraas, Nakheel & Dubai Holding for 4 Consecutive Years',
     ctaPrimary: { href: '/leadership', label: 'Explore Her Leadership' },
     ctaSecondary: { href: '/contact', label: 'Contact Amber Homes' },
     imgAlt: 'Ambreen Qureshi, Founder and Managing Director of Amber Homes Real Estate, holding the Black Onyx Award at the ceremony in Dubai'
   },
   stats: [
     { num: '2017', cap: 'Amber Homes founded in Dubai' },
-    { num: '4 Years', cap: 'Platinum Agency — Meraas, Nakheel & Dubai Holding (2022–2025)' },
+    { num: '4 Years', cap: 'Platinum Agency for Meraas, Nakheel & Dubai Holding for 4 Consecutive Years' },
     { num: 'USD 1.5B+', cap: 'Cumulative Amber Homes sales — internally reported' },
     { num: 'RAKBANK', cap: 'Featured — “She Means Business” female entrepreneur' }
   ],
@@ -101,7 +101,7 @@ export const HOME = {
     ]
   },
   timeline: {
-    heading: 'From a 2017 foundation to four consecutive years of recognition.',
+    heading: 'From a 2017 foundation to Platinum Agency for Meraas, Nakheel & Dubai Holding for 4 Consecutive Years.',
     note: 'Company recognitions belong to Amber Homes Real Estate — the team Ambreen leads with Founder & Managing Partner Saad Waqas. Each entry links to its evidence.',
     items: [
       { year: '2011', text: 'Ambreen enters Dubai real estate, building command of property investment, market cycles and master-planned communities — the foundations on which Amber Homes is later built.', href: '/about' },
@@ -109,7 +109,7 @@ export const HOME = {
       { year: '2019', text: 'Amber Homes Interiors launched, extending the group beyond brokerage.', href: '/amber-homes' },
       { year: '2020', text: 'Nshama Town Square appreciation recognition for performance and partnership.', href: '/awards#recognition-2020' },
       { year: '2021', text: 'Amber Holiday Homes founded — particularly Ambreen’s brainchild. The company’s performance across Dubai Holding communities this year is honoured with the Platinum — Agents Award.', href: '/awards#recognition-2022' },
-      { year: '2022', text: 'The Platinum Agency record begins: Dubai Holding Real Estate’s Platinum — Agents Award opens four consecutive Platinum years for Meraas, Nakheel & Dubai Holding.', href: '/awards#recognition-2022' },
+      { year: '2022', text: 'Dubai Holding Real Estate’s Platinum — Agents Award begins the record: Platinum Agency for Meraas, Nakheel & Dubai Holding for 4 Consecutive Years.', href: '/awards#recognition-2022' },
       { year: '2023', text: 'Platinum recognition at the Black Onyx Awards, presented by Dubai Properties and Meraas.', href: '/awards#recognition-2023' },
       { year: '2024', text: 'Platinum Certificate of Appreciation — recognised as Platinum Top Performing Partner for 2023–2024.', href: '/awards#recognition-2024' },
       { year: '2025', text: 'Platinum Award from Meraas and Nakheel; Amber Homes named among the Top 10 Platinum Awardees.', href: '/awards#recognition-2025' },
@@ -129,7 +129,7 @@ export const HOME = {
     heading: 'The company she built and continues to lead.',
     paras: [
       'Founded in Dubai in 2017, Amber Homes Real Estate operates across off-plan, ready and luxury property. As Founder and Managing Director, Ambreen oversees the operational structure supporting the company’s advisors, clients and transactions.',
-      'Amber Homes operates under RERA ORN 18690 and has reported more than USD 1.5 billion in cumulative company sales — an internally reported figure. Its standing as a Platinum Agency for Meraas, Nakheel & Dubai Holding for four consecutive years reflects the consistency of the wider team and its operating standards.'
+      'Amber Homes operates under RERA ORN 18690 and has reported more than USD 1.5 billion in cumulative company sales — an internally reported figure. Its record — Platinum Agency for Meraas, Nakheel & Dubai Holding for 4 Consecutive Years — reflects the consistency of the wider team and its operating standards.'
     ]
   },
   cta: {
@@ -156,6 +156,9 @@ export const AWARDS = [
     id: 'recognition-2025', year: '2025',
     title: 'Platinum Award — Top 10 Platinum Awardees',
     presenter: 'Meraas & Nakheel (Black Onyx Awards 2025)',
+    img2: '/assets/img/awards/amber-homes-platinum-2025-ceremony.webp', w2: 1366, h2: 768,
+    alt2: 'The Amber Homes Real Estate team on stage receiving Platinum recognition at the Black Onyx Awards 2025',
+    caption2: '2025 — the Amber Homes team on stage, receiving the recognition in person.',
     exact: 'Platinum Award presented to Amber Homes Real Estate L.L.C “in recognition of exceptional performance, dedication, and outstanding accomplishment in achieving excellence within Dubai’s real estate community.” Named among the Top 10 Platinum Awardees.',
     img: '/assets/img/awards/amber-homes-black-onyx-platinum-2025.webp', w: 1122, h: 1402,
     alt: 'The Black Onyx Awards 2025 Platinum Award plaque and trophy presented to Amber Homes Real Estate LLC by Meraas and Nakheel',
@@ -167,6 +170,9 @@ export const AWARDS = [
     id: 'recognition-2024', year: '2024',
     title: 'Platinum Certificate of Appreciation',
     presenter: 'Meraas & Nakheel (Black Onyx Awards)',
+    img2: '/assets/img/awards/amber-homes-platinum-2024-ceremony.webp', w2: 1366, h2: 768,
+    alt2: 'The Amber Homes Real Estate team on stage receiving Platinum recognition at the Black Onyx Awards 2024',
+    caption2: '2024 — the Amber Homes team on stage, receiving the recognition in person.',
     exact: 'Platinum Certificate of Appreciation — recognised as “Platinum Top Performing Partner in 2023–2024”.',
     img: '/assets/img/awards/amber-homes-black-onyx-platinum-2024.webp', w: 1122, h: 1402,
     alt: 'Black Onyx Awards 2024 Platinum Certificate of Appreciation recognising Amber Homes Real Estate as Platinum Top Performing Partner 2023–2024',
@@ -178,6 +184,9 @@ export const AWARDS = [
     id: 'recognition-2023', year: '2023',
     title: 'Platinum — Black Onyx Awards',
     presenter: 'Dubai Properties & Meraas',
+    img2: '/assets/img/awards/amber-homes-platinum-2023-ceremony.webp', w2: 1366, h2: 768,
+    alt2: 'The Amber Homes Real Estate team on stage receiving Platinum recognition at the Black Onyx Awards 2023',
+    caption2: '2023 — the Amber Homes team on stage, receiving the recognition in person.',
     exact: 'Platinum recognition at the Black Onyx Awards 2023, presented by Dubai Properties and Meraas.',
     img: '/assets/img/awards/amber-homes-black-onyx-platinum-2023.webp', w: 1086, h: 1448,
     alt: 'Black Onyx Awards 2023 Platinum recognition presented to Amber Homes Real Estate by Dubai Properties and Meraas',
@@ -189,7 +198,10 @@ export const AWARDS = [
     id: 'recognition-2022', year: '2022',
     title: 'Platinum — Agents Award',
     presenter: 'Dubai Holding Real Estate',
-    exact: 'Platinum — Agents Award, presented by Dubai Holding Real Estate “in honour of outstanding sales performance in 2021” — the opening year of the four consecutive Platinum years for Meraas, Nakheel & Dubai Holding.',
+    img2: '/assets/img/awards/amber-homes-platinum-2022-ceremony.webp', w2: 1366, h2: 768,
+    alt2: 'The Amber Homes Real Estate team on stage receiving Platinum recognition at the Dubai Holding Real Estate awards ceremony',
+    caption2: '2022 — the Amber Homes team on stage, receiving the recognition in person.',
+    exact: 'Platinum — Agents Award, presented by Dubai Holding Real Estate “in honour of outstanding sales performance in 2021” — the opening year of: Platinum Agency for Meraas, Nakheel & Dubai Holding for 4 Consecutive Years.',
     img: '/assets/img/awards/amber-homes-dubai-holding-platinum-agents-2021.webp', w: 1122, h: 1402,
     alt: 'Dubai Holding Real Estate Platinum Agents Award presented to Amber Homes Real Estate in honour of outstanding sales performance in 2021',
     caption: 'Dubai Holding Real Estate — Platinum Agents Award; the certificate honours outstanding sales performance in 2021.',
@@ -236,7 +248,7 @@ export const MEDIA = [
     type: 'Press release — AETOSWire',
     title: 'Dubai’s Luxury Real Estate Boom Places Amber Homes Real Estate at the Center of Global High-Net-Worth Investment Momentum',
     date: '4 Dec 2025',
-    desc: 'Company release citing over USD 1.5 billion in transactions and four consecutive years of Top Platinum recognition, with commentary from Managing Director Ambreen Qureshi on how clients rely on insight, early access and developer relationships.',
+    desc: 'Company release citing over USD 1.5 billion in transactions and the record — Platinum Agency for Meraas, Nakheel & Dubai Holding for 4 Consecutive Years — with commentary from Managing Director Ambreen Qureshi on how clients rely on insight, early access and developer relationships.',
     href: 'https://www.businesswire.com/news/home/20251204865132/en/Dubais-Luxury-Real-Estate-Boom-Places-Amber-Homes-Real-Estate-at-the-Center-of-Global-High-Net-Worth-Investment-Momentum',
     note: 'Press release issued by Amber Homes Real Estate LLC — labelled accordingly'
   },
@@ -275,7 +287,7 @@ export const FAQS = [
   { q: 'Who is Ambreen Qureshi?', a: 'Ambreen Qureshi is the Founder and Managing Director of Amber Homes Real Estate, a RERA-licensed Dubai brokerage founded in 2017 (ORN 18690). She has worked in Dubai real estate since 2011.' },
   { q: 'What is Ambreen Qureshi’s role at Amber Homes?', a: 'She leads the company’s operations, team, processes and client-care standards — the structure behind how enquiries, documentation and transactions are managed as the brokerage grows.' },
   { q: 'Is Ambreen Qureshi the founder of Amber Homes?', a: 'Yes. She is publicly identified as Founder and Managing Director of Amber Homes Real Estate, which she leads together with Founder and Managing Partner Saad Waqas. The company is named after her — “Amber”, from Ambreen.' },
-  { q: 'What recognition has Amber Homes received?', a: 'Amber Homes has been a Platinum Agency for Meraas, Nakheel & Dubai Holding for four consecutive years (2022–2025) — from the Dubai Holding Real Estate Platinum Agents Award through the Black Onyx Awards of 2023, 2024 and 2025 — with further recognition from Nshama (2020) and Binghatti (2026). Dubai Holding is Dubai’s largest government-owned developer group, whose ecosystem includes Meraas, Nakheel, Dubai Properties and Jumeirah Group.' },
+  { q: 'What recognition has Amber Homes received?', a: 'Amber Homes holds the record: Platinum Agency for Meraas, Nakheel & Dubai Holding for 4 Consecutive Years (2022–2025) — from the Dubai Holding Real Estate Platinum Agents Award through the Black Onyx Awards of 2023, 2024 and 2025 — with further recognition from Nshama (2020) and Binghatti (2026). Dubai Holding is Dubai’s largest government-owned developer group, whose ecosystem includes Meraas, Nakheel, Dubai Properties and Jumeirah Group.' },
   { q: 'Was Ambreen Qureshi featured by RAKBANK?', a: 'Yes. Her entrepreneurial journey was featured through RAKBANK’s “She Means Business” campaign, which highlights female entrepreneurship in the UAE.' },
   { q: 'What is Amber Homes’ RERA registration?', a: 'Amber Homes Real Estate operates under RERA ORN 18690, with its office at Burj Al Salam Tower, Sheikh Zayed Road, Dubai.' },
   { q: 'How can someone contact Ambreen Qureshi?', a: 'Enquiries can be submitted through the contact form on this website, by telephone on +971 4 368 4497, or through the Amber Homes team on WhatsApp. Client engagements are handled through Amber Homes Real Estate.' }
@@ -303,7 +315,7 @@ export const ARTICLES = [
       ]},
       { h2: 'Why follow-through is a leadership issue', paras: [
         'It is tempting to file documentation under “back office” and leadership under “vision”. Operationally, the two are the same thing. Whether a coordinator chases a developer NOC on Tuesday or the following Tuesday is decided by the standards the company’s leadership actually enforces — not the ones printed in a brochure.',
-        'At Amber Homes, that is the part of the business Ambreen Qureshi owns. The company’s four consecutive years of Platinum recognition, from 2022 through 2025, are usually discussed as a sales achievement, and they are. But sustained sales performance across Meraas, Nakheel and Dubai Holding communities is only possible when files close cleanly enough that developers keep allocating inventory and clients keep coming back.'
+        'At Amber Homes, that is the part of the business Ambreen Qureshi owns. The company’s record — Platinum Agency for Meraas, Nakheel & Dubai Holding for 4 Consecutive Years — is usually discussed as a sales achievement, and it is. But sustained sales performance across Meraas, Nakheel and Dubai Holding communities is only possible when files close cleanly enough that developers keep allocating inventory and clients keep coming back.'
       ]},
       { h2: 'What clients should ask any brokerage', paras: [
         'A practical test for any buyer choosing representation in Dubai: ask who inside the firm owns your file after signature. Ask how documentation deadlines are tracked, what happens if a payment date falls in a holiday week, and when you will hear from the firm without having to call first.',
@@ -336,7 +348,7 @@ export const ARTICLES = [
         'This is also where a female-led operations culture has, in practice, been an advantage at Amber Homes: meticulousness and follow-through are treated as senior skills, not support functions. The people who keep files clean sit at the centre of the company’s reputation, because they are the reason the reputation exists.'
       ]},
       { h2: 'The compounding return', paras: [
-        'None of this produces a single dramatic win. What it produces is repetition: developers who keep allocating inventory because files close cleanly, clients who return because the second transaction felt like the first, and recognition — such as four consecutive years at Platinum level, 2022 through 2025 — that reflects sustained performance rather than one good season.',
+        'None of this produces a single dramatic win. What it produces is repetition: developers who keep allocating inventory because files close cleanly, clients who return because the second transaction felt like the first, and recognition — Platinum Agency for Meraas, Nakheel & Dubai Holding for 4 Consecutive Years — that reflects sustained performance rather than one good season.',
         'Service standards are the least visible investment a brokerage can make, and the only one that compounds.'
       ]}
     ]
@@ -358,7 +370,7 @@ export const ARTICLES = [
         'Institutions are built in exactly these moments, because standards that survive a crisis become culture, and culture is what new hires absorb without being told.'
       ]},
       { h2: 'Recognition as a lagging indicator', paras: [
-        'From 2021, the external record thickens: a Platinum Agents Award from Dubai Holding Real Estate in 2021, then Platinum recognition at the Black Onyx Awards for four consecutive years, 2022 through 2025 — including the Platinum Certificate of Appreciation as a Top Performing Partner in 2023–2024 and a place among the Top 10 Platinum Awardees in 2025, with a Binghatti Broker Recognition Award following in 2026.',
+        'From 2021, the external record thickens: a Platinum Agents Award from Dubai Holding Real Estate in 2021, then the record of Platinum Agency for Meraas, Nakheel & Dubai Holding for 4 Consecutive Years (2022–2025) — including the Platinum Certificate of Appreciation as a Top Performing Partner in 2023–2024 and a place among the Top 10 Platinum Awardees in 2025, with a Binghatti Broker Recognition Award following in 2026.',
         'It is worth being precise about what these recognitions are: they are company awards, earned by the whole Amber Homes team, within developer ecosystems that measure delivered performance. Awards are a lagging indicator. The leading indicators — clean files, trained teams, retained clients — were built in the years the certificates now summarise.'
       ]},
       { h2: 'Growing sideways, carefully', paras: [
@@ -398,7 +410,7 @@ export const EVIDENCE = [
     links: [{ label: 'Property Finder — public register listing', href: 'https://www.propertyfinder.ae/en/agent/ambreen-qureshi-145563' }]
   },
   {
-    claim: 'Platinum Agency for Meraas, Nakheel & Dubai Holding — four consecutive years (2022–2025)',
+    claim: 'Platinum Agency for Meraas, Nakheel & Dubai Holding for 4 Consecutive Years (2022–2025)',
     detail: 'Dubai Holding is Dubai’s largest government-owned developer group (Meraas, Nakheel, Dubai Properties, Jumeirah Group). The record: 2022 Platinum — Agents Award from Dubai Holding Real Estate (certificate honours 2021 performance), 2023 Platinum (Dubai Properties & Meraas), 2024 Platinum Certificate of Appreciation (Top Performing Partner 2023–2024), 2025 Platinum Award (Top 10 Platinum Awardees). Company recognitions earned by the Amber Homes team.',
     tag: 'Award record + press',
     links: [
