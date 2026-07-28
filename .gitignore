@@ -1,0 +1,6 @@
+node_modules/
+.vercel/
+shots/
+tools/og-shot.mjs
+.DS_Store
+*.log
