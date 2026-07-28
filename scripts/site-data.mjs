@@ -121,9 +121,9 @@ export const HOME = {
     heading: 'A business journey recognised by RAKBANK.',
     paras: [
       'Ambreen Qureshi’s entrepreneurial journey was featured by RAKBANK through its “She Means Business” campaign, highlighting the ambition, resilience and operational leadership involved in building Amber Homes Real Estate.',
-      '“She Means Business” is RAKBANK’s initiative spotlighting women entrepreneurs across the UAE — the founders building companies, teams and standards in one of the world’s most competitive business environments.'
+      'In the official feature on RAKBANK’s Instagram, the bank introduces her simply: “Meet Ambreen, Founder of Amber Homes Real Estate” — her story of ambition and resilience, told as part of the #SheMeansBusiness campaign spotlighting women entrepreneurs across the UAE.'
     ],
-    cta: { href: '/media#rakbank', label: 'View the RAKBANK Feature' }
+    cta: { href: 'https://www.instagram.com/reel/Da5C9TzsWJJ/', label: 'Watch the RAKBANK Feature' }
   },
   amber: {
     heading: 'The company she built and continues to lead.',
@@ -227,12 +227,12 @@ export const MEDIA = [
   {
     id: 'rakbank',
     outlet: 'RAKBANK',
-    type: 'Campaign feature',
-    title: '“She Means Business” — female entrepreneurship in the UAE',
-    date: 'Campaign feature',
-    desc: 'Ambreen Qureshi’s entrepreneurial journey featured through RAKBANK’s “She Means Business” campaign for women entrepreneurs in the UAE. The original campaign asset is held by RAKBANK; a direct link is being added to this page.',
-    href: null,
-    note: 'Source: RAKBANK campaign — evidence link being added'
+    type: 'Campaign feature — official reel',
+    title: '“She Means Business” — Ambreen, Founder of Amber Homes Real Estate',
+    date: 'July 2026',
+    desc: 'RAKBANK’s official feature: “Meet Ambreen, Founder of Amber Homes Real Estate” — her journey of ambition and resilience in building a growing business, published on RAKBANK’s Instagram as part of the #SheMeansBusiness campaign (English and Arabic).',
+    href: 'https://www.instagram.com/reel/Da5C9TzsWJJ/',
+    note: 'Official RAKBANK Instagram (@rakbank)'
   },
   {
     outlet: 'Khaleej Times',
@@ -394,6 +394,7 @@ export const EVIDENCE = [
     tag: 'Primary source',
     links: [
       { label: 'AmberHomes.ae — About / leadership', href: 'https://www.amberhomes.ae/about-us' },
+      { label: 'RAKBANK official reel — “Meet Ambreen, Founder of Amber Homes Real Estate”', href: 'https://www.instagram.com/reel/Da5C9TzsWJJ/' },
       { label: 'Business Wire, Dec 2025', href: 'https://www.businesswire.com/news/home/20251204865132/en/Dubais-Luxury-Real-Estate-Boom-Places-Amber-Homes-Real-Estate-at-the-Center-of-Global-High-Net-Worth-Investment-Momentum' }
     ]
   },
@@ -433,9 +434,9 @@ export const EVIDENCE = [
   },
   {
     claim: 'Featured by RAKBANK in “She Means Business”',
-    detail: 'Campaign feature highlighting female entrepreneurship in the UAE, confirmed by Amber Homes leadership. The direct link to RAKBANK’s published asset is being added; until then this claim is presented with that qualification and no stronger designation (it is not described as an award or nomination).',
-    tag: 'Campaign feature — link pending',
-    links: [{ label: 'Media page — RAKBANK entry', href: '/media#rakbank' }]
+    detail: 'Verified: RAKBANK’s official Instagram published the feature in July 2026, introducing her as “Meet Ambreen, Founder of Amber Homes Real Estate” under the #SheMeansBusiness campaign. Presented as a campaign feature (not an award or nomination).',
+    tag: 'Verified — official RAKBANK channel',
+    links: [{ label: 'RAKBANK — official reel (Instagram)', href: 'https://www.instagram.com/reel/Da5C9TzsWJJ/' }, { label: 'Media page — RAKBANK entry', href: '/media#rakbank' }]
   },
   {
     claim: 'Education — Gold medalist, Master’s in Economics (Government College, Lahore)',
