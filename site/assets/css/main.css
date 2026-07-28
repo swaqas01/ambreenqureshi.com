@@ -391,3 +391,10 @@ main,.site-footer,.site-header{position:relative;z-index:1}
   .timeline .yr{text-align:left;font-size:1.35rem}
   .meet-intro p{font-size:.99rem;line-height:1.7}
 }
+
+/* ---- brand logo images (posted logo, white version — same treatment as saadwaqas.com) ---- */
+.brandmark img{height:26px;width:auto;display:block}
+.hero-logo{width:min(460px,82%);height:auto;margin-bottom:.2rem}
+.footer-logo{width:230px;max-width:62%;height:auto;margin-bottom:1.1rem}
+@media (max-width:900px){.hero-logo{width:min(300px,76%)}}
+@media (max-width:600px){.brandmark img{height:22px}.footer-logo{width:190px}}

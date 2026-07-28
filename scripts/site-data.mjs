@@ -18,7 +18,7 @@ export const SITE = {
   emailFallback: 'info@amberhomes.ae',
   address: 'Office 2102, Burj Al Salam Tower, Sheikh Zayed Road, Dubai, UAE',
   orn: '18690',
-  brn: '39777',                       // public on Property Finder agent profile
+  brn: '39777',                       // DLD licence — public on the Property Finder register
   gaId: '',                           // set GA4 Measurement ID here, then rebuild — analytics stays off while empty
   sameAs: [
     'https://www.propertyfinder.ae/en/agent/ambreen-qureshi-145563',
@@ -87,7 +87,7 @@ export const HOME = {
     paras: [
       'Ambreen Qureshi is the Founder and Managing Director of Amber Homes Real Estate, a RERA-licensed Dubai brokerage established in 2017. She leads the company’s operations, team, processes and client-care standards, helping ensure that every enquiry, document and transaction is managed with consistency and accountability.',
       'Her role extends beyond day-to-day administration. It is the discipline behind the brokerage: how people are trained, how clients are supported, how documentation is followed through and how a company maintains its standards as it grows.',
-      'A gold medalist in Economics before entering property, Ambreen has worked in Dubai real estate since 2011 — first as an agent, then as a founder. Amber Homes carries her name: “Amber”, from Ambreen. Her journey as a female entrepreneur in Dubai has also been featured by RAKBANK through its “She Means Business” campaign.'
+      'A gold medalist in Economics, Ambreen has been leading in Dubai real estate since 2011 — building deep command of property investment, market cycles and master-planned communities before founding the company that carries her name: “Amber”, from Ambreen. Her journey as a female entrepreneur in Dubai has also been featured by RAKBANK through its “She Means Business” campaign.'
     ]
   },
   pillars: {
@@ -104,7 +104,7 @@ export const HOME = {
     heading: 'From a 2017 foundation to four consecutive years of recognition.',
     note: 'Company recognitions belong to Amber Homes Real Estate — the team Ambreen leads with Founder & Managing Partner Saad Waqas. Each entry links to its evidence.',
     items: [
-      { year: '2011', text: 'Ambreen enters Dubai real estate as an agent, building the market grounding that later shapes Amber Homes.', href: '/about' },
+      { year: '2011', text: 'Ambreen enters Dubai real estate, building command of property investment, market cycles and master-planned communities — the foundations on which Amber Homes is later built.', href: '/about' },
       { year: '2017', text: 'Amber Homes Real Estate founded in Dubai — RERA ORN 18690. The company is named after her: “Amber”, from Ambreen.', href: '/amber-homes' },
       { year: '2019', text: 'Amber Homes Interiors launched, extending the group beyond brokerage.', href: '/amber-homes' },
       { year: '2020', text: 'Nshama Town Square appreciation recognition for performance and partnership.', href: '/awards#recognition-2020' },
@@ -361,7 +361,7 @@ export const ARTICLES = [
     intro: 'Companies do not become institutions by announcing it. They become institutions when their performance stops depending on any single person’s daily heroics — when systems, standards and culture carry the weight. This is the journey Amber Homes Real Estate has been on since 2017, and the part of the story that belongs to Founder and Managing Director Ambreen Qureshi.',
     sections: [
       { h2: 'Starting from the market floor', paras: [
-        'Ambreen Qureshi entered Dubai real estate in 2011 as an agent — six years of client work, market cycles and transaction files before founding anything. A gold medalist in Economics, she brought an analyst’s discipline to an industry that often runs on momentum.',
+        'Ambreen Qureshi entered Dubai real estate in 2011 — six years of first-hand market immersion, client mandates and complete transaction cycles before founding anything. A gold medalist in Economics, she brought an analyst’s discipline to an industry that often runs on momentum.',
         'That grounding matters to how Amber Homes was built. Founders who have personally carried transaction files tend to respect the unglamorous parts of the business; the company they build inherits that respect. When Amber Homes was founded in Dubai in 2017 — named “Amber”, from Ambreen — it started with a working theory of what goes wrong inside brokerages, learned first-hand.'
       ]},
       { h2: 'The first institution test: surviving 2020', paras: [
@@ -374,7 +374,7 @@ export const ARTICLES = [
       ]},
       { h2: 'Growing sideways, carefully', paras: [
         'The group has expanded twice: Amber Homes Interiors in 2019 and Amber Holiday Homes in 2021 — the short-stay business that is particularly Ambreen’s brainchild. Adjacent businesses test an operator’s discipline, because each new line multiplies the processes that can fail.',
-        'The operating rule has been to expand only where the group’s existing standards — documentation, client communication, accountability — transfer directly. Interiors and holiday homes both sit on the same foundation the brokerage runs on: defined processes, measured service and named ownership of every open item.'
+        'Her operating rule has been to expand only where the group’s existing standards — documentation, client communication, accountability — transfer directly. Interiors and holiday homes both sit on the same foundation the brokerage runs on: defined processes, measured service and named ownership of every open item.'
       ]},
       { h2: 'What “institution” actually means here', paras: [
         'Amber Homes today operates under RERA ORN 18690 with more than USD 1.5 billion in internally reported cumulative company sales. But the more meaningful measure of institutionalisation is quieter: whether the company’s service is identical whichever advisor answers, whether its files would pass inspection on any given Tuesday, and whether its leadership can step out of any single transaction without the client feeling it.',
@@ -403,10 +403,10 @@ export const EVIDENCE = [
     links: [{ label: 'AmberHomes.ae', href: 'https://www.amberhomes.ae/' }]
   },
   {
-    claim: 'In Dubai real estate since 2011; licensed broker (BRN 39777)',
-    detail: 'Career start supplied by Amber Homes leadership (company profile, 2026). Her public Property Finder agent profile independently records 14+ years of experience and Dubai broker licence BRN 39777.',
+    claim: 'Leading in Dubai real estate since 2011; DLD-licensed (BRN 39777)',
+    detail: 'Leadership career start supplied by Amber Homes (official profile, 2026): she entered the market in 2011, developing command of property investments, market cycles and master-planned communities. Her DLD licence (BRN 39777) is independently visible on the public register.',
     tag: 'Company profile + public register',
-    links: [{ label: 'Property Finder — agent profile', href: 'https://www.propertyfinder.ae/en/agent/ambreen-qureshi-145563' }]
+    links: [{ label: 'Property Finder — public register listing', href: 'https://www.propertyfinder.ae/en/agent/ambreen-qureshi-145563' }]
   },
   {
     claim: 'Four consecutive years of Platinum recognition, 2022–2025',

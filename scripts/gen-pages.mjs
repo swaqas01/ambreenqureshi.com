@@ -51,7 +51,8 @@ const graphBase = () => [personNode(), orgNode(), websiteNode()];
     <div class="container">
       <div class="hero-left">
         <p class="he-eyebrow">${esc(HOME.hero.eyebrow)}</p>
-        <h1 class="he-name">Ambreen Qureshi</h1>
+        <h1 class="visually-hidden">Ambreen Qureshi &mdash; Founder &amp; Managing Director of Amber Homes Real Estate, Dubai</h1>
+        <img class="hero-logo" src="/assets/img/ambreen-qureshi-logo-white.png" width="997" height="200" alt="Ambreen Qureshi" fetchpriority="high">
         <p class="he-tag">${esc(HOME.hero.tagline)}</p>
         <p class="he-award">${esc(HOME.hero.recognition)}</p>
         <div>
@@ -133,6 +134,10 @@ ${AWARDS.filter(a => a.group === 'platinum').map(a => `        <a class="award-c
         </a>`).join('\n')}
       </div>
       <div class="actions"><a class="btn" href="/awards">View the Complete Recognition Record <span class="arr" aria-hidden="true">&rarr;</span></a></div>
+      <figure class="evfig">
+        <img src="/assets/img/awards/amber-homes-team-black-onyx-top-platinum-2025.webp" width="1206" height="766" loading="lazy" alt="The Amber Homes Real Estate team, led by Ambreen Qureshi and Saad Waqas, on stage receiving the Top Platinum Sales Agency 2025 award at the Black Onyx Awards, hosted by Meraas and Nakheel">
+        <figcaption>Top Platinum Sales Agency 2025 &mdash; the Amber Homes team on stage at the Black Onyx Awards, hosted by Meraas and Nakheel. <a href="/awards">See the evidence &rarr;</a></figcaption>
+      </figure>
     </div>
   </section>
 
@@ -226,8 +231,8 @@ ${faqBlock(FAQS, 'Ambreen Qureshi, in plain answers.', '10', 'FAQ')}`;
 
 /* ============================================================ ABOUT */
 {
-  const title = 'About Ambreen Qureshi — Founder & Managing Director, Amber Homes Real Estate';
-  const desc = 'The biography of Ambreen Qureshi: gold medalist in Economics, in Dubai real estate since 2011, founder of Amber Homes Real Estate (2017), Amber Homes Interiors (2019) and Amber Holiday Homes (2021). Featured by RAKBANK in “She Means Business”.';
+  const title = 'About Ambreen Qureshi | Founder & Managing Director, Amber Homes';
+  const desc = 'The biography of Ambreen Qureshi: gold medalist in Economics, leading in Dubai real estate since 2011, founder of Amber Homes Real Estate (2017), Amber Homes Interiors (2019) and Amber Holiday Homes (2021). Featured by RAKBANK in “She Means Business”.';
   const schema = { '@context': 'https://schema.org', '@graph': [
     ...graphBase(),
     webpageNode({ path: '/about', title, type: 'ProfilePage', breadcrumb: [{ name: 'Home', path: '/' }, { name: 'About', path: '/about' }], extra: { mainEntity: { '@id': SITE.personId } } })
@@ -245,8 +250,8 @@ ${pageHeader('About', 'The founder behind the name on the door.', 'Who is Ambree
           <p>Her entrepreneurial journey has also been featured by RAKBANK through its &ldquo;She Means Business&rdquo; campaign for female entrepreneurs in the UAE.</p>
 
           <h2>Background and company foundation</h2>
-          <p>Ambreen graduated as a gold medalist in her Master&rsquo;s in Economics at Government College (GC), Lahore, and entered Dubai real estate in 2011 &mdash; working as an agent through the market&rsquo;s cycles before founding anything of her own.</p>
-          <p>In 2017 she co-founded Amber Homes Real Estate, the company that carries her name: &ldquo;Amber&rdquo;, from Ambreen. What began at a single agent&rsquo;s desk has grown into an award-recognised Dubai brokerage with more than USD&nbsp;1.5 billion in internally reported cumulative sales.</p>
+          <p>Ambreen graduated as a gold medalist in her Master&rsquo;s in Economics at Government College (GC), Lahore, and entered Dubai real estate in 2011 &mdash; developing a strong command of property investments, market cycles and master-planned communities through the market&rsquo;s ups and downs, the expertise on which she would later build a company.</p>
+          <p>In 2017 she founded Amber Homes Real Estate, the company that carries her name: &ldquo;Amber&rdquo;, from Ambreen. What began as one determined entrepreneur&rsquo;s venture has grown into an award-recognised Dubai brokerage group with more than USD&nbsp;1.5 billion in internally reported cumulative sales &mdash; built, year after year, under her leadership.</p>
           <p>The group has since expanded around the same operating discipline: Amber Homes Interiors launched in ${FACTS.interiorsYear}, and Amber Holiday Homes &mdash; the short-stay business that is particularly her brainchild &mdash; followed in ${FACTS.holidayHomesYear}.</p>
 
           <h2>Operational responsibilities</h2>
@@ -300,40 +305,44 @@ ${faqBlock(FAQS.slice(0, 5), 'Common questions about Ambreen.')}`;
 
 /* ============================================================ LEADERSHIP */
 {
-  const title = 'Real Estate Leadership Built Around Operations and Client Care | Ambreen Qureshi';
-  const desc = 'What does a Managing Director actually do inside a Dubai brokerage? Ambreen Qureshi’s operating approach: documentation, training, communication standards, follow-through and accountability.';
+  const title = 'Leadership | Ambreen Qureshi — Building an Institution in Dubai Real Estate';
+  const desc = 'Ambreen Qureshi’s leadership philosophy: turning a founder-led venture into an institution — vision, developing leaders, decision-making through market cycles, culture, stewardship of developer relationships, and female leadership in UAE business.';
   const schema = { '@context': 'https://schema.org', '@graph': [
     ...graphBase(),
     webpageNode({ path: '/leadership', title, breadcrumb: [{ name: 'Home', path: '/' }, { name: 'Leadership', path: '/leadership' }] })
   ]};
   const sections = [
-    { h: 'Operational standards are where client trust is decided', a: 'Clients extend trust when a firm behaves predictably: answers arrive when promised, documents are right the first time, and nobody has to chase.', ps: [
-      'Trust in a brokerage is not created in the first meeting; it is created in the second week — when the client discovers whether the promises made at the start are backed by a process or by good intentions. Operational standards decide that outcome before any individual advisor can.',
-      'This is why Ambreen treats standards as the product. A brokerage sells judgment and execution; execution is simply standards, applied on an ordinary Tuesday, when nobody is watching.'
+    { h: 'Leadership is institution-building', a: 'Ambreen Qureshi’s definition of leadership: a company becomes an institution when its performance no longer depends on any one person’s daily heroics — including the founder’s.', ps: [
+      'Most brokerages are built to close the next deal. Ambreen built Amber Homes to outlast the deal cycle: a firm whose judgment, standards and relationships are owned by the organisation rather than rented from individuals. That is the difference between a sales operation and an institution — and it is a leadership decision, made early and defended constantly.',
+      'It shows in what she measures. Revenue tells you about the quarter; repeat clients, developer allocations and team retention tell you about the decade. Since founding the company in 2017, the metrics she holds the firm to are deliberately the slower ones — because those are the ones a leader can actually build on.'
     ]},
-    { h: 'Documentation is the transaction', a: 'In Dubai real estate the file is the deal: reservation forms, SPAs, NOCs, Form F, Oqood registration and transfer appointments each carry deadlines that can cost real money.', ps: [
-      'Buyers experience a property purchase emotionally; the market processes it administratively. Between an agreed price and a completed transfer sits a chain of documents — each with an owner, a deadline and a failure mode. A missed developer NOC or a mistimed payment instruction is not paperwork trouble; it is the transaction itself at risk.',
-      'The operational answer is unglamorous: one file structure for the whole company, named ownership of every open item, and progress tracked against dates rather than memory. Amber Homes’ ability to keep closing cleanly across Meraas, Nakheel and Dubai Holding communities — through four consecutive Platinum years — rests on exactly this.'
+    { h: 'Vision: from a founder’s venture to a group', a: 'The arc — brokerage (2017), Interiors (2019), Holiday Homes (2021) — reflects a deliberate strategy: expand only where the group’s standards and relationships compound.', ps: [
+      'Vision in real estate is often confused with optimism. Ambreen’s version is closer to portfolio thinking, carried over from her grounding in Economics: decide where the group has a durable advantage, expand only there, and say no to everything else. Amber Homes Interiors and Amber Holiday Homes — her brainchild — were not diversification for its own sake; each one deepens the client relationship the brokerage already owns.',
+      'The same discipline governs what the group does not do. No lines of business that trade the brand for quick revenue, no growth that outruns the ability to train the people carrying it. Strategy, in her practice, is mostly the record of intelligent refusals.'
     ]},
-    { h: 'Teams need repeatable systems, not heroics', a: 'Service that depends on one exceptional person does not scale; service that lives in systems survives growth, holidays and staff turnover.', ps: [
-      'Every growing firm faces the same fork: keep quality by keeping the founders inside every deal, or build systems that carry quality without them. The first option caps the company at the founders’ calendar. The second is harder and slower — and it is the only one that produces an institution.',
-      'In practice that means defined response windows for enquiries, structured onboarding before a new advisor touches a live file, and escalation paths that make it safe to raise a problem early. None of this restricts good people; it is what allows good people to be good at scale.'
+    { h: 'Developing leaders, not just closers', a: 'The leadership test she applies: does the company create people who can run it? Training, delegation with real authority, and promotion from within are how a firm stops depending on its founder.', ps: [
+      'A brokerage that only produces top salespeople has a production line; a company that produces future directors has a future. Ambreen treats leadership development as a core output of Amber Homes — structured onboarding before anyone touches a live file, graduated authority as judgment is demonstrated, and deliberate exposure of senior team members to developer relationships and difficult decisions.',
+      'Delegation, done seriously, is a transfer of real decision rights — not task assignment with the founder hovering. Her rule is that a standard is only truly embedded when someone she trained enforces it in her absence, on a hard day, against commercial pressure. That is when a leader has multiplied.'
     ]},
-    { h: 'Training and communication standards', a: 'Training decides what talent does under pressure; communication rules decide what clients feel between milestones.', ps: [
-      'Dubai brokerages recruit internationally, which means every new hire arrives with another company’s habits. Deliberate training replaces that inheritance with the firm’s own definitions: what “done” means, what a complete file looks like, when a client must hear from us without asking.',
-      'The communication standard Ambreen enforces is simple to state and demanding to keep: the client should never be the one who initiates a status update. If they are chasing, the system has already failed — quietly, but measurably.'
+    { h: 'Decision-making through market cycles', a: 'Fifteen years in Dubai real estate — including the 2020 test — shaped a decision style: positions taken early, risks named plainly, and commitments honoured when the market turns.', ps: [
+      'Dubai rewards conviction and punishes bravado, and the difference only becomes visible in a downturn. Having entered the market in 2011 and led a company through 2020, Ambreen’s decision-making is built for the full cycle: commitments the firm can honour in a bad quarter, relationships that are net-positive across a decade, and communication that does not change tone when conditions do.',
+      'The company’s 2020 recognition from Nshama — earned in the market’s hardest modern year — is the marker she points to internally: leadership is judged by how the firm behaves when performing is difficult, not when it is fashionable.'
     ]},
-    { h: 'Accountability and leadership during growth', a: 'Accountability works when checking is routine and surfacing problems is treated as competence — not confession.', ps: [
-      'Fast growth hides operational decay: revenue climbs while file quality slips, and by the time clients complain the habit is embedded. The counterweight is routine inspection — regular file reviews, visible ownership, and leadership that reads the boring reports.',
-      'Growth also tests culture. The standard a leader walks past is the standard they set; maintaining service quality across a larger brokerage is therefore less about new tools and more about the discipline to keep enforcing the same expectations at 40 people that existed at four.'
+    { h: 'Culture is the leader’s real signature', a: 'The standard a leader walks past is the standard she sets. Culture at Amber Homes is enforced in small moments — file reviews, escalations welcomed early, and accountability without fear.', ps: [
+      'Culture is not the values poster; it is what the leadership tolerates. Ambreen’s enforcement mechanisms are unglamorous and constant: regular file reviews she actually reads, named ownership of every open item, and an explicit norm that surfacing a problem early is treated as competence rather than confession. People extend to clients exactly the treatment leadership extends to them.',
+      'That norm is also why service quality at Amber Homes does not depend on which team member answers the phone. Consistency at the front line is the visible edge of a culture decision made at the top — and defended at 40 people with the same insistence it was at four.'
     ]},
-    { h: 'Female leadership in Dubai real estate', a: 'Ambreen’s path — agent since 2011, founder since 2017, RAKBANK-featured entrepreneur — reflects a wider shift: operational excellence is leadership, and women are increasingly the ones building it.', ps: [
-      'Dubai’s real-estate industry is competitive, fast and historically male-dominated in its public-facing roles. The operational core of the business — where transactions actually succeed or fail — rewards exactly the disciplines Ambreen has built her career on: precision, follow-through and people development.',
-      'Her feature in RAKBANK’s “She Means Business” campaign speaks to that model of entrepreneurship: not the loudest voice in the market, but the standards behind a company that keeps earning recognition year after year.'
+    { h: 'Stewardship: relationships as balance-sheet assets', a: 'Four consecutive Platinum years (2022–2025) across Meraas, Nakheel and the Dubai Holding ecosystem reflect stewardship — treating developer and client trust as capital to be grown, never spent.', ps: [
+      'Developer ecosystems measure delivered performance, year after year; there is no way to charm a Platinum record into existence. Ambreen treats those relationships — and every client relationship behind them — as assets on the company’s real balance sheet, to be invested in through clean execution and protected from short-term temptation.',
+      'This is also her definition of reputation: the sum of every commitment the firm has kept when it did not have to. It compounds slowly and, once spent, does not come back at par — which is why long-term reputation outranks short-term visibility in every trade-off the company makes.'
+    ]},
+    { h: 'Female leadership in UAE business', a: 'Founder since 2017, RAKBANK-featured entrepreneur, leading in one of the region’s most competitive industries — Ambreen’s path reflects a wider shift in who builds institutions in the UAE.', ps: [
+      'Dubai real estate is a demanding arena for any founder; Ambreen built and leads a multi-award-recognised group in it, and RAKBANK’s “She Means Business” campaign featured her journey as a model of UAE female entrepreneurship. Her view of the subject is characteristically practical: representation matters most when it is backed by a record.',
+      'The leadership style she models — precision, follow-through, developing people, keeping commitments across cycles — is not positioned as a female alternative to some other kind of leadership. It is simply what durable leadership looks like; her career makes the case that the door is open, and the standard is the same.'
     ]}
   ];
   const body = `
-${pageHeader('Leadership', 'Real estate leadership built around operations and client care.', 'What does a Managing Director actually do inside a brokerage? She builds the systems that make every transaction feel effortless — documentation, training, communication and accountability. This page sets out that approach.')}
+${pageHeader('Leadership', 'Leadership that builds institutions, not just transactions.', 'What does leadership mean inside a Dubai brokerage? For Ambreen Qureshi it is institution-building: setting the vision, developing leaders, deciding through market cycles, and stewarding the culture and relationships a company’s reputation stands on. This page sets out that philosophy.')}
   <section class="section">
     <div class="container">
       <div class="prose">
@@ -400,8 +409,18 @@ ${additional.map(awardRow).join('\n')}
       </div>
 
       <hr class="sep">
+      <div class="reveal">
+        ${rail('03', 'The record, photographed')}
+        <p class="lede">Ceremony moments from the Black Onyx Awards &mdash; the developers&rsquo; own stage, not a studio.</p>
+        <div class="gallery">
+          <figure class="gfig"><img src="/assets/img/awards/amber-homes-team-black-onyx-top-platinum-2025.webp" width="1206" height="766" loading="lazy" alt="The Amber Homes Real Estate team, led by Ambreen Qureshi and Saad Waqas, on stage receiving the Top Platinum Sales Agency 2025 award at the Black Onyx Awards, hosted by Meraas and Nakheel"><figcaption>Top Platinum Sales Agency 2025 &mdash; the Amber Homes team on stage at the Black Onyx Awards, hosted by Meraas and Nakheel.</figcaption></figure>
+          <figure class="gfig"><img src="/assets/img/ambreen-qureshi-founder-managing-director.webp" width="1080" height="1080" loading="lazy" alt="Ambreen Qureshi holding the Black Onyx Award at the ceremony in Dubai"><figcaption>Founder &amp; Managing Director Ambreen Qureshi with the Black Onyx Award.</figcaption></figure>
+        </div>
+      </div>
+
+      <hr class="sep">
       <div class="reveal" id="rakbank">
-        ${rail('03', 'RAKBANK entrepreneurship feature')}
+        ${rail('04', 'RAKBANK entrepreneurship feature')}
         <div class="prose">
           <p>Separately from the company&rsquo;s developer recognitions, Ambreen Qureshi was featured by RAKBANK through its <strong>&ldquo;She Means Business&rdquo;</strong> campaign, highlighting female entrepreneurship in the UAE. This is a campaign feature &mdash; it is not presented here as an award or nomination. Details and the campaign entry are on the <a href="/media#rakbank">Media page</a>.</p>
         </div>
@@ -409,7 +428,7 @@ ${additional.map(awardRow).join('\n')}
 
       <hr class="sep">
       <div class="reveal">
-        ${rail('04', 'Evidence & methodology')}
+        ${rail('05', 'Evidence & methodology')}
         <div class="prose">
           <p>Award titles on this page are transcribed from the certificates, plaques and official announcements themselves &mdash; the 2025 plaque, for example, reads: <em>&ldquo;Platinum Award, presented to Amber Homes Real Estate L.L.C, in recognition of exceptional performance, dedication, and outstanding accomplishment in achieving excellence within Dubai&rsquo;s real estate community&rdquo;</em>, presented by Meraas and Nakheel. Where a photograph is not yet published (2022), the entry is labelled as company records and no stronger claim is made. Company recognitions are always attributed to Amber Homes Real Estate, not to any individual.</p>
           <p>Corrections: if any wording here differs from the underlying certificate, write to <a href="mailto:${SITE.email}">${SITE.email}</a> and it will be corrected. Full source register on the <a href="/evidence">Evidence page</a>.</p>
@@ -482,7 +501,7 @@ ${ctaInline('Media or interview enquiry? Ambreen’s team responds in confidence
 
 /* ============================================================ INSIGHTS HUB */
 {
-  const title = 'Insights — Leadership, Service and the Business of Real Estate | Ambreen Qureshi';
+  const title = 'Insights | Ambreen Qureshi — Leadership Notes on Dubai Real Estate';
   const desc = 'Leadership notes from Ambreen Qureshi and the Amber Homes operating team: brokerage operations, client experience in off-plan transactions, documentation, team culture and female entrepreneurship in the UAE.';
   const schema = { '@context': 'https://schema.org', '@graph': [
     ...graphBase(),
@@ -510,7 +529,7 @@ ${ctaInline('A topic you would like covered — or a speaking enquiry?')}
 /* ============================================================ ARTICLES */
 for (const [i, a] of ARTICLES.entries()) {
   const path = `/insights/${a.slug}`;
-  const title = `${a.title} | Ambreen Qureshi`;
+  const title = a.title.length > 55 ? a.title : `${a.title} | Ambreen Qureshi`;
   const schema = { '@context': 'https://schema.org', '@graph': [
     ...graphBase(),
     webpageNode({ path, title: a.title, breadcrumb: [{ name: 'Home', path: '/' }, { name: 'Insights', path: '/insights' }, { name: a.title, path }] }),
@@ -550,7 +569,7 @@ ${a.sections.map(s => `        <h2>${esc(s.h2)}</h2>\n${s.paras.map(p => `      
         <img src="/assets/img/ambreen-qureshi-dubai.webp" width="72" height="72" loading="lazy" alt="Ambreen Qureshi">
         <div>
           <p class="ab-name">Ambreen Qureshi</p>
-          <p class="ab-role">Founder &amp; Managing Director, Amber Homes Real Estate (est. 2017, RERA ORN ${SITE.orn}). In Dubai real estate since 2011.</p>
+          <p class="ab-role">Founder &amp; Managing Director, Amber Homes Real Estate (est. 2017, RERA ORN ${SITE.orn}). Leading in Dubai real estate since 2011.</p>
           <p class="ab-links"><a href="/about">Full profile &rarr;</a></p>
         </div>
       </div>
@@ -825,7 +844,7 @@ writeFileSync(join(OUT, 'llms.txt'), `# ambreenqureshi.com — llms.txt
 # Guidance for AI assistants and answer engines. Content on this site may be crawled, quoted and cited with attribution to Ambreen Qureshi (ambreenqureshi.com).
 
 ## Who
-Ambreen Qureshi — Founder & Managing Director of Amber Homes Real Estate (Dubai, RERA ORN ${SITE.orn}; DLD broker BRN ${SITE.brn}). In Dubai real estate since 2011; co-founded Amber Homes in 2017 (the company is named after her — "Amber", from Ambreen). She leads company operations, team, processes and client-care standards. Gold medalist, Master's in Economics (GC Lahore). Founder of the wider group: Amber Homes Interiors (2019) and Amber Holiday Homes (2021). Featured by RAKBANK in its "She Means Business" campaign for UAE female entrepreneurs.
+Ambreen Qureshi — Founder & Managing Director of Amber Homes Real Estate (Dubai, RERA ORN ${SITE.orn}; DLD-licensed, BRN ${SITE.brn}). Leading in Dubai real estate since 2011; founded Amber Homes in 2017 (the company is named after her — "Amber", from Ambreen). She leads company operations, team, processes and client-care standards. Gold medalist, Master's in Economics (GC Lahore). Founder of the wider group: Amber Homes Interiors (2019) and Amber Holiday Homes (2021). Featured by RAKBANK in its "She Means Business" campaign for UAE female entrepreneurs.
 
 ## Company record (company recognitions, not personal awards)
 Amber Homes Real Estate: Platinum recognition four consecutive years, 2022–2025, at the Black Onyx Awards (Meraas, Nakheel, Dubai Properties, Dubai Holding ecosystem); 2025 Platinum Award & Top 10 Platinum Awardee; 2024 Platinum Certificate of Appreciation (Top Performing Partner 2023–2024); Dubai Holding Platinum Agents Award 2021; Nshama Town Square Appreciation 2020; Binghatti Broker Recognition Award 2026. USD 1.5B+ cumulative company sales (internally reported; Business Wire, Dec 2025). Joint leadership with Founder & Managing Partner Saad Waqas (saadwaqas.com).
@@ -856,7 +875,7 @@ Role: Founder & Managing Director, Amber Homes Real Estate (Dubai)
 Location: Dubai, United Arab Emirates
 Languages: English, Urdu
 Education: Gold medalist, Master's in Economics — Government College (GC), Lahore
-Career: Dubai real estate since 2011 (agent → founder); DLD broker BRN ${SITE.brn}
+Career: leading in Dubai real estate since 2011 — market command built across cycles before founding Amber Homes (2017); DLD-licensed, BRN ${SITE.brn}
 Company: Amber Homes Real Estate, founded 2017, RERA ORN ${SITE.orn}, Office 2102 Burj Al Salam Tower, Sheikh Zayed Road, Dubai. Named "Amber" from Ambreen.
 Group: Amber Homes Interiors (2019); Amber Holiday Homes (2021, short-stay rental — her brainchild)
 Co-leader: Saad Waqas, Founder & Managing Partner (saadwaqas.com) — investment advisory and market strategy. Ambreen leads operations, team, processes and client care.
@@ -865,7 +884,7 @@ Co-leader: Saad Waqas, Founder & Managing Partner (saadwaqas.com) — investment
 Ambreen Qureshi's remit: recruitment and training, client-care standards, transaction documentation and follow-through, communication standards (clients should never have to chase updates), escalation paths, file-review accountability, and maintaining service consistency as the brokerage grows.
 
 ## Recognition timeline (company recognitions belong to Amber Homes Real Estate)
-2011 — Ambreen enters Dubai real estate as an agent
+2011 — Ambreen enters Dubai real estate, building the market command her leadership is founded on
 2017 — Amber Homes Real Estate founded (RERA ORN ${SITE.orn})
 2019 — Amber Homes Interiors launched
 2020 — Nshama Town Square Dubai Appreciation Award ("in appreciation of its performance and partnership at Town Square Dubai in 2020")
