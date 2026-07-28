@@ -164,6 +164,7 @@ body.loaded .hero-editorial{opacity:1;transform:none}
 .award-card .img-none{display:flex;align-items:center;justify-content:center;height:100%;padding:1.5rem;text-align:center;font-family:var(--serif);font-weight:300;font-size:1.3rem;color:var(--muted);line-height:1.35}
 .award-card .aw-body{display:flex;flex-direction:column;gap:.45rem;padding:1.2rem 1.2rem 1.4rem}
 .award-card .aw-year{font-family:var(--serif);font-weight:300;font-size:1.6rem;color:var(--accent);line-height:1}
+.award-card .aw-year.aw-uniform{font-size:1.32rem;line-height:1.2}
 .award-card .aw-title{font-family:var(--sans);font-weight:700;font-size:.95rem;color:var(--text);line-height:1.4}
 .award-card .aw-by{font-size:.8rem;color:var(--muted);line-height:1.5}
 
