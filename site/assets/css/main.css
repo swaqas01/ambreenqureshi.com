@@ -121,7 +121,7 @@ body.loaded .hero-editorial{opacity:1;transform:none}
 .dev-logos .dl{display:flex;align-items:center;justify-content:center}
 .dev-logos .dl img{max-height:23px;max-width:150px;width:auto;height:auto;display:block}
 .dev-logos .dl img[alt="Nakheel"]{max-height:26px}
-.dev-logos .dl-text{font-family:var(--sans);font-weight:900;font-size:1.05rem;letter-spacing:.05em;text-transform:uppercase;color:var(--text);line-height:1}
+.dev-logos .dl-text{font-family:var(--sans);font-weight:900;font-size:1.55rem;letter-spacing:.03em;text-transform:uppercase;color:var(--text);line-height:1}
 .dev-logos .divider{width:1px;height:22px;background:var(--hairline-strong)}
 .dev-note{font-family:var(--sans);font-size:.66rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:.6rem}
 
@@ -380,11 +380,11 @@ main,.site-footer,.site-header{position:relative;z-index:1}
   .overlay nav a{font-size:1.7rem}
   .site-header .container{padding-block:.85rem}
   .he-eyebrow{font-size:.66rem}
-  .dev-logos{gap:.8rem}
-  .dev-logos .dl img{max-height:17px;max-width:110px}
-  .dev-logos .dl img[alt="Nakheel"]{max-height:19px}
-  .dev-logos .dl-text{font-size:.82rem}
-  .dev-logos .divider{height:15px}
+  .dev-logos{gap:.55rem;flex-wrap:wrap}
+  .dev-logos .dl img{max-height:13px;max-width:84px}
+  .dev-logos .dl img[alt="Nakheel"]{max-height:15px}
+  .dev-logos .dl-text{font-size:.92rem}
+  .dev-logos .divider{height:11px}
   .timeline::before{display:none}
   .timeline li{grid-template-columns:1fr;gap:.3rem;border-bottom:1px solid var(--hairline);padding-block:1.1rem}
   .timeline li::after{display:none}

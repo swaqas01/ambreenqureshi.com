@@ -11,7 +11,7 @@ export const esc = (s) => String(s)
 const abs = (path) => SITE.origin + (path === '/' ? '/' : path);
 
 /* ---------- head ---------- */
-export function head({ title, desc, path, ogType = 'website', ogImage = '/assets/og/og-default.png', ogImageAlt = 'Ambreen Qureshi — Founder & Managing Director, Amber Homes Real Estate, Dubai', schema }) {
+export function head({ title, desc, path, ogType = 'website', ogImage = '/assets/og/og-default.png', ogImageAlt = 'Ambreen Qureshi — Founder & Managing Director, Amber Homes Real Estate, Dubai', schema, preloadImage, articleDates }) {
   const canonical = abs(path);
   const ga = SITE.gaId ? `
 <script async src="https://www.googletagmanager.com/gtag/js?id=${SITE.gaId}"></script>
@@ -22,7 +22,8 @@ export function head({ title, desc, path, ogType = 'website', ogImage = '/assets
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="preload" href="/assets/fonts/lato-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/assets/fonts/lato-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/lato-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>${preloadImage ? `
+<link rel="preload" href="${preloadImage}" as="image" type="image/webp" fetchpriority="high">` : ''}
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(desc)}">
 <link rel="canonical" href="${canonical}">
@@ -39,7 +40,10 @@ export function head({ title, desc, path, ogType = 'website', ogImage = '/assets
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="${esc(title)}">
 <meta name="twitter:description" content="${esc(desc)}">
-<meta name="twitter:image" content="${SITE.origin}${ogImage}">
+<meta name="twitter:image" content="${SITE.origin}${ogImage}">${articleDates ? `
+<meta property="article:published_time" content="${articleDates.published}">
+<meta property="article:modified_time" content="${articleDates.modified}">
+<meta property="article:author" content="Amber Homes Real Estate — Editorial">` : ''}
 <link rel="icon" type="image/png" sizes="256x256" href="/assets/img/favicon-256.png">
 <link rel="icon" type="image/png" sizes="64x64" href="/assets/img/favicon-64.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon-180.png">
@@ -122,6 +126,7 @@ export function webpageNode({ path, title, breadcrumb, type = 'WebPage', extra =
     isPartOf: { '@id': SITE.origin + '/#website' },
     about: { '@id': SITE.personId },
     inLanguage: 'en',
+    dateModified: SITE.buildDate,
     ...extra
   };
   if (breadcrumb) {

@@ -40,8 +40,6 @@ const graphBase = () => [personNode(), orgNode(), websiteNode()];
             <span class="dl"><img src="/assets/img/logos/nakheel-white.png" alt="Nakheel" width="120" height="26"></span>
             <span class="divider" aria-hidden="true"></span>
             <span class="dl"><span class="dl-text">Dubai Holding</span></span>
-            <span class="divider" aria-hidden="true"></span>
-            <span class="dl"><span class="dl-text">Dubai Properties</span></span>
           </div>`;
 
   const body = `
@@ -226,7 +224,7 @@ ${ARTICLES.map(a => `        <a class="acard" href="/insights/${a.slug}">
 
 ${faqBlock(FAQS, 'Ambreen Qureshi, in plain answers.', '10', 'FAQ')}`;
 
-  write('/', head({ title: HOME.metaTitle, desc: HOME.metaDesc, path: '/', ogType: 'profile', schema }) + header('/') + body + footer(), { priority: '1.0' });
+  write('/', head({ title: HOME.metaTitle, desc: HOME.metaDesc, path: '/', ogType: 'profile', schema, preloadImage: '/assets/img/ambreen-qureshi-founder-managing-director.webp' }) + header('/') + body + footer(), { priority: '1.0' });
 }
 
 /* ============================================================ ABOUT */
@@ -577,7 +575,7 @@ ${a.sections.map(s => `        <h2>${esc(s.h2)}</h2>\n${s.paras.map(p => `      
 ${ctaInline('Discuss this topic with Ambreen’s team — client care, operations or partnership.')}
     </div>
   </section>`;
-  write(path, head({ title, desc: a.desc, path, ogType: 'article', schema }) + header('/insights') + body + footer(), { priority: '0.7' });
+  write(path, head({ title, desc: a.desc, path, ogType: 'article', schema, articleDates: { published: a.date, modified: a.date } }) + header('/insights') + body + footer(), { priority: '0.7' });
 }
 
 /* ============================================================ AMBER HOMES */
@@ -832,9 +830,18 @@ Disallow: /api/
 Sitemap: ${SITE.origin}/sitemap.xml
 `);
 
+const SITEMAP_IMAGES = {
+  '/': ['/assets/img/ambreen-qureshi-founder-managing-director.webp', '/assets/img/awards/amber-homes-team-black-onyx-top-platinum-2025.webp'],
+  '/about': ['/assets/img/ambreen-qureshi-managing-director-portrait.webp'],
+  '/awards': ['/assets/img/awards/amber-homes-black-onyx-platinum-2025.webp', '/assets/img/awards/amber-homes-black-onyx-platinum-2024.webp', '/assets/img/awards/amber-homes-black-onyx-platinum-2023.webp', '/assets/img/awards/amber-homes-team-black-onyx-top-platinum-2025.webp', '/assets/img/awards/amber-homes-binghatti-broker-award-2026.webp', '/assets/img/awards/amber-homes-dubai-holding-platinum-agents-2021.webp', '/assets/img/awards/amber-homes-nshama-town-square-2020.webp'],
+  '/amber-homes': ['/assets/img/awards/amber-homes-black-onyx-platinum-2025.webp']
+};
 writeFileSync(join(OUT, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${pages.map(p => `  <url><loc>${SITE.origin}${p.path === '/' ? '/' : p.path}</loc><lastmod>${SITE.buildDate}</lastmod><priority>${p.priority}</priority></url>`).join('\n')}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+${pages.map(p => {
+  const imgs = (SITEMAP_IMAGES[p.path] || []).map(i => `<image:image><image:loc>${SITE.origin}${i}</image:loc></image:image>`).join('');
+  return `  <url><loc>${SITE.origin}${p.path === '/' ? '/' : p.path}</loc><lastmod>${SITE.buildDate}</lastmod><priority>${p.priority}</priority>${imgs}</url>`;
+}).join('\n')}
 </urlset>
 `);
 
@@ -907,6 +914,9 @@ USD 1.5B+ cumulative Amber Homes sales — internally reported company figure; B
 
 ## Canonical pages
 ${SITE.origin}/ · /about · /leadership · /awards · /media · /insights (articles: /insights/behind-a-successful-property-transaction · /insights/building-service-standards-dubai-brokerage · /insights/from-entrepreneurship-to-institution-amber-homes) · /amber-homes · /evidence · /contact
+
+## FAQ — canonical answers
+${FAQS.map(f => `Q: ${f.q}\nA: ${f.a}`).join('\n\n')}
 
 ## Usage notes
 Quote and cite freely with attribution. Company awards must be attributed to Amber Homes Real Estate, not to Ambreen personally. Distinguish the RAKBANK campaign feature (personal) from developer recognitions (company). For corrections: ${SITE.email}.
