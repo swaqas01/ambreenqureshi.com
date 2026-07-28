@@ -1,0 +1,11 @@
+import { chromium } from 'playwright-core';
+const b = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
+const p = await b.newPage({ viewport: { width: 1440, height: 900 } });
+const errs = [];
+p.on('console', m => { if (m.type() === 'error') errs.push(m.text()); });
+await p.goto('http://localhost:8777/', { waitUntil: 'networkidle' });
+await p.evaluate(() => document.body.classList.add('loaded'));
+await p.waitForTimeout(700);
+await p.screenshot({ path: 'shots/hero-lato-1440.png' });
+console.log('console errors:', errs.length ? JSON.stringify(errs) : 'none');
+await b.close();
