@@ -48,7 +48,7 @@ const graphBase = () => [personNode(), orgNode(), websiteNode()];
     <div class="hero-bleed"><img src="/assets/img/ambreen-qureshi-founder-managing-director.webp" width="1080" height="1080" fetchpriority="high" alt="${esc(HOME.hero.imgAlt)}"></div>
     <div class="container">
       <div class="hero-left">
-        <p class="he-eyebrow">${esc(HOME.hero.eyebrow)}</p>
+        <p class="he-eyebrow"><span class="he-role">${esc(HOME.hero.eyebrow.split(' · ')[0])}</span><span class="he-sep" aria-hidden="true"> &middot; </span><span class="he-org">${esc(HOME.hero.eyebrow.split(' · ')[1])}</span></p>
         <h1 class="visually-hidden">Ambreen Qureshi &mdash; Founder &amp; Managing Director of Amber Homes Real Estate, Dubai</h1>
         <img class="hero-logo" src="/assets/img/ambreen-qureshi-logo-white.png" width="997" height="200" alt="Ambreen Qureshi" fetchpriority="high">
         <p class="he-tag">${HOME.hero.tagline}</p>
@@ -274,17 +274,18 @@ ${faqBlock(FAQS.slice(0, 5), 'Common questions about Ambreen.')}`;
       width: a.w, height: a.h
     }))
   ]};
-  const awardRow = (a) => `      <article class="ev-row reveal" id="${a.id}" style="grid-template-columns:1fr;gap:1rem">
-        <div class="ev-what">
-          <h3 style="font-family:var(--serif);font-size:1.7rem;font-weight:300">${esc(a.title)}${a.group === 'platinum' ? '' : ` &mdash; ${a.year}`}</h3>
-          <p style="margin-top:.4rem"><strong style="color:var(--text)">Presented by:</strong> ${esc(a.presenter)} &middot; <strong style="color:var(--text)">Recipient:</strong> Amber Homes Real Estate</p>
-          ${a.exact ? `<p style="margin-top:.6rem">${esc(a.exact)}</p>` : ''}
-        </div>
-        ${a.img2 ? `<div class="gallery" style="margin-top:.4rem"><figure class="gfig"><img src="${a.img2}" width="${a.w2}" height="${a.h2}" loading="lazy" alt="${esc(a.alt2)}"><figcaption>${esc(a.caption2)}</figcaption></figure><figure class="gfig"><img src="${a.img}" width="${a.w}" height="${a.h}" loading="lazy" alt="${esc(a.alt)}"><figcaption>${esc(a.caption)}</figcaption></figure></div>` : a.img ? `<figure class="evfig" style="margin-top:.4rem;max-width:560px"><img src="${a.img}" width="${a.w}" height="${a.h}" loading="lazy" alt="${esc(a.alt)}"><figcaption>${esc(a.caption)}</figcaption></figure>` : `<p class="ev-pending">${esc(a.caption)}</p>`}
-        <div class="ev-proof" style="border-left:0;padding-left:0;border-top:1px solid var(--hairline);padding-top:.9rem">
-          <span class="ev-tag">Source</span>
-          <a href="${a.source.href}" rel="noopener${a.source.href.startsWith('http') ? ' nofollow' : ''}">${esc(a.source.label)}${a.source.href.startsWith('http') ? ' <span class="ext" aria-hidden="true">&#8599;</span>' : ''}</a>
-        </div>
+  const awardRow = (a) => `      <article class="award-year reveal" id="${a.id}">
+        <header class="ay-head">
+          <span class="ay-num" aria-hidden="true">${a.year}</span>
+          <div class="ay-meta">
+            <h3>${esc(a.title)}</h3>
+            <p class="ay-by">${esc(a.presenter)} &middot; Recipient: Amber Homes Real Estate</p>
+            ${a.exact ? `<p class="ay-exact">${esc(a.exact)}</p>` : ''}
+          </div>
+          <a class="ay-src" href="${a.source.href}" rel="noopener${a.source.href.startsWith('http') ? ' nofollow' : ''}">${esc(a.source.label)}${a.source.href.startsWith('http') ? ' <span class="ext" aria-hidden="true">&#8599;</span>' : ''}</a>
+        </header>
+        ${a.img2 ? `<figure class="ay-stage"><img src="${a.img2}" width="${a.w2}" height="${a.h2}" loading="lazy" alt="${esc(a.alt2)}"><figcaption>${esc(a.caption2)}</figcaption></figure>` : ''}
+        ${a.img ? `<figure class="ay-trophy"><img src="${a.img}" width="${a.w}" height="${a.h}" loading="lazy" alt="${esc(a.alt)}"><figcaption>${esc(a.caption)}</figcaption></figure>` : `<p class="ev-pending">${esc(a.caption)}</p>`}
       </article>`;
   const body = `
 ${pageHeader('Awards & Recognition', 'Platinum Agency for Meraas, Nakheel &amp; Dubai Holding for 4 Consecutive Years.', 'Platinum Agency 2022, 2023, 2024 and 2025 — each year shown with its ceremony picture and award picture. Amber Homes Real Estate is the only company recognised as Platinum Agency for 4 Consecutive Years.')}
@@ -310,10 +311,8 @@ ${additional.map(awardRow).join('\n')}
       <div class="reveal">
         ${rail('03', 'The record, photographed')}
         <p class="lede">Ceremony moments from the Black Onyx Awards &mdash; the developers&rsquo; own stage, not a studio.</p>
-        <div class="gallery">
-          <figure class="gfig"><img src="/assets/img/awards/amber-homes-team-black-onyx-top-platinum-2025.webp" width="1206" height="766" loading="lazy" alt="The Amber Homes Real Estate team, led by Ambreen Qureshi and Saad Waqas, on stage — Platinum Agency 2025 — Meraas - Nakheel & Dubai Holding"><figcaption>Platinum Agency 2025 &mdash; Meraas - Nakheel &amp; Dubai Holding.</figcaption></figure>
-          <figure class="gfig"><img src="/assets/img/ambreen-qureshi-founder-managing-director.webp" width="1080" height="1080" loading="lazy" alt="Founder and Managing Director Ambreen Qureshi with the award at the ceremony in Dubai"><figcaption>Founder &amp; Managing Director Ambreen Qureshi with the award.</figcaption></figure>
-        </div>
+        <figure class="ay-stage" style="margin-top:1.8rem"><img src="/assets/img/awards/amber-homes-team-black-onyx-top-platinum-2025.webp" width="1206" height="766" loading="lazy" alt="The Amber Homes Real Estate team, led by Ambreen Qureshi and Saad Waqas, on stage — Platinum Agency 2025 — Meraas - Nakheel & Dubai Holding"><figcaption>Platinum Agency 2025 &mdash; Meraas - Nakheel &amp; Dubai Holding.</figcaption></figure>
+        <figure class="ay-trophy"><img src="/assets/img/ambreen-qureshi-founder-managing-director.webp" width="1080" height="1080" loading="lazy" alt="Founder and Managing Director Ambreen Qureshi with the award at the ceremony in Dubai"><figcaption>Founder &amp; Managing Director Ambreen Qureshi with the award.</figcaption></figure>
       </div>
 
       <hr class="sep">
