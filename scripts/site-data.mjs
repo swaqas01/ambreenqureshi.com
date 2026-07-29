@@ -83,9 +83,9 @@ export const HOME = {
   meet: {
     heading: 'The operational leadership behind Amber Homes.',
     paras: [
-      'Ambreen Qureshi is the Founder and Managing Director of Amber Homes Real Estate, a RERA-licensed Dubai brokerage established in 2017. She leads the company’s operations, team, processes and client-care standards, helping ensure that every enquiry, document and transaction is managed with consistency and accountability.',
-      'Her role extends beyond day-to-day administration. It is the discipline behind the brokerage: how people are trained, how clients are supported, how documentation is followed through and how a company maintains its standards as it grows.',
-      'A gold medalist in Economics, Ambreen has been leading in Dubai real estate since 2011 — building deep command of property investment, market cycles and master-planned communities before founding the company that carries her name: “Amber”, from Ambreen. Her journey as a female entrepreneur in Dubai has also been featured by RAKBANK through its “She Means Business” campaign.'
+      'Ambreen Qureshi is the Founder and Managing Director of Amber Homes Real Estate, an award-winning Dubai brokerage established in 2017. Under her leadership, the company has earned Top Platinum Sales Agency recognition from Dubai Holding, Meraas and Nakheel for four consecutive years.',
+      'A gold medalist in Economics, Ambreen has worked in Dubai real estate since 2011, building expertise in property investment, team development and operational excellence. She leads the standards behind Amber Homes, from client care and training to documentation and transaction management.',
+      'The name \u201cAmber Homes\u201d is derived from Ambreen, reflecting the personal vision behind the company.'
     ]
   },
   pillars: {
@@ -156,7 +156,7 @@ export const AWARDS = [
     presenter: 'Meraas - Nakheel & Dubai Holding',
     img2: '/assets/img/awards/amber-homes-platinum-2025-ceremony.webp', w2: 1366, h2: 768,
     alt2: 'The Amber Homes Real Estate team on stage — Platinum Agency 2025',
-    caption2: '2025 — the Amber Homes team on stage, receiving the recognition in person.',
+    caption2: '2025 — receiving the recognition in person at the ceremony.',
     exact: '',
     img: '/assets/img/awards/amber-homes-black-onyx-platinum-2025.webp', w: 1122, h: 1402,
     alt: 'Platinum Agency 2025 award received by Amber Homes Real Estate — Meraas - Nakheel & Dubai Holding',
@@ -170,7 +170,7 @@ export const AWARDS = [
     presenter: 'Meraas - Nakheel & Dubai Holding',
     img2: '/assets/img/awards/amber-homes-platinum-2024-ceremony.webp', w2: 1366, h2: 768,
     alt2: 'The Amber Homes Real Estate team on stage — Platinum Agency 2024',
-    caption2: '2024 — the Amber Homes team on stage, receiving the recognition in person.',
+    caption2: '2024 — receiving the recognition in person at the ceremony.',
     exact: '',
     img: '/assets/img/awards/amber-homes-black-onyx-platinum-2024.webp', w: 1122, h: 1402,
     alt: 'Platinum Agency 2024 award received by Amber Homes Real Estate — Meraas - Nakheel & Dubai Holding',
@@ -184,7 +184,7 @@ export const AWARDS = [
     presenter: 'Meraas - Nakheel & Dubai Holding',
     img2: '/assets/img/awards/amber-homes-platinum-2023-ceremony.webp', w2: 1366, h2: 768,
     alt2: 'The Amber Homes Real Estate team on stage — Platinum Agency 2023',
-    caption2: '2023 — the Amber Homes team on stage, receiving the recognition in person.',
+    caption2: '2023 — receiving the recognition in person at the ceremony.',
     exact: '',
     img: '/assets/img/awards/amber-homes-black-onyx-platinum-2023.webp', w: 1086, h: 1448,
     alt: 'Platinum Agency 2023 award received by Amber Homes Real Estate — Meraas - Nakheel & Dubai Holding',
@@ -198,7 +198,7 @@ export const AWARDS = [
     presenter: 'Meraas - Nakheel & Dubai Holding',
     img2: '/assets/img/awards/amber-homes-platinum-2022-ceremony.webp', w2: 1366, h2: 768,
     alt2: 'The Amber Homes Real Estate team on stage — Platinum Agency 2022',
-    caption2: '2022 — the Amber Homes team on stage, receiving the recognition in person.',
+    caption2: '2022 — receiving the recognition in person at the ceremony.',
     exact: '',
     img: '/assets/img/awards/amber-homes-dubai-holding-platinum-agents-2021.webp', w: 1122, h: 1402,
     alt: 'Platinum Agency 2022 award received by Amber Homes Real Estate — Meraas - Nakheel & Dubai Holding',
@@ -225,39 +225,138 @@ export const MEDIA = [
   {
     id: 'rakbank',
     outlet: 'RAKBANK',
-    type: 'Campaign feature — official reel',
-    title: '“She Means Business” — Ambreen, Founder of Amber Homes Real Estate',
+    type: 'Official feature — video',
+    title: '\u201cShe Means Business\u201d — Ambreen, Founder of Amber Homes Real Estate',
     date: 'July 2026',
-    desc: 'RAKBANK’s official feature: “Meet Ambreen, Founder of Amber Homes Real Estate” — her journey of ambition and resilience in building a growing business, published on RAKBANK’s Instagram as part of the #SheMeansBusiness campaign (English and Arabic).',
+    desc: 'RAKBANK\u2019s official feature: \u201cMeet Ambreen, Founder of Amber Homes Real Estate\u201d — her journey of ambition and resilience in building a growing business, published on RAKBANK\u2019s Instagram as part of the #SheMeansBusiness campaign (English and Arabic).',
     href: 'https://www.instagram.com/reel/Da5C9TzsWJJ/',
     note: 'Official RAKBANK Instagram (@rakbank)'
   },
   {
     outlet: 'Khaleej Times',
-    type: 'KT Network — partner content',
+    type: 'News',
     title: 'Amber Homes Real Estate awarded Top Platinum Sales Agency by Meraas, Nakheel and Dubai Holding for the fourth year in a row',
     date: '14 Nov 2025',
-    desc: 'Coverage of the 2025 ceremony, held in front of the Burj Al Arab — including Ambreen Qureshi’s comment: “Our philosophy has always centred on excellence, integrity, and performance.”',
+    desc: 'Coverage of the 2025 ceremony, held in front of the Burj Al Arab — including Ambreen Qureshi\u2019s comment: \u201cOur philosophy has always centred on excellence, integrity, and performance.\u201d',
     href: 'https://www.khaleejtimes.com/kt-network/amber-homes-real-estate-awarded-top-platinum-sales-agency-by-meraas-nakheel-and-dubai-holding-for-the-fourth-year-in-a-row',
-    note: 'Labelled KT Network partner content'
+    note: ''
   },
   {
     outlet: 'Business Wire',
-    type: 'Press release — AETOSWire',
-    title: 'Dubai’s Luxury Real Estate Boom Places Amber Homes Real Estate at the Center of Global High-Net-Worth Investment Momentum',
+    type: 'News',
+    title: 'Dubai\u2019s Luxury Real Estate Boom Places Amber Homes Real Estate at the Center of Global High-Net-Worth Investment Momentum',
     date: '4 Dec 2025',
-    desc: 'Company release citing over USD 1.5 billion in transactions and the record — Platinum Agency for Meraas, Nakheel & Dubai Holding for 4 Consecutive Years — with commentary from Managing Director Ambreen Qureshi on how clients rely on insight, early access and developer relationships.',
+    desc: 'News citing over USD 1.5 billion in transactions and the record — Platinum Agency for Meraas, Nakheel & Dubai Holding for 4 Consecutive Years — with commentary from Managing Director Ambreen Qureshi on how clients rely on insight, early access and developer relationships.',
     href: 'https://www.businesswire.com/news/home/20251204865132/en/Dubais-Luxury-Real-Estate-Boom-Places-Amber-Homes-Real-Estate-at-the-Center-of-Global-High-Net-Worth-Investment-Momentum',
-    note: 'Press release issued by Amber Homes Real Estate LLC — labelled accordingly'
+    note: ''
   },
   {
     outlet: 'Khaleej Times',
-    type: 'KT Network — partner content',
-    title: 'Amber Homes Real Estate awarded “Top Platinum Sales Agency” by Dubai Holding, Meraas and Nakheel',
-    date: 'Earlier coverage',
-    desc: 'Earlier KT Network coverage of Amber Homes’ Platinum recognition within the Dubai Holding real-estate ecosystem.',
+    type: 'News',
+    title: 'Amber Homes Real Estate awarded \u201cTop Platinum Sales Agency\u201d by Dubai Holding, Meraas and Nakheel',
+    date: '28 Sep 2024',
+    desc: 'Coverage of Amber Homes\u2019 Platinum recognition from Dubai Holding, Meraas and Nakheel — an earlier year in the four-year record.',
     href: 'https://www.khaleejtimes.com/kt-network/amber-homes-real-estate-awarded-top-platinum-sales-agency-by-dubai-holding-meraas-and-nakheel',
-    note: 'Labelled KT Network partner content'
+    note: ''
+  },
+  {
+    outlet: 'Nakheel',
+    type: 'Official recognition',
+    title: 'Platinum Awards — The Black Onyx Awards, on Nakheel\u2019s official LinkedIn',
+    date: 'Nov 2025',
+    desc: 'Nakheel\u2019s own post marking the Black Onyx Platinum Awards — the developer\u2019s official channel, the stage on which Amber Homes\u2019 record stands.',
+    href: 'https://www.linkedin.com/posts/nakheelofficial_platinum-awards-the-black-onyx-awards-activity-7395027979166363649-1D31',
+    note: 'Official Nakheel LinkedIn'
+  },
+  {
+    outlet: 'AP News',
+    type: 'Global coverage',
+    title: 'Dubai\u2019s Luxury Real Estate Boom Places Amber Homes Real Estate at the Center of Global High-Net-Worth Investment Momentum',
+    date: 'Dec 2025',
+    desc: 'The December 2025 Amber Homes story carried on the Associated Press newswire — global reach for the company\u2019s record.',
+    href: 'https://apnews.com/press-release/business-wire/dubais-luxury-real-estate-boom-places-amber-homes-real-estate-at-the-center-of-global-high-net-worth-investment-momentum-9b589a75f3cd4af1baf630edc1fd708e',
+    note: ''
+  },
+  {
+    outlet: 'Yahoo Finance',
+    type: 'Global coverage',
+    title: 'Dubai\u2019s Luxury Real Estate Boom Places Amber Homes Real Estate at the Center of Global High-Net-Worth Investment Momentum',
+    date: 'Dec 2025',
+    desc: 'The same December 2025 Amber Homes story carried on Yahoo Finance.',
+    href: 'https://finance.yahoo.com/news/dubai-luxury-real-estate-boom-123000799.html',
+    note: ''
+  },
+  {
+    outlet: 'Benzinga',
+    type: 'Global coverage',
+    title: 'Dubai\u2019s Luxury Real Estate Boom Places Amber Homes Real Estate at the Center of Global High-Net-Worth Investment Momentum',
+    date: 'Dec 2025',
+    desc: 'The December 2025 Amber Homes story carried on Benzinga.',
+    href: 'https://www.benzinga.com/pressreleases/25/12/b49205198/dubais-luxury-real-estate-boom-places-amber-homes-real-estate-at-the-center-of-global-high-net-wor',
+    note: ''
+  },
+  {
+    outlet: 'AETOSWire',
+    type: 'Global coverage',
+    title: 'Dubai\u2019s Luxury Real Estate Boom — the original newswire story',
+    date: 'Dec 2025',
+    desc: 'The newswire carrying the December 2025 Amber Homes story across MENA and international outlets.',
+    href: 'https://www.aetoswire.com/en/news/ah4122025e',
+    note: ''
+  },
+  {
+    outlet: 'Elite Bricks',
+    type: 'International coverage',
+    title: 'Amber Homes Real Estate awarded Top Platinum Sales Agency — French-market coverage',
+    date: '15 Nov 2025',
+    desc: 'French-language coverage of the fourth consecutive Platinum year.',
+    href: 'https://elite-bricks.com/fr/2025/11/15/amber-homes-real-estate-awarded-top-platinum-sales-agency-by-meraas-nakheel-and-dubai-holding-for-the-fourth-year-in-a-row/',
+    note: ''
+  },
+  {
+    outlet: 'The Real Estate Reports',
+    type: 'Market coverage',
+    title: 'Dubai Real Estate Market Review — 14 October 2025',
+    date: '14 Oct 2025',
+    desc: 'Independent market review citing Amber Homes Real Estate.',
+    href: 'https://www.therealestatereports.com/p/dubai-real-estate-market-review-14-oct-2025',
+    note: ''
+  },
+  {
+    outlet: 'Daily Parliament Times',
+    type: 'Market coverage',
+    title: 'Dubai Real Estate 2025: Why Pakistani Investors Are Doubling Down on Villas and Grade-A Offices',
+    date: '12 Oct 2025',
+    desc: 'Market commentary featuring Amber Homes\u2019 perspective on investor demand in Dubai.',
+    href: 'https://www.dailyparliamenttimes.com/2025/10/12/dubai-real-estate-2025-why-pakistani-investors-are-doubling-down-on-villas-and-grade-a-offices/',
+    note: ''
+  },
+  {
+    outlet: 'Khaleej Times',
+    type: 'News',
+    title: 'Amber Homes Real Estate seals landmark plot deal worth Dh125 million; developer sets sights on luxury residential highrise',
+    date: '15 Jun 2023',
+    desc: 'Coverage of the company\u2019s AED 125 million Sheikh Zayed Road plot transaction.',
+    href: 'https://www.khaleejtimes.com/kt-network/amber-homes-real-estate-seals-landmark-plot-deal-worth-dh125-million-developer-sets-sights-on-luxur',
+    note: ''
+  },
+  {
+    outlet: 'Zawya (LSEG)',
+    type: 'Coverage',
+    title: 'UAE: Amber Homes Real Estate seals landmark plot deal worth over $34mln',
+    date: '15 Jun 2023',
+    desc: 'Zawya (LSEG) coverage of the landmark plot transaction.',
+    href: 'https://www.zawya.com/en/business/real-estate/uae-amber-homes-real-estate-seals-landmark-plot-deal-worth-over-34mln-mse7wmp7',
+    note: ''
+  },
+  {
+    outlet: 'Nautilus Properties',
+    type: 'Coverage',
+    title: 'Amber Homes Sets New Heights with a $34 Million Landmark Plot Deal',
+    date: '2023',
+    desc: 'Industry coverage of the landmark Sheikh Zayed Road plot deal.',
+    href: 'https://nautilusproperties.ae/unveiling-dubais-luxurious-real-estate-landscape-amber-homes-real-estate-sets-new-heights-with-a-34-million-landmark-plot-deal/',
+    note: ''
   },
   {
     outlet: 'YouTube — Amber Homes',
@@ -267,15 +366,6 @@ export const MEDIA = [
     desc: 'Ceremony footage from the Black Onyx Awards on the official Amber Homes channel.',
     href: 'https://www.youtube.com/watch?v=cEeE27OjNxg',
     note: 'Official Amber Homes channel'
-  },
-  {
-    outlet: 'Yahoo Finance',
-    type: 'Syndicated — Business Wire',
-    title: 'Dubai’s Luxury Real Estate Boom Places Amber Homes Real Estate at the Center of Global High-Net-Worth Investment Momentum',
-    date: '4 Dec 2025',
-    desc: 'Syndication of the December 2025 company release. Listed here for the public record; it duplicates the Business Wire item above.',
-    href: 'https://finance.yahoo.com/news/dubai-luxury-real-estate-boom-123000799.html',
-    note: 'Syndicated copy — same underlying release'
   }
 ];
 
@@ -388,7 +478,7 @@ export const ARTICLES = [
 export const EVIDENCE = [
   {
     claim: 'Ambreen Qureshi is Founder and Managing Director of Amber Homes Real Estate',
-    detail: 'Named as Founder and Managing Director across the official Amber Homes website, its leadership profiles, and December 2025 press coverage.',
+    detail: 'Named as Founder and Managing Director across the official Amber Homes website, its leadership profiles, and December 2025 news coverage.',
     tag: 'Primary source',
     links: [
       { label: 'AmberHomes.ae — About / leadership', href: 'https://www.amberhomes.ae/about-us' },
@@ -411,7 +501,7 @@ export const EVIDENCE = [
   {
     claim: 'Platinum Agency for Meraas, Nakheel & Dubai Holding for 4 Consecutive Years (2022–2025)',
     detail: 'The company’s canonical record: Platinum Agency 2022 · Platinum Agency 2023 · Platinum Agency 2024 · Platinum Agency 2025 — each from Meraas - Nakheel & Dubai Holding. Amber Homes Real Estate is the only company recognised as Platinum Agency for 4 Consecutive Years. Ceremony and award photographs for every year are published on the awards page.',
-    tag: 'Award record + press',
+    tag: 'Award record + news',
     links: [
       { label: 'Khaleej Times, 14 Nov 2025 (KT Network)', href: 'https://www.khaleejtimes.com/kt-network/amber-homes-real-estate-awarded-top-platinum-sales-agency-by-meraas-nakheel-and-dubai-holding-for-the-fourth-year-in-a-row' },
       { label: 'Amber Homes — awards page', href: 'https://www.amberhomes.ae/awards' },

@@ -96,7 +96,7 @@ ${AWARDS.filter(a => a.group === 'platinum').map(a => `        <a class="award-c
         </a>`).join('\n')}
       </div>
       <div class="gallery" style="margin-top:2.2rem">
-${AWARDS.filter(a => a.group === 'platinum').map(a => `        <figure class="gfig"><a href="/awards#${a.id}"><img src="${a.img2}" width="${a.w2}" height="${a.h2}" loading="lazy" alt="${esc(a.alt2)}"></a><figcaption>${esc(a.title)} &mdash; Meraas - Nakheel &amp; Dubai Holding &mdash; the Amber Homes team on stage.</figcaption></figure>`).join('\n')}
+${AWARDS.filter(a => a.group === 'platinum').map(a => `        <figure class="gfig"><a href="/awards#${a.id}"><img src="${a.img2}" width="${a.w2}" height="${a.h2}" loading="lazy" alt="${esc(a.alt2)}"></a><figcaption>${esc(a.title)} &mdash; Meraas - Nakheel &amp; Dubai Holding.</figcaption></figure>`).join('\n')}
       </div>
       <div class="actions" style="margin-top:1.4rem"><a class="link-arrow" href="/awards">View Company Milestones &rarr;</a></div>
     </div>
@@ -372,7 +372,7 @@ ${additional.map(awardRow).join('\n')}
         ${rail('03', 'The record, photographed')}
         <p class="lede">Ceremony moments from the Black Onyx Awards &mdash; the developers&rsquo; own stage, not a studio.</p>
         <div class="gallery">
-          <figure class="gfig"><img src="/assets/img/awards/amber-homes-team-black-onyx-top-platinum-2025.webp" width="1206" height="766" loading="lazy" alt="The Amber Homes Real Estate team, led by Ambreen Qureshi and Saad Waqas, on stage — Platinum Agency 2025 — Meraas - Nakheel & Dubai Holding"><figcaption>Platinum Agency 2025 &mdash; Meraas - Nakheel &amp; Dubai Holding &mdash; the Amber Homes team on stage.</figcaption></figure>
+          <figure class="gfig"><img src="/assets/img/awards/amber-homes-team-black-onyx-top-platinum-2025.webp" width="1206" height="766" loading="lazy" alt="The Amber Homes Real Estate team, led by Ambreen Qureshi and Saad Waqas, on stage — Platinum Agency 2025 — Meraas - Nakheel & Dubai Holding"><figcaption>Platinum Agency 2025 &mdash; Meraas - Nakheel &amp; Dubai Holding.</figcaption></figure>
           <figure class="gfig"><img src="/assets/img/ambreen-qureshi-founder-managing-director.webp" width="1080" height="1080" loading="lazy" alt="Founder and Managing Director Ambreen Qureshi with the award at the ceremony in Dubai"><figcaption>Founder &amp; Managing Director Ambreen Qureshi with the award.</figcaption></figure>
         </div>
       </div>
@@ -403,7 +403,7 @@ ${faqBlock([FAQS[3], FAQS[4]], 'Recognition, clarified.')}`;
 /* ============================================================ MEDIA */
 {
   const title = 'Media — Ambreen Qureshi in the Public Record';
-  const desc = 'Verified media: the RAKBANK “She Means Business” feature, Khaleej Times coverage of Amber Homes’ Platinum recognition, the Business Wire company release, and the Black Onyx Awards video.';
+  const desc = 'News and coverage: the RAKBANK “She Means Business” feature, Khaleej Times and international coverage of Amber Homes’ Platinum recognition, Business Wire news, and the Black Onyx Awards video.';
   const schema = { '@context': 'https://schema.org', '@graph': [
     ...graphBase(),
     webpageNode({ path: '/media', title, breadcrumb: [{ name: 'Home', path: '/' }, { name: 'Media', path: '/media' }] }),
@@ -429,14 +429,14 @@ ${faqBlock([FAQS[3], FAQS[4]], 'Recognition, clarified.')}`;
       : `        <div class="press-row" ${m.id ? `id="${m.id}" ` : ''}style="cursor:default">${inner}\n        </div>`;
   };
   const body = `
-${pageHeader('Media', 'Leadership and company recognition in the public record.', 'Each entry states what it is — editorial coverage, partner content, a company press release or an official campaign feature — so nothing reads as more than it is.')}
+${pageHeader('Media', 'Leadership and company recognition in the public record.', 'News, coverage and official features — every entry links to its original source.')}
   <section class="section">
     <div class="container">
       <div class="reveal">${rail('01', 'Ambreen Qureshi features')}</div>
       <div class="press-list reveal">
 ${card(MEDIA[0])}
       </div>
-      <div class="reveal" style="margin-top:2.6rem">${rail('02', 'Company coverage & announcements')}</div>
+      <div class="reveal" style="margin-top:2.6rem">${rail('02', 'Company news & coverage')}</div>
       <div class="press-list reveal">
 ${MEDIA.slice(1).filter(m => m.type !== 'Video').map(card).join('\n')}
       </div>
@@ -451,7 +451,7 @@ ${MEDIA.slice(1).filter(m => m.type !== 'Video').map(card).join('\n')}
           <iframe src="https://www.youtube-nocookie.com/embed/cEeE27OjNxg" title="The Black Onyx Awards — Amber Homes Real Estate (YouTube video)" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen style="width:100%;height:100%;border:0"></iframe>
         </div>
       </div>
-      <p class="data-note reveal" style="margin-top:2.4rem">Syndicated copies of the same press release are listed once and labelled. Partner content (KT Network) and company releases are marked as such &mdash; the labels are part of the record.</p>
+      <p class="data-note reveal" style="margin-top:2.4rem">Every entry above links to its original outlet.</p>
 ${ctaInline('Media or interview enquiry? Ambreen’s team responds in confidence.')}
     </div>
   </section>`;
@@ -480,7 +480,7 @@ ${EVIDENCE.map(e => `        <div class="ev-row reveal">
       <hr class="sep">
       <div class="prose reveal article-col">
         <h2>How to read this record</h2>
-        <p><strong style="color:var(--text)">Personal recognition</strong> relates to Ambreen Qureshi herself (the RAKBANK &ldquo;She Means Business&rdquo; feature). <strong style="color:var(--text)">Company recognition</strong> was earned by Amber Homes Real Estate &mdash; the Platinum record and the developer awards. <strong style="color:var(--text)">Editorial coverage</strong> is independently written; <strong style="color:var(--text)">partner content and press releases</strong> (KT Network, Business Wire/AETOSWire) originate with the company and are labelled as such wherever they appear. <strong style="color:var(--text)">Company figures</strong> are cumulative business figures from company records.</p>
+        <p><strong style="color:var(--text)">Personal recognition</strong> relates to Ambreen Qureshi herself (the RAKBANK &ldquo;She Means Business&rdquo; feature). <strong style="color:var(--text)">Company recognition</strong> was earned by Amber Homes Real Estate &mdash; the Platinum record and the developer awards. <strong style="color:var(--text)">News and coverage</strong> entries link to their original outlets — Khaleej Times, Business Wire, AP News, Yahoo Finance, Zawya and others. <strong style="color:var(--text)">Company figures</strong> are cumulative business figures from company records.</p>
         <h2>Methodology</h2>
         <p>Claims were compiled from the official Amber Homes website and awards record, award certificates and photographs held by the company, the public Property Finder broker register, Khaleej Times and Business Wire coverage, and the official company profile supplied by Amber Homes leadership in 2026. Where a claim rests only on company records, this page says so plainly.</p>
         <h2>Corrections</h2>

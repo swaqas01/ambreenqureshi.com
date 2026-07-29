@@ -392,7 +392,10 @@ main,.site-footer,.site-header{position:relative;z-index:1}
   .ev-proof{border-left:none;border-top:1px solid var(--hairline);padding:1rem 0 0}
   .footer-grid{grid-template-columns:1fr}
   .footer-legal{flex-direction:column}
-  .award-grid{grid-template-columns:1fr}
+  .award-grid{grid-template-columns:repeat(2,1fr);gap:.7rem}
+  .award-card .aw-body{padding:.85rem .8rem 1rem;gap:.3rem}
+  .award-card .aw-year.aw-uniform{font-size:1.02rem}
+  .award-card .aw-title{font-size:.74rem;line-height:1.35}
   .agrid{grid-template-columns:1fr}
   .gallery{grid-template-columns:1fr}
   .inline-wrap{flex-direction:column;align-items:flex-start}
@@ -411,11 +414,11 @@ main,.site-footer,.site-header{position:relative;z-index:1}
 }
 
 /* ---- brand logo images (posted logo, white version — same treatment as saadwaqas.com) ---- */
-.brandmark img{height:26px;width:auto;display:block}
+.brandmark img{height:31px;width:auto;display:block}
 .hero-logo{width:min(460px,82%);height:auto;margin-bottom:.2rem}
 .footer-logo{width:230px;max-width:62%;height:auto;margin-bottom:1.1rem}
 @media (max-width:900px){.hero-logo{width:min(300px,76%)}}
-@media (max-width:600px){.brandmark img{height:22px}.footer-logo{width:190px}}
+@media (max-width:600px){.brandmark img{height:25px}.footer-logo{width:190px}}
 
 /* ---- hero image element + meet portrait ---- */
 .hero-bleed img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
