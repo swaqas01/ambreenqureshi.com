@@ -10,6 +10,14 @@ export const esc = (s) => String(s)
 
 const abs = (path) => SITE.origin + (path === '/' ? '/' : path);
 
+/* bold key organisation / developer names inside already-escaped text */
+export const bb = (s) => esc(s)
+  .replaceAll('RAKBANK', '<strong>RAKBANK</strong>')
+  .replaceAll('She Means Business', '<strong>She Means Business</strong>')
+  .replaceAll('Meraas', '<strong>Meraas</strong>')
+  .replaceAll('Nakheel', '<strong>Nakheel</strong>')
+  .replaceAll('Dubai Holding', '<strong>Dubai Holding</strong>');
+
 /* ---------- head ---------- */
 export function head({ title, desc, path, ogType = 'website', ogImage = '/assets/og/og-default.png', ogImageW = 1200, ogImageH = 630, ogImageAlt = 'Ambreen Qureshi — Founder & Managing Director, Amber Homes Real Estate, Dubai', schema, preloadImage, articleDates }) {
   const canonical = abs(path);
@@ -195,7 +203,7 @@ export function footer() {
         <a href="/awards">Awards &amp; Recognition</a>
         <a href="/media">Media</a>
         <a href="/insights">Insights</a>
-        <a href="/evidence">Evidence &amp; Sources</a>
+        <a href="/evidence">Facts &amp; Sources</a>
       </div>
       <div class="footer-col">
         <h4>Connect</h4>

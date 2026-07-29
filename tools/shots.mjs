@@ -13,7 +13,7 @@ p.on('pageerror', e => errors.push('PAGEERROR :: ' + e.message));
 for (const w of widths) {
   await p.setViewportSize({ width: w, height: 900 });
   await p.goto('http://localhost:8777/', { waitUntil: 'networkidle' }).catch(()=>{});
-  await p.evaluate(() => { document.querySelectorAll('.reveal').forEach(e=>e.classList.add('in')); document.body.classList.add('loaded'); });
+  await p.evaluate(async () => { document.querySelectorAll('.reveal').forEach(e=>e.classList.add('in')); document.body.classList.add('loaded'); document.querySelectorAll('img[loading="lazy"]').forEach(i=>{ i.loading='eager'; }); await Promise.all([...document.images].filter(i=>!i.complete).map(i=>new Promise(r=>{ i.onload=i.onerror=r; }))); });
   await p.waitForTimeout(500);
   await p.screenshot({ path: `shots/home-${w}.png`, fullPage: true });
 }
@@ -22,13 +22,23 @@ for (const [name, path] of Object.entries(pages)) {
   for (const w of [1440, 390]) {
     await p.setViewportSize({ width: w, height: 900 });
     await p.goto('http://localhost:8777' + path, { waitUntil: 'networkidle' }).catch(()=>{});
-    await p.evaluate(() => { document.querySelectorAll('.reveal').forEach(e=>e.classList.add('in')); document.body.classList.add('loaded'); });
+    await p.evaluate(async () => { document.querySelectorAll('.reveal').forEach(e=>e.classList.add('in')); document.body.classList.add('loaded'); document.querySelectorAll('img[loading="lazy"]').forEach(i=>{ i.loading='eager'; }); await Promise.all([...document.images].filter(i=>!i.complete).map(i=>new Promise(r=>{ i.onload=i.onerror=r; }))); });
     await p.waitForTimeout(400);
     await p.screenshot({ path: `shots/${name}-${w}.png`, fullPage: true });
   }
 }
-// horizontal overflow check at 320/375/390
-for (const w of [320, 375, 390, 430]) {
+// layout-sensitive pages at intermediate widths
+for (const name of ['home', 'about', 'leadership', 'awards', 'amber', 'evidence']) {
+  for (const w of [1280, 1024, 768]) {
+    await p.setViewportSize({ width: w, height: 900 });
+    await p.goto('http://localhost:8777' + pages[name], { waitUntil: 'networkidle' }).catch(()=>{});
+    await p.evaluate(async () => { document.querySelectorAll('.reveal').forEach(e=>e.classList.add('in')); document.body.classList.add('loaded'); document.querySelectorAll('img[loading="lazy"]').forEach(i=>{ i.loading='eager'; }); await Promise.all([...document.images].filter(i=>!i.complete).map(i=>new Promise(r=>{ i.onload=i.onerror=r; }))); });
+    await p.waitForTimeout(350);
+    await p.screenshot({ path: `shots/${name}-${w}.png`, fullPage: true });
+  }
+}
+// horizontal overflow check
+for (const w of [320, 375, 390, 430, 768, 1024, 1280, 1440]) {
   for (const [name, path] of Object.entries(pages)) {
     await p.setViewportSize({ width: w, height: 900 });
     await p.goto('http://localhost:8777' + path, { waitUntil: 'domcontentloaded' }).catch(()=>{});
