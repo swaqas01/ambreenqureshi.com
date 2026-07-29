@@ -22,6 +22,7 @@ export const SITE = {
   gaId: '',                           // set GA4 Measurement ID here, then rebuild — analytics stays off while empty
   sameAs: [
     'https://www.wikidata.org/wiki/Q132734671',
+    'https://about.me/ambreenqureshi',
     'https://www.propertyfinder.ae/en/agent/ambreen-qureshi-145563',
     'https://www.amberhomes.ae/about-us'
   ]
