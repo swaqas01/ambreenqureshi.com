@@ -203,7 +203,6 @@ export function footer() {
       <div class="footer-col">
         <h4>Explore</h4>
         <a href="/about">About</a>
-        <a href="/leadership">Leadership</a>
         <a href="/awards">Awards &amp; Recognition</a>
         <a href="/media">Media</a>
         <a href="https://www.amberhomes.ae/" rel="noopener">Amber Homes<span class="ext" aria-hidden="true"> &#8599;</span></a>
@@ -211,10 +210,9 @@ export function footer() {
       </div>
       <div class="footer-col">
         <h4>Connect</h4>
-        <a href="/contact">Private Conversation</a>
+        <a href="/contact">Connect</a>
         <a href="https://www.amberhomes.ae/" rel="noopener">Amber Homes Real Estate<span class="ext" aria-hidden="true"> &#8599;</span></a>
         <a href="https://saadwaqas.com/" rel="noopener">Saad Waqas &mdash; Managing Partner<span class="ext" aria-hidden="true"> &#8599;</span></a>
-        <a href="/contact">Contact</a>
       </div>
     </div>
     <div class="footer-legal">

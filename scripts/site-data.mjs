@@ -28,22 +28,20 @@ export const SITE = {
 
 export const NAV = [
   { href: '/about', label: 'About' },
-  { href: '/leadership', label: 'Leadership' },
   { href: '/awards', label: 'Awards' },
   { href: '/media', label: 'Media' },
   { href: 'https://www.amberhomes.ae/', label: 'Amber Homes' }
 ];
-export const NAV_CTA = { href: '/contact', label: 'Private Conversation' };
+export const NAV_CTA = { href: '/contact', label: 'Connect' };
 
 export const OVERLAY_NAV = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
-  { href: '/leadership', label: 'Leadership' },
   { href: '/awards', label: 'Awards & Recognition' },
   { href: '/media', label: 'Media' },
   { href: 'https://www.amberhomes.ae/', label: 'Amber Homes' },
   { href: '/evidence', label: 'Facts & Sources' },
-  { href: '/contact', label: 'Private Conversation' }
+  { href: '/contact', label: 'Connect' }
 ];
 
 /* ---------------- verified facts ---------------- */
@@ -70,7 +68,7 @@ export const HOME = {
     eyebrow: 'Founder & Managing Director · Amber Homes Real Estate',
     tagline: 'Building an award-recognised Dubai real estate company through disciplined operations, client care and long-term leadership.',
     recognition: 'Featured by RAKBANK in “She Means Business” · Platinum Agency for Meraas, Nakheel & Dubai Holding for 4 Consecutive Years',
-    ctaPrimary: { href: '/leadership', label: 'Explore Her Leadership' },
+    ctaPrimary: { href: '/about', label: 'About Ambreen' },
     ctaSecondary: { href: '/contact', label: 'Contact Amber Homes' },
     imgAlt: 'Ambreen Qureshi, Founder and Managing Director of Amber Homes Real Estate, holding the Black Onyx Award at the ceremony in Dubai'
   },

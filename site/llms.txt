@@ -12,7 +12,6 @@ Company sales figures are cumulative business figures from company records, not 
 
 ## Key pages
 - /about — canonical biography and verified fact table
-- /leadership — her operating approach: documentation, training, client care, accountability
 - /awards — every recognition with year, exact wording, photograph and source
 - /media — RAKBANK "She Means Business" feature, Khaleej Times, Business Wire, video
 - /evidence — Facts & Sources register, methodology, corrections route

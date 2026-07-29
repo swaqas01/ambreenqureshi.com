@@ -113,13 +113,12 @@ ${AWARDS.filter(a => a.group === 'platinum').map(a => `        <figure class="gf
         <p class="head-note">${esc(HOME.pillars.note)}</p>
       </div>
       <div class="pathways">
-${HOME.pillars.items.map((p, i) => `        <a class="path" href="/leadership">
+${HOME.pillars.items.map((p, i) => `        <div class="path">
           <span class="pnum">0${i + 1}</span>
           <h3>${esc(p.title)}</h3>
           <p>${esc(p.text)}</p>
-        </a>`).join('\n')}
+        </div>`).join('\n')}
       </div>
-      <div class="actions"><a class="link-arrow" href="/leadership">The full leadership approach &rarr;</a></div>
     </div>
   </section>
 
@@ -214,7 +213,7 @@ ${pageHeader('About', 'The founder behind the name on the door.', 'Who is Ambree
           <p>As Managing Director, Ambreen is responsible for how the company actually runs: recruitment and training, client-care standards, transaction documentation and follow-through, escalation paths, and the accountability that keeps service quality consistent across a growing team.</p>
 
           <h2>Leadership philosophy</h2>
-          <p>Her approach is built on four working principles: operational discipline, client care, team standards and long-term reputation. The fuller version &mdash; how those principles show up inside a live brokerage &mdash; is set out on the <a href="/leadership">Leadership page</a>.</p>
+          <p>Her approach is built on four working principles: operational discipline, client care, team standards and long-term reputation &mdash; the discipline behind how the company trains its people, documents its transactions and keeps its commitments.</p>
         </div>
         <div class="reveal">
           <img class="portrait" src="/assets/img/ambreen-qureshi-managing-director-portrait.webp" width="1200" height="1629" alt="Ambreen Qureshi, Founder and Managing Director of Amber Homes Real Estate, Dubai" fetchpriority="high">
@@ -256,66 +255,6 @@ ${ctaInline('For media, partnership or client enquiries, Ambreen’s team respon
   </section>
 ${faqBlock(FAQS.slice(0, 5), 'Common questions about Ambreen.')}`;
   write('/about', head({ title, desc, path: '/about', ogType: 'profile', schema, ogImage: '/assets/img/ambreen-qureshi.jpg', ogImageW: 1080, ogImageH: 1080, ogImageAlt: 'Ambreen Qureshi — Founder & Managing Director of Amber Homes Real Estate, Dubai' }) + header('/about') + body + footer(), { priority: '0.9' });
-}
-
-/* ============================================================ LEADERSHIP */
-{
-  const title = 'Leadership | Ambreen Qureshi — Building an Institution in Dubai Real Estate';
-  const desc = 'Ambreen Qureshi’s leadership philosophy: turning a founder-led venture into an institution — vision, developing leaders, decision-making through market cycles, culture, stewardship of developer relationships, and female leadership in UAE business.';
-  const schema = { '@context': 'https://schema.org', '@graph': [
-    ...graphBase(),
-    webpageNode({ path: '/leadership', title, breadcrumb: [{ name: 'Home', path: '/' }, { name: 'Leadership', path: '/leadership' }] })
-  ]};
-  const sections = [
-    { h: 'Leadership is institution-building', a: 'Ambreen Qureshi’s definition of leadership: a company becomes an institution when its performance no longer depends on any one person’s daily heroics — including the founder’s.', ps: [
-      'Most brokerages are built to close the next deal. Ambreen built Amber Homes to outlast the deal cycle: a firm whose judgment, standards and relationships are owned by the organisation rather than rented from individuals. That is the difference between a sales operation and an institution — and it is a leadership decision, made early and defended constantly.',
-      'It shows in what she measures. Revenue tells you about the quarter; repeat clients, developer allocations and team retention tell you about the decade. Since founding the company in 2017, the metrics she holds the firm to are deliberately the slower ones — because those are the ones a leader can actually build on.'
-    ]},
-    { h: 'Vision: from a founder’s venture to a group', a: 'The arc — brokerage (2017), Interiors (2019), Holiday Homes (2021) — reflects a deliberate strategy: expand only where the group’s standards and relationships compound.', ps: [
-      'Vision in real estate is often confused with optimism. Ambreen’s version is closer to portfolio thinking, carried over from her grounding in Economics: decide where the group has a durable advantage, expand only there, and say no to everything else. Amber Homes Interiors and Amber Holiday Homes — her brainchild — were not diversification for its own sake; each one deepens the client relationship the brokerage already owns.',
-      'The same discipline governs what the group does not do. No lines of business that trade the brand for quick revenue, no growth that outruns the ability to train the people carrying it. Strategy, in her practice, is mostly the record of intelligent refusals.'
-    ]},
-    { h: 'Developing leaders, not just closers', a: 'The leadership test she applies: does the company create people who can run it? Training, delegation with real authority, and promotion from within are how a firm stops depending on its founder.', ps: [
-      'A brokerage that only produces top salespeople has a production line; a company that produces future directors has a future. Ambreen treats leadership development as a core output of Amber Homes — structured onboarding before anyone touches a live file, graduated authority as judgment is demonstrated, and deliberate exposure of senior team members to developer relationships and difficult decisions.',
-      'Delegation, done seriously, is a transfer of real decision rights — not task assignment with the founder hovering. Her rule is that a standard is only truly embedded when someone she trained enforces it in her absence, on a hard day, against commercial pressure. That is when a leader has multiplied.'
-    ]},
-    { h: 'Decision-making through market cycles', a: 'Fifteen years in Dubai real estate — including the 2020 test — shaped a decision style: positions taken early, risks named plainly, and commitments honoured when the market turns.', ps: [
-      'Dubai rewards conviction and punishes bravado, and the difference only becomes visible in a downturn. Having entered the market in 2011 and led a company through 2020, Ambreen’s decision-making is built for the full cycle: commitments the firm can honour in a bad quarter, relationships that are net-positive across a decade, and communication that does not change tone when conditions do.',
-      'The company’s 2020 recognition from Nshama — earned in the market’s hardest modern year — is the marker she points to internally: leadership is judged by how the firm behaves when performing is difficult, not when it is fashionable.'
-    ]},
-    { h: 'Culture is the leader’s real signature', a: 'The standard a leader walks past is the standard she sets. Culture at Amber Homes is enforced in small moments — file reviews, escalations welcomed early, and accountability without fear.', ps: [
-      'Culture is not the values poster; it is what the leadership tolerates. Ambreen’s enforcement mechanisms are unglamorous and constant: regular file reviews she actually reads, named ownership of every open item, and an explicit norm that surfacing a problem early is treated as competence rather than confession. People extend to clients exactly the treatment leadership extends to them.',
-      'That norm is also why service quality at Amber Homes does not depend on which team member answers the phone. Consistency at the front line is the visible edge of a culture decision made at the top — and defended at 40 people with the same insistence it was at four.'
-    ]},
-    { h: 'Stewardship: relationships as balance-sheet assets', a: 'Platinum Agency for Meraas, Nakheel & Dubai Holding for 4 Consecutive Years — a record that reflects stewardship — treating developer and client trust as capital to be grown, never spent.', ps: [
-      'Developer ecosystems measure delivered performance, year after year; there is no way to charm a Platinum record into existence. Ambreen treats those relationships — and every client relationship behind them — as assets on the company’s real balance sheet, to be invested in through clean execution and protected from short-term temptation.',
-      'This is also her definition of reputation: the sum of every commitment the firm has kept when it did not have to. It compounds slowly and, once spent, does not come back at par — which is why long-term reputation outranks short-term visibility in every trade-off the company makes.'
-    ]},
-    { h: 'Female leadership in UAE business', a: 'Founder since 2017, RAKBANK-featured entrepreneur, leading in one of the region’s most competitive industries — Ambreen’s path reflects a wider shift in who builds institutions in the UAE.', ps: [
-      'Dubai real estate is a demanding arena for any founder; Ambreen built and leads a multi-award-recognised group in it, and RAKBANK’s “She Means Business” campaign featured her journey as a model of UAE female entrepreneurship. Her view of the subject is characteristically practical: representation matters most when it is backed by a record.',
-      'The leadership style she models — precision, follow-through, developing people, keeping commitments across cycles — is not positioned as a female alternative to some other kind of leadership. It is simply what durable leadership looks like; her career makes the case that the door is open, and the standard is the same.'
-    ]}
-  ];
-  const body = `
-${pageHeader('Leadership', 'Leadership that builds institutions, not just transactions.', 'What does leadership mean inside a Dubai brokerage? For Ambreen Qureshi it is institution-building: setting the vision, developing leaders, deciding through market cycles, and stewarding the culture and relationships a company’s reputation stands on. This page sets out that philosophy.')}
-  <section class="section">
-    <div class="container">
-      <div class="lead-list">
-${sections.map((s) => `      <section class="lead-item reveal">
-        <div class="lead-head">
-          <h2>${esc(s.h)}</h2>
-          <p class="answer-first"><strong>In brief:</strong> ${bb(s.a)}</p>
-        </div>
-        <div class="lead-body">
-${s.ps.map(p => `          <p>${bb(p)}</p>`).join('\n')}
-        </div>
-      </section>`).join('\n')}
-      </div>
-${ctaInline('Discuss leadership, partnership or media topics with Ambreen’s team.')}
-    </div>
-  </section>
-${faqBlock([FAQS[1], FAQS[3], FAQS[4]], 'Leadership questions, answered.')}`;
-  write('/leadership', head({ title, desc, path: '/leadership', schema }) + header('/leadership') + body + footer(), { priority: '0.8' });
 }
 
 /* ============================================================ AWARDS */
@@ -494,7 +433,7 @@ ${ctaInline('Want a claim verified directly? Ask the team.')}
 
 /* ============================================================ CONTACT */
 {
-  const title = 'Contact Ambreen Qureshi’s Team — Private Conversation';
+  const title = 'Contact Ambreen Qureshi’s Team — Connect';
   const desc = 'Contact Ambreen Qureshi’s team at Amber Homes Real Estate: property enquiries, client support, partnerships, media, leadership and speaking. Office +971 4 368 4497 · Burj Al Salam Tower, Dubai.';
   const schema = { '@context': 'https://schema.org', '@graph': [
     ...graphBase(),
@@ -694,7 +633,6 @@ Company sales figures are cumulative business figures from company records, not 
 
 ## Key pages
 - /about — canonical biography and verified fact table
-- /leadership — her operating approach: documentation, training, client care, accountability
 - /awards — every recognition with year, exact wording, photograph and source
 - /media — RAKBANK "She Means Business" feature, Khaleej Times, Business Wire, video
 - /evidence — Facts & Sources register, methodology, corrections route
@@ -748,7 +686,7 @@ USD 1.5B+ cumulative Amber Homes sales — company-records figure; Business Wire
 "Luxury real estate in Dubai is evolving at exceptional speed. Our clients rely on our insights, early-access opportunities, and developer relationships." — Ambreen Qureshi, Business Wire, 4 Dec 2025.
 
 ## Canonical pages
-${SITE.origin}/ · /about · /leadership · /awards · /media · /evidence · /contact — company website: https://www.amberhomes.ae/
+${SITE.origin}/ · /about · /awards · /media · /evidence · /contact — company website: https://www.amberhomes.ae/
 
 ## FAQ — canonical answers
 ${FAQS.map(f => `Q: ${f.q}\nA: ${f.a}`).join('\n\n')}

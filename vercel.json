@@ -10,6 +10,7 @@
       "permanent": true
     },
     { "source": "/amber-homes", "destination": "https://www.amberhomes.ae/", "permanent": true },
+    { "source": "/leadership", "destination": "/about", "permanent": true },
     { "source": "/insights", "destination": "/", "permanent": true },
     { "source": "/insights/(.*)", "destination": "/", "permanent": true },
     { "source": "/feed.xml", "destination": "/", "permanent": true }
