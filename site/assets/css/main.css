@@ -269,6 +269,16 @@ body.loaded .hero-editorial{opacity:1;transform:none}
 .ay-src{font-size:.84rem;color:var(--muted-2);border-bottom:1px solid var(--hairline-strong);white-space:nowrap;margin-left:auto;align-self:center;max-width:100%;overflow:hidden;text-overflow:ellipsis}
 .ay-src:hover{color:var(--accent);border-color:var(--accent)}
 .ay-stage{margin:1.5rem 0 0;border:1px solid var(--hairline);background:var(--canvas)}
+.ay-stage.ay-follow{margin-top:1rem}
+.ev-duo{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.ev-duo .award-year{margin:0}
+.ev-duo .ay-head{display:block}
+.ev-duo .ay-num{display:block;margin-bottom:.45rem}
+.ev-duo .ay-meta{width:100%}
+.ev-duo .ay-meta h3{font-size:clamp(1.25rem,1.8vw,1.5rem)}
+.ev-duo .ay-src{display:inline-block;margin:.75rem 0 0;white-space:normal;line-height:1.5}
+.ev-duo .ay-trophy{max-width:none}
+@media (max-width:900px){.ev-duo{grid-template-columns:1fr}}
 .ay-trophy{margin:1rem auto 0;max-width:600px;border:1px solid var(--hairline);background:var(--canvas)}
 .ay-stage img,.ay-trophy img{display:block;width:100%;height:auto}
 .ay-stage figcaption,.ay-trophy figcaption{padding:.75rem 1rem;font-size:.82rem;color:var(--muted);line-height:1.5;border-top:1px solid var(--hairline)}
@@ -393,7 +403,7 @@ main,.site-footer,.site-header{position:relative;z-index:1}
   .hero-editorial{min-height:0;padding-block:0 2rem;justify-content:flex-start}
   .hero-bleed{position:relative;width:100%;height:min(112vw,500px);margin-bottom:0;background-position:center 18%}
   .hero-bleed::after{background:linear-gradient(0deg,#0D111A 4%,rgba(13,17,26,.6) 22%,rgba(13,17,26,.12) 46%,rgba(13,17,26,0) 64%)}
-  .hero-left{max-width:100%;gap:1.15rem;margin-top:-4rem}
+  .hero-left{max-width:100%;gap:1.15rem;margin-top:-5.6rem}
   .he-name{font-size:clamp(2.4rem,11vw,3.3rem)}
   .hero-logo{order:1}
   .he-eyebrow{order:2}

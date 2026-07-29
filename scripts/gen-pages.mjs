@@ -266,12 +266,12 @@ ${faqBlock(FAQS.slice(0, 5), 'Common questions about Ambreen.')}`;
   const schema = { '@context': 'https://schema.org', '@graph': [
     ...graphBase(),
     webpageNode({ path: '/awards', title, breadcrumb: [{ name: 'Home', path: '/' }, { name: 'Awards & Recognition', path: '/awards' }] }),
-    ...AWARDS.filter(a => a.img).map(a => ({
+    ...AWARDS.filter(a => a.imgA || a.img).map(a => ({
       '@type': 'ImageObject',
-      contentUrl: SITE.origin + a.img,
+      contentUrl: SITE.origin + (a.imgA || a.img),
       caption: a.caption,
       creditText: a.presenter,
-      width: a.w, height: a.h
+      width: a.imgA ? a.wA : a.w, height: a.imgA ? a.hA : a.h
     }))
   ]};
   const awardRow = (a) => `      <article class="award-year reveal" id="${a.id}">
@@ -285,7 +285,7 @@ ${faqBlock(FAQS.slice(0, 5), 'Common questions about Ambreen.')}`;
           <a class="ay-src" href="${a.source.href}" rel="noopener${a.source.href.startsWith('http') ? ' nofollow' : ''}">${esc(a.source.label)}${a.source.href.startsWith('http') ? ' <span class="ext" aria-hidden="true">&#8599;</span>' : ''}</a>
         </header>
         ${a.img2 ? `<figure class="ay-stage"><img src="${a.img2}" width="${a.w2}" height="${a.h2}" loading="lazy" alt="${esc(a.alt2)}"><figcaption>${esc(a.caption2)}</figcaption></figure>` : ''}
-        ${a.img ? `<figure class="ay-trophy"><img src="${a.img}" width="${a.w}" height="${a.h}" loading="lazy" alt="${esc(a.alt)}"><figcaption>${esc(a.caption)}</figcaption></figure>` : `<p class="ev-pending">${esc(a.caption)}</p>`}
+        ${a.imgA ? `<figure class="ay-stage ay-follow"><img src="${a.imgA}" width="${a.wA}" height="${a.hA}" loading="lazy" alt="${esc(a.alt)}"><figcaption>${esc(a.caption)}</figcaption></figure>` : a.img ? `<figure class="ay-trophy"><img src="${a.img}" width="${a.w}" height="${a.h}" loading="lazy" alt="${esc(a.alt)}"><figcaption>${esc(a.caption)}</figcaption></figure>` : `<p class="ev-pending">${esc(a.caption)}</p>`}
       </article>`;
   const body = `
 ${pageHeader('Awards & Recognition', 'Platinum Agency for Meraas, Nakheel &amp; Dubai Holding for 4 Consecutive Years.', 'Platinum Agency 2022, 2023, 2024 and 2025 — each year shown with its ceremony picture and award picture. Amber Homes Real Estate is the only company recognised as Platinum Agency for 4 Consecutive Years.')}
@@ -303,21 +303,13 @@ ${platinum.map(awardRow).join('\n')}
       <div class="reveal">
         ${rail('02', 'Additional company recognition')}
       </div>
-      <div class="evidence-list">
+      <div class="evidence-list ev-duo">
 ${additional.map(awardRow).join('\n')}
       </div>
 
       <hr class="sep">
-      <div class="reveal">
-        ${rail('03', 'The record, photographed')}
-        <p class="lede">Ceremony moments from the Black Onyx Awards &mdash; the developers&rsquo; own stage, not a studio.</p>
-        <figure class="ay-stage" style="margin-top:1.8rem"><img src="/assets/img/awards/amber-homes-team-black-onyx-top-platinum-2025.webp" width="1206" height="766" loading="lazy" alt="The Amber Homes Real Estate team, led by Ambreen Qureshi and Saad Waqas, on stage — Platinum Agency 2025 — Meraas - Nakheel & Dubai Holding"><figcaption>Platinum Agency 2025 &mdash; Meraas - Nakheel &amp; Dubai Holding.</figcaption></figure>
-        <figure class="ay-trophy"><img src="/assets/img/ambreen-qureshi-founder-managing-director.webp" width="1080" height="1080" loading="lazy" alt="Founder and Managing Director Ambreen Qureshi with the award at the ceremony in Dubai"><figcaption>Founder &amp; Managing Director Ambreen Qureshi with the award.</figcaption></figure>
-      </div>
-
-      <hr class="sep">
       <div class="reveal" id="rakbank">
-        ${rail('04', 'RAKBANK entrepreneurship feature')}
+        ${rail('03', 'RAKBANK entrepreneurship feature')}
         <div class="prose">
           <p>Alongside the company&rsquo;s developer recognitions, Ambreen Qureshi was featured by <strong>RAKBANK</strong> through its <strong>&ldquo;She Means Business&rdquo;</strong> campaign, highlighting female entrepreneurship in the UAE. The official feature, published on <strong>RAKBANK</strong>&rsquo;s Instagram in July 2026, introduces her as &ldquo;Meet Ambreen, Founder of Amber Homes Real Estate&rdquo;. <a href="https://www.instagram.com/reel/Da5C9TzsWJJ/" rel="noopener nofollow">Watch the official reel <span class="ext" aria-hidden="true">&#8599;</span></a> &middot; <a href="/media#rakbank">Media page entry</a>.</p>
         </div>
@@ -325,7 +317,7 @@ ${additional.map(awardRow).join('\n')}
 
       <hr class="sep">
       <div class="reveal">
-        ${rail('05', 'The record & methodology')}
+        ${rail('04', 'The record & methodology')}
         <div class="prose">
           <p>The four Platinum years are presented in the company&rsquo;s canonical form &mdash; <strong style="color:var(--text)">Platinum Agency 2022, 2023, 2024 and 2025 &mdash; Meraas - Nakheel &amp; Dubai Holding</strong> &mdash; with the ceremony picture and the award picture published for every year. Amber Homes Real Estate is the only company recognised as Platinum Agency for 4 Consecutive Years.</p>
           <p>Corrections: if any wording here differs from the underlying certificate, write to <a href="mailto:${SITE.email}">${SITE.email}</a> and it will be corrected. Full source register: <a href="/evidence">Facts &amp; Sources</a>.</p>
@@ -605,7 +597,7 @@ Sitemap: ${SITE.origin}/sitemap.xml
 const SITEMAP_IMAGES = {
   '/': ['/assets/img/ambreen-qureshi.jpg', '/assets/img/ambreen-qureshi-founder-managing-director.webp', '/assets/img/awards/amber-homes-platinum-2025-ceremony.webp', '/assets/img/awards/amber-homes-platinum-2024-ceremony.webp', '/assets/img/awards/amber-homes-platinum-2023-ceremony.webp', '/assets/img/awards/amber-homes-platinum-2022-ceremony.webp'],
   '/about': ['/assets/img/ambreen-qureshi.jpg', '/assets/img/ambreen-qureshi-managing-director-portrait.webp'],
-  '/awards': ['/assets/img/awards/amber-homes-platinum-award-2025.webp', '/assets/img/awards/amber-homes-platinum-award-2024.webp', '/assets/img/awards/amber-homes-platinum-award-2023.webp', '/assets/img/awards/amber-homes-platinum-award-2022.webp', '/assets/img/awards/amber-homes-team-black-onyx-top-platinum-2025.webp', '/assets/img/awards/amber-homes-binghatti-broker-award-2026.webp', '/assets/img/awards/amber-homes-nshama-town-square-2020.webp']
+  '/awards': ['/assets/img/awards/amber-homes-platinum-trophy-2025-wide.webp', '/assets/img/awards/amber-homes-platinum-trophy-2024-wide.webp', '/assets/img/awards/amber-homes-platinum-trophy-2023-wide.webp', '/assets/img/awards/amber-homes-platinum-trophy-2022-wide.webp', '/assets/img/awards/amber-homes-binghatti-broker-award-2026.webp', '/assets/img/awards/amber-homes-nshama-town-square-2020.webp']
 };
 writeFileSync(join(OUT, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
