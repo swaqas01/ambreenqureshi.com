@@ -56,7 +56,6 @@ export function head({ title, desc, path, ogType = 'website', ogImage = '/assets
 <link rel="icon" type="image/png" sizes="256x256" href="/assets/img/favicon-256.png">
 <link rel="icon" type="image/png" sizes="64x64" href="/assets/img/favicon-64.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon-180.png">
-<link rel="alternate" type="application/rss+xml" title="Ambreen Qureshi — Insights" href="${SITE.origin}/feed.xml">
 <link rel="stylesheet" href="/assets/css/main.css">${ga}
 <script type="application/ld+json">
 ${JSON.stringify(schema, null, 1)}
@@ -157,7 +156,7 @@ export function faqNode(faqs, path = '/') {
 
 /* ---------- header / footer ---------- */
 export function header(activePath = '') {
-  const links = NAV.map(n => `      <a href="${n.href}"${activePath === n.href ? ' aria-current="page"' : ''}>${n.label}</a>`).join('\n');
+  const links = NAV.map(n => `      <a href="${n.href}"${n.href.startsWith('http') ? ' rel="noopener"' : (activePath === n.href ? ' aria-current="page"' : '')}>${n.label}</a>`).join('\n');
   return `<header class="site-header">
   <div class="container">
     <a class="brandmark" href="/" aria-label="Ambreen Qureshi — home">
@@ -174,7 +173,7 @@ ${links}
 <div class="overlay" id="site-menu" aria-hidden="true">
   <button class="overlay-close" aria-label="Close menu">&#10005;</button>
   <nav aria-label="Menu">
-${OVERLAY_NAV.map(n => `    <a href="${n.href}">${n.label}</a>`).join('\n')}
+${OVERLAY_NAV.map(n => `    <a href="${n.href}"${n.href.startsWith('http') ? ' rel="noopener"' : ''}>${n.label}</a>`).join('\n')}
   </nav>
   <div class="overlay-meta">Ambreen Qureshi &middot; Dubai &middot; United Arab Emirates</div>
 </div>
@@ -202,7 +201,7 @@ export function footer() {
         <a href="/leadership">Leadership</a>
         <a href="/awards">Awards &amp; Recognition</a>
         <a href="/media">Media</a>
-        <a href="/insights">Insights</a>
+        <a href="https://www.amberhomes.ae/" rel="noopener">Amber Homes<span class="ext" aria-hidden="true"> &#8599;</span></a>
         <a href="/evidence">Facts &amp; Sources</a>
       </div>
       <div class="footer-col">

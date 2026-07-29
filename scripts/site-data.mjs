@@ -31,8 +31,7 @@ export const NAV = [
   { href: '/leadership', label: 'Leadership' },
   { href: '/awards', label: 'Awards' },
   { href: '/media', label: 'Media' },
-  { href: '/insights', label: 'Insights' },
-  { href: '/amber-homes', label: 'Amber Homes' }
+  { href: 'https://www.amberhomes.ae/', label: 'Amber Homes' }
 ];
 export const NAV_CTA = { href: '/contact', label: 'Private Conversation' };
 
@@ -42,8 +41,7 @@ export const OVERLAY_NAV = [
   { href: '/leadership', label: 'Leadership' },
   { href: '/awards', label: 'Awards & Recognition' },
   { href: '/media', label: 'Media' },
-  { href: '/insights', label: 'Insights' },
-  { href: '/amber-homes', label: 'Amber Homes' },
+  { href: 'https://www.amberhomes.ae/', label: 'Amber Homes' },
   { href: '/evidence', label: 'Facts & Sources' },
   { href: '/contact', label: 'Private Conversation' }
 ];

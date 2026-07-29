@@ -83,12 +83,31 @@ ${HOME.stats.map(s => `        <div class="metric"><div class="num">${esc(s.num)
     </div>
   </section>
 
-  <!-- 02 Leadership approach -->
+  <!-- 02 Company Recognition -->
   <section class="section section-panel">
+    <div class="container reveal">
+      ${rail('02', 'Company Recognition')}
+      <h2 class="section-title section-title-wide">Platinum Agency Recognition for Four Consecutive Years.</h2>
+      <p class="lede lede-wide">Amber Homes Real Estate received consecutive Platinum Agency recognition from <strong>Meraas</strong>, <strong>Nakheel</strong> and <strong>Dubai Holding</strong>, reflecting the company&rsquo;s consistent sales performance and long-standing relationships with Dubai&rsquo;s leading master developers. The record &mdash; Platinum Agency for <strong>Meraas</strong>, <strong>Nakheel</strong> &amp; <strong>Dubai Holding</strong> for 4 Consecutive Years (2022&ndash;2025) &mdash; is shown below year by year, and Amber Homes Real Estate is the only company recognised as Platinum Agency for 4 Consecutive Years.</p>
+      <div class="award-grid">
+${AWARDS.filter(a => a.group === 'platinum').map(a => `        <a class="award-card" href="/awards#${a.id}">
+          <div class="img-wrap"><img src="${a.img}" width="${a.w}" height="${a.h}" loading="lazy" alt="${esc(a.alt)}"></div>
+          <div class="aw-body"><span class="aw-year aw-uniform">${esc(a.title)}</span><span class="aw-title">${esc(a.presenter)}</span></div>
+        </a>`).join('\n')}
+      </div>
+      <div class="gallery" style="margin-top:2.2rem">
+${AWARDS.filter(a => a.group === 'platinum').map(a => `        <figure class="gfig"><a href="/awards#${a.id}"><img src="${a.img2}" width="${a.w2}" height="${a.h2}" loading="lazy" alt="${esc(a.alt2)}"></a><figcaption>${esc(a.title)} &mdash; Meraas - Nakheel &amp; Dubai Holding &mdash; the Amber Homes team on stage.</figcaption></figure>`).join('\n')}
+      </div>
+      <div class="actions" style="margin-top:1.4rem"><a class="link-arrow" href="/awards">View Company Milestones &rarr;</a></div>
+    </div>
+  </section>
+
+  <!-- 03 Leadership approach -->
+  <section class="section">
     <div class="container reveal">
       <div class="head-split">
         <div>
-          ${rail('02', 'Leadership approach')}
+          ${rail('03', 'Leadership approach')}
           <h2 class="section-title">${esc(HOME.pillars.heading)}</h2>
         </div>
         <p class="head-note">${esc(HOME.pillars.note)}</p>
@@ -104,33 +123,14 @@ ${HOME.pillars.items.map((p, i) => `        <a class="path" href="/leadership">
     </div>
   </section>
 
-  <!-- 03 Growth record -->
-  <section class="section">
+  <!-- 04 Growth record -->
+  <section class="section section-panel">
     <div class="container reveal">
-      ${rail('03', 'Amber Homes growth record')}
+      ${rail('04', 'Amber Homes growth record')}
       <h2 class="section-title section-title-wide">${esc(HOME.timeline.heading)}</h2>
       <ol class="timeline">
 ${HOME.timeline.items.map(t => `        <li><span class="yr">${t.year}</span><span class="tx">${bb(t.text)}</span></li>`).join('\n')}
       </ol>
-    </div>
-  </section>
-
-  <!-- 04 Awards -->
-  <section class="section section-panel">
-    <div class="container reveal">
-      ${rail('04', 'Company Recognition')}
-      <h2 class="section-title section-title-wide">Platinum Agency Recognition for Four Consecutive Years.</h2>
-      <p class="lede lede-wide">Amber Homes Real Estate received consecutive Platinum Agency recognition from <strong>Meraas</strong>, <strong>Nakheel</strong> and <strong>Dubai Holding</strong>, reflecting the company&rsquo;s consistent sales performance and long-standing relationships with Dubai&rsquo;s leading master developers. The record &mdash; Platinum Agency for <strong>Meraas</strong>, <strong>Nakheel</strong> &amp; <strong>Dubai Holding</strong> for 4 Consecutive Years (2022&ndash;2025) &mdash; is shown below year by year, and Amber Homes Real Estate is the only company recognised as Platinum Agency for 4 Consecutive Years.</p>
-      <div class="award-grid">
-${AWARDS.filter(a => a.group === 'platinum').map(a => `        <a class="award-card" href="/awards#${a.id}">
-          <div class="img-wrap"><img src="${a.img}" width="${a.w}" height="${a.h}" loading="lazy" alt="${esc(a.alt)}"></div>
-          <div class="aw-body"><span class="aw-year aw-uniform">${esc(a.title)}</span><span class="aw-title">${esc(a.presenter)}</span></div>
-        </a>`).join('\n')}
-      </div>
-      <div class="gallery" style="margin-top:2.2rem">
-${AWARDS.filter(a => a.group === 'platinum').map(a => `        <figure class="gfig"><a href="/awards#${a.id}"><img src="${a.img2}" width="${a.w2}" height="${a.h2}" loading="lazy" alt="${esc(a.alt2)}"></a><figcaption>${esc(a.title)} &mdash; Meraas - Nakheel &amp; Dubai Holding &mdash; the Amber Homes team on stage.</figcaption></figure>`).join('\n')}
-      </div>
-      <div class="actions" style="margin-top:1.4rem"><a class="link-arrow" href="/awards">View Company Milestones &rarr;</a></div>
     </div>
   </section>
 
@@ -152,37 +152,10 @@ ${HOME.rakbank.paras.map(p => `          <p class="lede" style="font-size:1.05re
     </div>
   </section>
 
-  <!-- 06 Amber Homes -->
+  <!-- 06 Media -->
   <section class="section section-panel">
     <div class="container reveal">
-      ${rail('06', 'Amber Homes')}
-      <div class="amber-duo">
-        <div class="amber-copy">
-          <h2 class="section-title">${esc(HOME.amber.heading)}</h2>
-${HOME.amber.paras.map(p => `          <p class="lede" style="font-size:1.05rem">${bb(p)}</p>`).join('\n')}
-          <div class="actions">
-            <a class="btn" href="https://www.amberhomes.ae/" rel="noopener">Explore Amber Homes <span class="ext" aria-hidden="true">&#8599;</span></a>
-            <a class="link-arrow" href="/awards">View Company Milestones &rarr;</a>
-          </div>
-        </div>
-        <aside class="facts-panel" aria-label="Amber Homes Real Estate key facts">
-          <div class="fp-mark"><img src="/assets/img/logos/amber-homes-gold.png" alt="Amber Homes Real Estate" width="76" height="76" loading="lazy"></div>
-          <dl>
-            <div><dt>Founded</dt><dd>2017 &middot; Dubai</dd></div>
-            <div><dt>Licence</dt><dd>RERA ORN ${SITE.orn}</dd></div>
-            <div><dt>Cumulative sales</dt><dd>USD 1.5 Billion</dd></div>
-            <div><dt>Recognition</dt><dd>Platinum Agency &middot; 4 Consecutive Years</dd></div>
-            <div><dt>Group</dt><dd>Interiors 2019 &middot; Holiday Homes 2021</dd></div>
-          </dl>
-        </aside>
-      </div>
-    </div>
-  </section>
-
-  <!-- 07 Media -->
-  <section class="section">
-    <div class="container reveal">
-      ${rail('07', 'Media')}
+      ${rail('06', 'Media')}
       <h2 class="section-title">Leadership and company recognition in the public record.</h2>
       <div class="press-list">
 ${MEDIA.slice(1, 4).map(m => `        <a class="press-row" href="${m.href}" rel="noopener nofollow">
@@ -195,26 +168,7 @@ ${MEDIA.slice(1, 4).map(m => `        <a class="press-row" href="${m.href}" rel=
     </div>
   </section>
 
-  <!-- 08 Insights -->
-  <section class="section section-panel">
-    <div class="container reveal">
-      ${rail('08', 'Insights')}
-      <div class="head-split">
-        <h2 class="section-title">Leadership, service and the business of real estate.</h2>
-        <p class="head-note">Leadership notes from Ambreen Qureshi and the Amber Homes operating team.</p>
-      </div>
-      <div class="agrid">
-${ARTICLES.map(a => `        <a class="acard" href="/insights/${a.slug}">
-          <span class="acard-tag">${esc(a.tag)}</span>
-          <h3>${esc(a.title)}</h3>
-          <p>${esc(a.desc.split('. ')[0])}.</p>
-          <span class="acard-meta">${a.dateLabel} &middot; ${a.read} min read</span>
-        </a>`).join('\n')}
-      </div>
-    </div>
-  </section>
-
-  <!-- 09 CTA -->
+  <!-- CTA -->
   <section class="section">
     <div class="container reveal cta-band">
       <h2>${esc(HOME.cta.heading)}</h2>
@@ -226,7 +180,7 @@ ${ARTICLES.map(a => `        <a class="acard" href="/insights/${a.slug}">
     </div>
   </section>
 
-${faqBlock(FAQS, 'Ambreen Qureshi, in plain answers.', '10', 'FAQ')}`;
+${faqBlock(FAQS, 'Ambreen Qureshi, in plain answers.', '07', 'FAQ')}`;
 
   write('/', head({ title: HOME.metaTitle, desc: HOME.metaDesc, path: '/', ogType: 'profile', schema, preloadImage: '/assets/img/ambreen-qureshi-founder-managing-director.webp', ogImage: '/assets/img/ambreen-qureshi.jpg', ogImageW: 1080, ogImageH: 1080, ogImageAlt: 'Ambreen Qureshi — Founder & Managing Director of Amber Homes Real Estate, Dubai' }) + header('/') + body + footer(), { priority: '1.0' });
 }
@@ -504,136 +458,6 @@ ${ctaInline('Media or interview enquiry? Ambreen’s team responds in confidence
   write('/media', head({ title, desc, path: '/media', schema }) + header('/media') + body + footer(), { priority: '0.8' });
 }
 
-/* ============================================================ INSIGHTS HUB */
-{
-  const title = 'Insights | Ambreen Qureshi — Leadership Notes on Dubai Real Estate';
-  const desc = 'Leadership notes from Ambreen Qureshi and the Amber Homes operating team: brokerage operations, client experience in off-plan transactions, documentation, team culture and female entrepreneurship in the UAE.';
-  const schema = { '@context': 'https://schema.org', '@graph': [
-    ...graphBase(),
-    webpageNode({ path: '/insights', title, type: 'CollectionPage', breadcrumb: [{ name: 'Home', path: '/' }, { name: 'Insights', path: '/insights' }] })
-  ]};
-  const body = `
-${pageHeader('Insights', 'Leadership, service and the business of real estate.', 'Leadership notes from Ambreen Qureshi and the Amber Homes operating team — on how brokerages actually run: operations, client experience, documentation, team culture and the realities of building a company in Dubai.')}
-  <section class="section">
-    <div class="container">
-      <div class="agrid reveal">
-${ARTICLES.map(a => `        <a class="acard" href="/insights/${a.slug}">
-          <span class="acard-tag">${esc(a.tag)}</span>
-          <h2 style="font-size:1.55rem">${esc(a.title)}</h2>
-          <p>${esc(a.desc)}</p>
-          <span class="acard-meta">${a.dateLabel} &middot; ${a.read} min read</span>
-        </a>`).join('\n')}
-      </div>
-      <p class="data-note reveal" style="margin-top:2.4rem">Editorial format: these are leadership notes prepared with the Amber Homes operating team, grounded in the company&rsquo;s verified record. First-person accounts are published only from Ambreen&rsquo;s own approved material. Subscribe by RSS: <a href="/feed.xml">/feed.xml</a>.</p>
-${ctaInline('A topic you would like covered — or a speaking enquiry?')}
-    </div>
-  </section>`;
-  write('/insights', head({ title, desc, path: '/insights', schema }) + header('/insights') + body + footer(), { priority: '0.8' });
-}
-
-/* ============================================================ ARTICLES */
-for (const [i, a] of ARTICLES.entries()) {
-  const path = `/insights/${a.slug}`;
-  const title = a.title.length > 55 ? a.title : `${a.title} | Ambreen Qureshi`;
-  const schema = { '@context': 'https://schema.org', '@graph': [
-    ...graphBase(),
-    webpageNode({ path, title: a.title, breadcrumb: [{ name: 'Home', path: '/' }, { name: 'Insights', path: '/insights' }, { name: a.title, path }] }),
-    {
-      '@type': 'Article',
-      '@id': SITE.origin + path + '#article',
-      headline: a.title,
-      description: a.desc,
-      datePublished: a.date,
-      dateModified: a.date,
-      inLanguage: 'en',
-      image: SITE.origin + '/assets/og/og-default.png',
-      author: { '@type': 'Organization', name: 'Amber Homes Real Estate — Editorial', url: 'https://www.amberhomes.ae/' },
-      contributor: { '@id': SITE.personId },
-      publisher: { '@type': 'Organization', name: 'Ambreen Qureshi', url: SITE.origin + '/', logo: { '@type': 'ImageObject', url: SITE.origin + '/assets/img/favicon-256.png' } },
-      mainEntityOfPage: SITE.origin + path,
-      about: { '@id': SITE.personId }
-    }
-  ]};
-  const next = ARTICLES[(i + 1) % ARTICLES.length];
-  const body = `
-  <section class="page-header">
-    <div class="container">
-      <div class="article-col">
-        <p class="crumb"><a href="/">Home</a> &nbsp;/&nbsp; <a href="/insights">Insights</a> &nbsp;/&nbsp; ${esc(a.tag)}</p>
-        <h1 style="max-width:26ch">${esc(a.title)}</h1>
-        <p class="article-meta">Leadership notes from Ambreen Qureshi and the Amber Homes operating team &middot; ${a.dateLabel} &middot; ${a.read} min read</p>
-      </div>
-    </div>
-  </section>
-  <section class="section">
-    <div class="container">
-      <div class="article-col">
-      <div class="prose article-body">
-        <p class="answer-first"><strong>In brief:</strong> ${esc(a.intro)}</p>
-${a.sections.map(s => `        <h2>${esc(s.h2)}</h2>\n${s.paras.map(p => `        <p>${esc(p)}</p>`).join('\n')}`).join('\n')}
-        <blockquote>Service standards are the least visible investment a brokerage can make, and the only one that compounds.</blockquote>
-      </div>
-      <div class="author-box reveal">
-        <img src="/assets/img/ambreen-qureshi-dubai.webp" width="72" height="72" loading="lazy" alt="Ambreen Qureshi">
-        <div>
-          <p class="ab-name">Ambreen Qureshi</p>
-          <p class="ab-role">Founder &amp; Managing Director, Amber Homes Real Estate (est. 2017, RERA ORN ${SITE.orn}). Leading in Dubai real estate since 2011.</p>
-          <p class="ab-links"><a href="/about">Full profile &rarr;</a></p>
-        </div>
-      </div>
-      <div class="actions"><a class="link-arrow" href="/insights/${next.slug}">Next: ${esc(next.title)} &rarr;</a></div>
-${ctaInline('Discuss this topic with Ambreen’s team — client care, operations or partnership.')}
-      </div>
-    </div>
-  </section>`;
-  write(path, head({ title, desc: a.desc, path, ogType: 'article', schema, articleDates: { published: a.date, modified: a.date } }) + header('/insights') + body + footer(), { priority: '0.7' });
-}
-
-/* ============================================================ AMBER HOMES */
-{
-  const title = 'Amber Homes Real Estate — The Company Ambreen Qureshi Built';
-  const desc = 'Amber Homes Real Estate: a RERA-licensed Dubai brokerage (ORN 18690) founded in 2017, more than USD 1.5 billion in cumulative company sales, and the record: Platinum Agency for Meraas, Nakheel & Dubai Holding for 4 Consecutive Years. Sister companies: Amber Homes Interiors and Amber Holiday Homes.';
-  const schema = { '@context': 'https://schema.org', '@graph': [
-    ...graphBase(),
-    webpageNode({ path: '/amber-homes', title, breadcrumb: [{ name: 'Home', path: '/' }, { name: 'Amber Homes', path: '/amber-homes' }] })
-  ]};
-  const body = `
-${pageHeader('Amber Homes', 'The company she built and continues to lead.', 'Amber Homes Real Estate is a RERA-licensed Dubai brokerage founded in 2017 — named “Amber”, from Ambreen — operating across off-plan, ready and luxury property.')}
-  <section class="section">
-    <div class="container">
-      <div class="grid2" style="align-items:start">
-        <div class="prose reveal">
-          <p>As Founder and Managing Director, Ambreen oversees the operational structure supporting the company&rsquo;s advisors, clients and transactions &mdash; alongside Founder and Managing Partner <a href="https://saadwaqas.com/" rel="noopener">Saad Waqas</a>, who leads the company&rsquo;s investment advisory and market strategy.</p>
-          <p>Amber Homes operates under RERA ORN ${SITE.orn} from Burj Al Salam Tower on Sheikh Zayed Road, with more than USD&nbsp;1.5 billion in cumulative company sales. Its record &mdash; Platinum Agency for <strong>Meraas</strong>, <strong>Nakheel</strong> &amp; <strong>Dubai Holding</strong> for 4 Consecutive Years (2022&ndash;2025) &mdash; reflects the consistency of the wider team and the operating standards Ambreen has built into it: training, documentation, defined processes and accountable transaction management.</p>
-          <h2>The wider group</h2>
-          <p><strong>Amber Homes Interiors</strong> (${FACTS.interiorsYear}) extends the company into design and fit-out, and <strong>Amber Holiday Homes</strong> (${FACTS.holidayHomesYear}) &mdash; particularly Ambreen&rsquo;s brainchild &mdash; operates short-stay residences in Dubai. Each business runs on the same operating discipline as the brokerage: defined processes, measured service and named ownership of every open item.</p>
-          <p class="note">This page is a summary. Property enquiries, listings and company detail live on the corporate site.</p>
-          <div class="actions">
-            <a class="btn" href="https://www.amberhomes.ae/" rel="noopener">Visit Amber Homes <span class="ext" aria-hidden="true">&#8599;</span></a>
-            <a class="btn-ghost" href="/awards">Explore Company Awards</a>
-          </div>
-        </div>
-        <div class="reveal">
-          <table class="facts-table" aria-label="Amber Homes Real Estate — key facts">
-            <tr><th scope="row">Company</th><td>Amber Homes Real Estate</td></tr>
-            <tr><th scope="row">Founded</th><td>2017, Dubai</td></tr>
-            <tr><th scope="row">Licence</th><td>RERA ORN ${SITE.orn}</td></tr>
-            <tr><th scope="row">Office</th><td>${esc(SITE.address)}</td></tr>
-            <tr><th scope="row">Segments</th><td>Off-plan &middot; ready &middot; luxury residential</td></tr>
-            <tr><th scope="row">Cumulative sales</th><td>USD 1.5 Billion+</td></tr>
-            <tr><th scope="row">Recognition</th><td>Platinum Agency for Meraas, Nakheel &amp; Dubai Holding for 4 Consecutive Years (2022&ndash;2025); Nshama 2020; Binghatti 2026</td></tr>
-            <tr><th scope="row">Leadership</th><td>Ambreen Qureshi &middot; Founder &amp; Managing Director<br>Saad Waqas &middot; Founder &amp; Managing Partner</td></tr>
-            <tr><th scope="row">Sister companies</th><td>Amber Homes Interiors (2019) &middot; Amber Holiday Homes (2021)</td></tr>
-          </table>
-          <figure class="evfig"><img src="/assets/img/awards/amber-homes-black-onyx-platinum-2025.webp" width="1122" height="1402" loading="lazy" alt="Platinum Agency 2025 award received by Amber Homes Real Estate — Meraas - Nakheel & Dubai Holding"><figcaption>Platinum Agency 2025 &mdash; Meraas - Nakheel &amp; Dubai Holding. <a href="/awards">Full record &rarr;</a></figcaption></figure>
-        </div>
-      </div>
-${ctaInline('Speak to the team behind the record.')}
-    </div>
-  </section>`;
-  write('/amber-homes', head({ title, desc, path: '/amber-homes', schema }) + header('/amber-homes') + body + footer(), { priority: '0.8' });
-}
-
 /* ============================================================ EVIDENCE */
 {
   const title = 'Facts & Sources — The Record Behind This Site | Ambreen Qureshi';
@@ -843,8 +667,7 @@ Sitemap: ${SITE.origin}/sitemap.xml
 const SITEMAP_IMAGES = {
   '/': ['/assets/img/ambreen-qureshi.jpg', '/assets/img/ambreen-qureshi-founder-managing-director.webp', '/assets/img/awards/amber-homes-platinum-2025-ceremony.webp', '/assets/img/awards/amber-homes-platinum-2024-ceremony.webp', '/assets/img/awards/amber-homes-platinum-2023-ceremony.webp', '/assets/img/awards/amber-homes-platinum-2022-ceremony.webp'],
   '/about': ['/assets/img/ambreen-qureshi.jpg', '/assets/img/ambreen-qureshi-managing-director-portrait.webp'],
-  '/awards': ['/assets/img/awards/amber-homes-black-onyx-platinum-2025.webp', '/assets/img/awards/amber-homes-black-onyx-platinum-2024.webp', '/assets/img/awards/amber-homes-black-onyx-platinum-2023.webp', '/assets/img/awards/amber-homes-team-black-onyx-top-platinum-2025.webp', '/assets/img/awards/amber-homes-binghatti-broker-award-2026.webp', '/assets/img/awards/amber-homes-dubai-holding-platinum-agents-2021.webp', '/assets/img/awards/amber-homes-nshama-town-square-2020.webp'],
-  '/amber-homes': ['/assets/img/awards/amber-homes-black-onyx-platinum-2025.webp']
+  '/awards': ['/assets/img/awards/amber-homes-black-onyx-platinum-2025.webp', '/assets/img/awards/amber-homes-black-onyx-platinum-2024.webp', '/assets/img/awards/amber-homes-black-onyx-platinum-2023.webp', '/assets/img/awards/amber-homes-team-black-onyx-top-platinum-2025.webp', '/assets/img/awards/amber-homes-binghatti-broker-award-2026.webp', '/assets/img/awards/amber-homes-dubai-holding-platinum-agents-2021.webp', '/assets/img/awards/amber-homes-nshama-town-square-2020.webp']
 };
 writeFileSync(join(OUT, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
@@ -874,9 +697,8 @@ Company sales figures are cumulative business figures from company records, not 
 - /leadership — her operating approach: documentation, training, client care, accountability
 - /awards — every recognition with year, exact wording, photograph and source
 - /media — RAKBANK "She Means Business" feature, Khaleej Times, Business Wire, video
-- /insights — leadership notes (3 foundational articles)
-- /amber-homes — the company, group and key facts
 - /evidence — Facts & Sources register, methodology, corrections route
+- Company website: https://www.amberhomes.ae/
 - /contact — contact Ambreen's team (office +971 4 368 4497 · ${SITE.email})
 
 ## Contact
@@ -926,7 +748,7 @@ USD 1.5B+ cumulative Amber Homes sales — company-records figure; Business Wire
 "Luxury real estate in Dubai is evolving at exceptional speed. Our clients rely on our insights, early-access opportunities, and developer relationships." — Ambreen Qureshi, Business Wire, 4 Dec 2025.
 
 ## Canonical pages
-${SITE.origin}/ · /about · /leadership · /awards · /media · /insights (articles: /insights/behind-a-successful-property-transaction · /insights/building-service-standards-dubai-brokerage · /insights/from-entrepreneurship-to-institution-amber-homes) · /amber-homes · /evidence · /contact
+${SITE.origin}/ · /about · /leadership · /awards · /media · /evidence · /contact — company website: https://www.amberhomes.ae/
 
 ## FAQ — canonical answers
 ${FAQS.map(f => `Q: ${f.q}\nA: ${f.a}`).join('\n\n')}
@@ -935,25 +757,5 @@ ${FAQS.map(f => `Q: ${f.q}\nA: ${f.a}`).join('\n\n')}
 Quote and cite freely with attribution. Company awards must be attributed to Amber Homes Real Estate, not to Ambreen personally. Distinguish the RAKBANK campaign feature (personal) from developer recognitions (company). For corrections: ${SITE.email}.
 `);
 
-writeFileSync(join(OUT, 'feed.xml'), `<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-<channel>
-  <title>Ambreen Qureshi — Insights</title>
-  <link>${SITE.origin}/insights</link>
-  <atom:link href="${SITE.origin}/feed.xml" rel="self" type="application/rss+xml"/>
-  <description>Leadership notes from Ambreen Qureshi and the Amber Homes operating team — operations, client experience and the business of real estate in Dubai.</description>
-  <language>en</language>
-  <lastBuildDate>Tue, 28 Jul 2026 12:00:00 +0400</lastBuildDate>
-${ARTICLES.map(a => `  <item>
-    <title>${esc(a.title)}</title>
-    <link>${SITE.origin}/insights/${a.slug}</link>
-    <guid>${SITE.origin}/insights/${a.slug}</guid>
-    <pubDate>Tue, 28 Jul 2026 09:00:00 +0400</pubDate>
-    <description>${esc(a.desc)}</description>
-  </item>`).join('\n')}
-</channel>
-</rss>
-`);
-
-console.log(`BUILD OK — ${pages.length} pages + 404 + robots.txt + sitemap.xml + llms.txt + llms-full.txt + feed.xml + IndexNow key`);
+console.log(`BUILD OK — ${pages.length} pages + 404 + robots.txt + sitemap.xml + llms.txt + llms-full.txt + IndexNow key`);
 console.log(pages.map(p => p.path).join('\n'));

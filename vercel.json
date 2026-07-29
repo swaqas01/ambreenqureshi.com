@@ -8,7 +8,11 @@
       "has": [{ "type": "host", "value": "www.ambreenqureshi.com" }],
       "destination": "https://ambreenqureshi.com/$1",
       "permanent": true
-    }
+    },
+    { "source": "/amber-homes", "destination": "https://www.amberhomes.ae/", "permanent": true },
+    { "source": "/insights", "destination": "/", "permanent": true },
+    { "source": "/insights/(.*)", "destination": "/", "permanent": true },
+    { "source": "/feed.xml", "destination": "/", "permanent": true }
   ],
   "headers": [
     {

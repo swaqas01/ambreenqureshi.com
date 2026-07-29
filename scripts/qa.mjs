@@ -66,7 +66,7 @@ for (const file of pages) {
   dupTitles.set(t, file.slice(OUT.length));
 }
 
-for (const req of ['robots.txt', 'sitemap.xml', 'llms.txt', 'llms-full.txt', 'feed.xml', '404.html']) {
+for (const req of ['robots.txt', 'sitemap.xml', 'llms.txt', 'llms-full.txt', '404.html']) {
   if (!existsSync(join(OUT, req))) fail('/', `missing ${req}`);
 }
 
