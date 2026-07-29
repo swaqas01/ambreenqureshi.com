@@ -50,7 +50,7 @@ for (const file of pages) {
   for (const m of html.matchAll(/(?:href|src)="(\/[^"#]*?)(?:#[^"]*)?"/g)) {
     const url = m[1];
     if (url.startsWith('//')) continue;
-    let p = url;
+    let p = url.split('?')[0];
     if (p.includes('.')) { if (!existsSync(join(OUT, p))) fail(rel, `asset 404: ${p}`); }
     else {
       const target = p === '/' ? join(OUT, 'index.html') : join(OUT, p, 'index.html');

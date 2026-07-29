@@ -3,6 +3,11 @@
    Static HTML output, Midnight Keynote design family.
    ============================================================ */
 import { SITE, NAV, NAV_CTA, OVERLAY_NAV, FAQS } from './site-data.mjs';
+import { readFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
+const assetVer = (rel) => { try { return createHash('md5').update(readFileSync(new URL('../site/assets/' + rel, import.meta.url))).digest('hex').slice(0, 8); } catch { return '1'; } };
+const CSS_V = assetVer('css/main.css');
+const JS_V = assetVer('js/main.js');
 
 export const esc = (s) => String(s)
   .replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;')
@@ -56,7 +61,7 @@ export function head({ title, desc, path, ogType = 'website', ogImage = '/assets
 <link rel="icon" type="image/png" sizes="256x256" href="/assets/img/favicon-256.png">
 <link rel="icon" type="image/png" sizes="64x64" href="/assets/img/favicon-64.png">
 <link rel="apple-touch-icon" href="/assets/img/favicon-180.png">
-<link rel="stylesheet" href="/assets/css/main.css">${ga}
+<link rel="stylesheet" href="/assets/css/main.css?v=${CSS_V}">${ga}
 <script type="application/ld+json">
 ${JSON.stringify(schema, null, 1)}
 </script>
@@ -220,7 +225,7 @@ export function footer() {
   </div>
 </footer>
 
-<script src="/assets/js/main.js" defer></script>
+<script src="/assets/js/main.js?v=${JS_V}" defer></script>
 </body>
 </html>
 `;
