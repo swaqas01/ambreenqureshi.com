@@ -193,7 +193,7 @@ ${faqBlock(FAQS, 'Ambreen Qureshi, in plain answers.', '07', 'FAQ')}`;
     webpageNode({ path: '/about', title, type: 'ProfilePage', breadcrumb: [{ name: 'Home', path: '/' }, { name: 'About', path: '/about' }], extra: { mainEntity: { '@id': SITE.personId }, primaryImageOfPage: { '@type': 'ImageObject', url: SITE.origin + '/assets/img/ambreen-qureshi.jpg', width: 1080, height: 1080, caption: 'Ambreen Qureshi — Founder & Managing Director, Amber Homes Real Estate' } } })
   ]};
   const body = `
-${pageHeader('About', 'The founder behind the name on the door.', 'Who is Ambreen Qureshi? The Founder and Managing Director of Amber Homes Real Estate — a RERA-licensed Dubai brokerage she has led from a 2017 foundation to the record: Platinum Agency for Meraas, Nakheel & Dubai Holding for 4 Consecutive Years.')}
+${pageHeader('About', 'The founder behind the name on the door.', 'Who is Ambreen Qureshi? The Founder and Managing Director of Amber Homes Real Estate — a RERA-licensed Dubai brokerage she has led from a 2017 foundation to the record: Platinum Agency for Meraas, Nakheel & Dubai Holding for 4 Consecutive Years.', '/assets/img/awards/amber-homes-platinum-trophy-2024-wide.webp')}
   <section class="section">
     <div class="container">
       <div class="grid2" style="align-items:start">
@@ -288,7 +288,7 @@ ${faqBlock(FAQS.slice(0, 5), 'Common questions about Ambreen.')}`;
         ${a.imgA ? `<figure class="ay-stage ay-follow"><img src="${a.imgA}" width="${a.wA}" height="${a.hA}" loading="lazy" alt="${esc(a.alt)}"><figcaption>${esc(a.caption)}</figcaption></figure>` : a.img ? `<figure class="ay-trophy"><img src="${a.img}" width="${a.w}" height="${a.h}" loading="lazy" alt="${esc(a.alt)}"><figcaption>${esc(a.caption)}</figcaption></figure>` : `<p class="ev-pending">${esc(a.caption)}</p>`}
       </article>`;
   const body = `
-${pageHeader('Awards & Recognition', 'Platinum Agency for Meraas, Nakheel &amp; Dubai Holding for 4 Consecutive Years.', 'Platinum Agency 2022, 2023, 2024 and 2025 — each year shown with its ceremony picture and award picture. Amber Homes Real Estate is the only company recognised as Platinum Agency for 4 Consecutive Years.')}
+${pageHeader('Awards & Recognition', 'Platinum Agency for Meraas, Nakheel &amp; Dubai Holding for 4 Consecutive Years.', 'Platinum Agency 2022, 2023, 2024 and 2025 — each year shown with its ceremony picture and award picture. Amber Homes Real Estate is the only company recognised as Platinum Agency for 4 Consecutive Years.', '/assets/img/awards/amber-homes-platinum-trophy-2025-wide.webp')}
   <section class="section">
     <div class="container">
       <div class="reveal">
@@ -359,7 +359,7 @@ ${faqBlock([FAQS[3], FAQS[4]], 'Recognition, clarified.')}`;
       : `        <div class="press-row" ${m.id ? `id="${m.id}" ` : ''}style="cursor:default">${inner}\n        </div>`;
   };
   const body = `
-${pageHeader('Media', 'Leadership and company recognition in the public record.', 'News, coverage and official features — every entry links to its original source.')}
+${pageHeader('Media', 'Leadership and company recognition in the public record.', 'News, coverage and official features — every entry links to its original source.', '/assets/img/awards/amber-homes-platinum-trophy-2023-wide.webp')}
   <section class="section">
     <div class="container">
       <div class="reveal">${rail('01', 'Ambreen Qureshi features')}</div>
@@ -397,7 +397,7 @@ ${ctaInline('Media or interview enquiry? Ambreen’s team responds in confidence
     webpageNode({ path: '/evidence', title, breadcrumb: [{ name: 'Home', path: '/' }, { name: 'Facts & Sources', path: '/evidence' }] })
   ]};
   const body = `
-${pageHeader('Facts & Sources', 'Every claim on this site, with its source.', 'A claim you cannot check does not belong on a personal-brand website. This register lists what this site says, where each statement comes from, and how to request a correction. Last updated ' + SITE.buildDate + '.')}
+${pageHeader('Facts & Sources', 'Every claim on this site, with its source.', 'A claim you cannot check does not belong on a personal-brand website. This register lists what this site says, where each statement comes from, and how to request a correction. Last updated ' + SITE.buildDate + '.', '/assets/img/awards/amber-homes-platinum-trophy-2022-wide.webp')}
   <section class="section">
     <div class="container">
       <div class="evidence-list">
@@ -431,7 +431,7 @@ ${ctaInline('Want a claim verified directly? Ask the team.')}
     webpageNode({ path: '/contact', title, type: 'ContactPage', breadcrumb: [{ name: 'Home', path: '/' }, { name: 'Contact', path: '/contact' }] })
   ]};
   const body = `
-${pageHeader('Contact', 'Contact Ambreen Qureshi&rsquo;s team.', 'For Amber Homes enquiries, client care, partnerships, media, speaking, leadership or business collaboration — begin with a confidential message. Enquiries are handled by Ambreen’s team at Amber Homes Real Estate.')}
+${pageHeader('Contact', 'Contact Ambreen Qureshi&rsquo;s team.', 'For Amber Homes enquiries, client care, partnerships, media, speaking, leadership or business collaboration — begin with a confidential message. Enquiries are handled by Ambreen’s team at Amber Homes Real Estate.', '/assets/img/awards/amber-homes-platinum-trophy-2022-wide.webp')}
   <section class="section">
     <div class="container">
       <div class="grid2" style="align-items:start">
@@ -482,7 +482,7 @@ ${ENQUIRY_TYPES.map(t => `              <option>${t}</option>`).join('\n')}
   const desc = 'How ambreenqureshi.com handles personal data: what the contact form collects, how it is used by Amber Homes Real Estate, retention, your rights and how to reach the team.';
   const schema = { '@context': 'https://schema.org', '@graph': [...graphBase(), webpageNode({ path: '/privacy', title, breadcrumb: [{ name: 'Home', path: '/' }, { name: 'Privacy Policy', path: '/privacy' }] })] };
   const body = `
-${pageHeader('Privacy Policy', 'Privacy, plainly stated.', 'What this website collects, why, and the choices you have. Last updated ' + SITE.buildDate + '.')}
+${pageHeader('Privacy Policy', 'Privacy, plainly stated.', 'What this website collects, why, and the choices you have. Last updated ' + SITE.buildDate + '.', '/assets/img/awards/amber-homes-platinum-trophy-2022-wide.webp')}
   <section class="section">
     <div class="container">
       <div class="prose reveal article-col">
@@ -510,7 +510,7 @@ ${pageHeader('Privacy Policy', 'Privacy, plainly stated.', 'What this website co
   const desc = 'Terms of use for ambreenqureshi.com: general-information status, no guaranteed investment advice, verification requirements for property information, and how engagements are handled through Amber Homes Real Estate.';
   const schema = { '@context': 'https://schema.org', '@graph': [...graphBase(), webpageNode({ path: '/terms', title, breadcrumb: [{ name: 'Home', path: '/' }, { name: 'Terms & Disclaimer', path: '/terms' }] })] };
   const body = `
-${pageHeader('Terms & Disclaimer', 'Terms of use, without the fog.', 'The rules that govern this website and what its content is — and is not. Last updated ' + SITE.buildDate + '.')}
+${pageHeader('Terms & Disclaimer', 'Terms of use, without the fog.', 'The rules that govern this website and what its content is — and is not. Last updated ' + SITE.buildDate + '.', '/assets/img/awards/amber-homes-platinum-trophy-2022-wide.webp')}
   <section class="section">
     <div class="container">
       <div class="prose reveal article-col">

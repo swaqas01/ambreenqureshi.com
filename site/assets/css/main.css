@@ -199,6 +199,7 @@ body.loaded .hero-editorial{opacity:1;transform:none}
    SUBPAGES
    ============================================================ */
 .page-header{padding-block:clamp(2.8rem,6vw,4.4rem) clamp(1.8rem,3.5vw,2.6rem);border-bottom:1px solid var(--hairline)}
+.page-header.ph-bg{padding-block:clamp(4rem,9vw,6.4rem) clamp(2.2rem,4.5vw,3.2rem)}
 .page-header h1{font-size:clamp(2.4rem,6vw,4.4rem);max-width:22ch}
 .crumb{font-family:var(--sans);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:1.3rem}
 .crumb a{color:var(--muted)}.crumb a:hover{color:var(--accent)}

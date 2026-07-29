@@ -232,8 +232,9 @@ export function footer() {
 /* ---------- shared components ---------- */
 export const rail = (num, label) => `<div class="rail"><b>${num}</b><span>${esc(label)}</span></div>`;
 
-export function pageHeader(crumbLabel, h1, lede) {
-  return `  <section class="page-header">
+export function pageHeader(crumbLabel, h1, lede, bg) {
+  const bgAttr = bg ? ` class="page-header ph-bg" style="background:linear-gradient(rgba(13,17,26,.55) 0%,rgba(13,17,26,.84) 78%,#0D111A 100%),url('${bg}') center 38%/cover no-repeat"` : ' class="page-header"';
+  return `  <section${bgAttr}>
     <div class="container">
       <p class="crumb"><a href="/">Home</a> &nbsp;/&nbsp; ${esc(crumbLabel)}</p>
       <h1>${h1}</h1>
