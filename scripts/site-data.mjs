@@ -68,7 +68,7 @@ export const HOME = {
   metaDesc: 'Ambreen Qureshi is the Founder and Managing Director of Amber Homes Real Estate, a RERA-licensed Dubai brokerage (est. 2017) Platinum Agency for Meraas, Nakheel & Dubai Holding for 4 Consecutive Years (2022–2025). Featured by RAKBANK in “She Means Business”.',
   hero: {
     eyebrow: 'Founder & Managing Director · Amber Homes Real Estate',
-    tagline: 'Dubai real estate leadership backed by over <strong>USD 1.5 Billion</strong> in company sales, <strong>Platinum Agency for 4 Consecutive Years</strong>, and an award-winning group built since <strong>2017</strong>.',
+    tagline: 'Building an award-recognised Dubai real estate company through disciplined operations, client care and long-term leadership.',
     recognition: 'Featured by RAKBANK in “She Means Business” · Platinum Agency for Meraas, Nakheel & Dubai Holding for 4 Consecutive Years',
     ctaPrimary: { href: '/leadership', label: 'Explore Her Leadership' },
     ctaSecondary: { href: '/contact', label: 'Contact Amber Homes' },
