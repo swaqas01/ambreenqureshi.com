@@ -24,7 +24,7 @@ export const bb = (s) => esc(s)
   .replaceAll('Dubai Holding', '<strong>Dubai Holding</strong>');
 
 /* ---------- head ---------- */
-export function head({ title, desc, path, ogType = 'website', ogImage = '/assets/og/og-default.png', ogImageW = 1200, ogImageH = 630, ogImageAlt = 'Ambreen Qureshi — Founder & Managing Director, Amber Homes Real Estate, Dubai', schema, preloadImage, articleDates }) {
+export function head({ title, desc, path, ogType = 'website', ogImage = '/assets/og/og-default.png', ogImageW = 1200, ogImageH = 630, ogImageAlt = 'Ambreen Qureshi — Founder & Managing Director, Amber Homes Real Estate, Dubai', schema, preloadImage, articleDates, noindex = false }) {
   const canonical = abs(path);
   const ga = SITE.gaId ? `
 <script async src="https://www.googletagmanager.com/gtag/js?id=${SITE.gaId}"></script>
@@ -40,7 +40,7 @@ export function head({ title, desc, path, ogType = 'website', ogImage = '/assets
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(desc)}">
 <link rel="canonical" href="${canonical}">
-<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="robots" content="${noindex ? 'noindex, follow' : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'}">
 <meta name="theme-color" content="${SITE.themeColor}">
 <meta property="og:type" content="${ogType}">
 <meta property="og:title" content="${esc(title)}">

@@ -463,6 +463,15 @@ main,.site-footer,.site-header{position:relative;z-index:1}
   .meet-intro p{font-size:.99rem;line-height:1.7}
 }
 
+/* ---- YouTube click-to-load facade ---- */
+.yt-wrap{position:relative;overflow:hidden}
+.yt-facade{position:absolute;inset:0;width:100%;height:100%;padding:0;border:0;background:#000;cursor:pointer;display:block}
+.yt-facade img{width:100%;height:100%;object-fit:cover;opacity:.85;transition:opacity .3s ease}
+.yt-facade:hover img{opacity:1}
+.yt-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:64px;height:64px;background:rgba(13,17,26,.72);border:1px solid var(--accent);display:grid;place-items:center;transition:background .25s ease}
+.yt-play::after{content:"";display:block;width:0;height:0;border-left:16px solid var(--accent);border-top:10px solid transparent;border-bottom:10px solid transparent;margin-left:4px}
+.yt-facade:hover .yt-play{background:rgba(217,155,98,.28)}
+
 /* ---- brand logo images (posted logo, white version — same treatment as saadwaqas.com) ---- */
 .brandmark img{height:36px;width:auto;display:block}
 .hero-logo{width:min(460px,82%);height:auto;margin-bottom:.2rem}

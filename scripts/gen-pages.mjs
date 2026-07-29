@@ -13,6 +13,7 @@ const OUT = join(ROOT, 'site');
 const INDEXNOW_KEY = 'a91f4c7e2b8d5a30c6f1e9b4d7a2c8e5';
 
 const wa = (text) => `https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(text)}`;
+const v = (src, w) => src.replace(/\.(webp|jpg)$/, `-${w}.$1`);
 const pages = []; // {path, priority}
 
 function write(path, html, { sitemap = true, priority = '0.7' } = {}) {
@@ -70,7 +71,7 @@ ${heroDevs}
     <div class="container reveal">
       ${rail('01', 'Meet Ambreen Qureshi')}
       <div class="meet-grid">
-        <div class="meet-portrait"><img src="/assets/img/ambreen-qureshi.jpg" width="1080" height="1080" loading="lazy" alt="Ambreen Qureshi — Founder and Managing Director of Amber Homes Real Estate, Dubai"></div>
+        <div class="meet-portrait"><img src="/assets/img/ambreen-qureshi.jpg" srcset="/assets/img/ambreen-qureshi-640.jpg 640w, /assets/img/ambreen-qureshi.jpg 1080w" sizes="(max-width:900px) 92vw, 420px" width="1080" height="1080" loading="lazy" decoding="async" alt="Ambreen Qureshi — Founder and Managing Director of Amber Homes Real Estate, Dubai"></div>
         <div class="meet-intro">
           <h2 class="section-title">${esc(HOME.meet.heading)}</h2>
 ${HOME.meet.paras.map(p => `          <p>${bb(p)}</p>`).join('\n')}
@@ -91,12 +92,12 @@ ${HOME.stats.map(s => `        <div class="metric"><div class="num">${esc(s.num)
       <p class="lede lede-wide">Amber Homes Real Estate received consecutive Platinum Agency recognition from <strong>Meraas</strong>, <strong>Nakheel</strong> and <strong>Dubai Holding</strong>, reflecting the company&rsquo;s consistent sales performance and long-standing relationships with Dubai&rsquo;s leading master developers. The record &mdash; Platinum Agency for <strong>Meraas</strong>, <strong>Nakheel</strong> &amp; <strong>Dubai Holding</strong> for 4 Consecutive Years (2022&ndash;2025) &mdash; is shown below year by year, and Amber Homes Real Estate is the only company recognised as Platinum Agency for 4 Consecutive Years.</p>
       <div class="award-grid">
 ${AWARDS.filter(a => a.group === 'platinum').map(a => `        <a class="award-card" href="/awards#${a.id}">
-          <div class="img-wrap"><img src="${a.img}" width="${a.w}" height="${a.h}" loading="lazy" alt="${esc(a.alt)}"></div>
+          <div class="img-wrap"><img src="${v(a.img,540)}" srcset="${v(a.img,540)} 540w, ${a.img} 1080w" sizes="(max-width:640px) 46vw, (max-width:1020px) 44vw, 292px" width="${a.w}" height="${a.h}" loading="lazy" decoding="async" alt="${esc(a.alt)}"></div>
           <div class="aw-body"><span class="aw-year aw-uniform">${esc(a.title)}</span><span class="aw-title">${esc(a.presenter)}</span></div>
         </a>`).join('\n')}
       </div>
       <div class="gallery" style="margin-top:2.2rem">
-${AWARDS.filter(a => a.group === 'platinum').map(a => `        <figure class="gfig"><a href="/awards#${a.id}"><img src="${a.img2}" width="${a.w2}" height="${a.h2}" loading="lazy" alt="${esc(a.alt2)}"></a><figcaption>${esc(a.title)} &mdash; Meraas - Nakheel &amp; Dubai Holding.</figcaption></figure>`).join('\n')}
+${AWARDS.filter(a => a.group === 'platinum').map(a => `        <figure class="gfig"><a href="/awards#${a.id}"><img src="${v(a.img2,720)}" srcset="${v(a.img2,720)} 720w, ${a.img2} 1366w" sizes="(max-width:900px) 92vw, 596px" width="${a.w2}" height="${a.h2}" loading="lazy" decoding="async" alt="${esc(a.alt2)}"></a><figcaption>${esc(a.title)} &mdash; Meraas - Nakheel &amp; Dubai Holding.</figcaption></figure>`).join('\n')}
       </div>
       <div class="actions" style="margin-top:1.4rem"><a class="link-arrow" href="/awards">View Company Milestones &rarr;</a></div>
     </div>
@@ -205,7 +206,7 @@ ${pageHeader('About', 'The founder behind the name on the door.', 'Who is Ambree
           <p>Her entrepreneurial journey has also been featured by <strong>RAKBANK</strong> through its &ldquo;<strong>She Means Business</strong>&rdquo; campaign for female entrepreneurs in the UAE.</p>
         </div>
         <div class="reveal">
-          <img class="portrait" src="/assets/img/ambreen-qureshi-managing-director-portrait.webp" width="1200" height="1629" alt="Ambreen Qureshi, Founder and Managing Director of Amber Homes Real Estate, Dubai" fetchpriority="high">
+          <img class="portrait" src="/assets/img/ambreen-qureshi-managing-director-portrait.webp" srcset="/assets/img/ambreen-qureshi-managing-director-portrait-640.webp 640w, /assets/img/ambreen-qureshi-managing-director-portrait.webp 1200w" sizes="(max-width:900px) 92vw, 560px" width="1200" height="1629" decoding="async" alt="Ambreen Qureshi, Founder and Managing Director of Amber Homes Real Estate, Dubai" fetchpriority="high">
           <table class="facts-table" aria-label="Verified facts about Ambreen Qureshi">
             <tr><th scope="row">Name</th><td>Ambreen Qureshi</td></tr>
             <tr><th scope="row">Role</th><td>Founder &amp; Managing Director, Amber Homes Real Estate</td></tr>
@@ -278,7 +279,7 @@ ${faqBlock(FAQS.slice(0, 5), 'Common questions about Ambreen.')}`;
   const additional = AWARDS.filter(a => a.group === 'additional');
   const schema = { '@context': 'https://schema.org', '@graph': [
     ...graphBase(),
-    webpageNode({ path: '/awards', title, breadcrumb: [{ name: 'Home', path: '/' }, { name: 'Awards & Recognition', path: '/awards' }] }),
+    webpageNode({ path: '/awards', title, type: 'CollectionPage', breadcrumb: [{ name: 'Home', path: '/' }, { name: 'Awards & Recognition', path: '/awards' }] }),
     ...AWARDS.filter(a => a.imgA || a.img).map(a => ({
       '@type': 'ImageObject',
       contentUrl: SITE.origin + (a.imgA || a.img),
@@ -297,8 +298,8 @@ ${faqBlock(FAQS.slice(0, 5), 'Common questions about Ambreen.')}`;
           </div>
           <a class="ay-src" href="${a.source.href}" rel="noopener${a.source.href.startsWith('http') ? ' nofollow' : ''}">${esc(a.source.label)}${a.source.href.startsWith('http') ? ' <span class="ext" aria-hidden="true">&#8599;</span>' : ''}</a>
         </header>
-        ${a.img2 ? `<figure class="ay-stage"><img src="${a.img2}" width="${a.w2}" height="${a.h2}" loading="lazy" alt="${esc(a.alt2)}"><figcaption>${esc(a.caption2)}</figcaption></figure>` : ''}
-        ${a.imgA ? `<figure class="ay-stage ay-follow"><img src="${a.imgA}" width="${a.wA}" height="${a.hA}" loading="lazy" alt="${esc(a.alt)}"><figcaption>${esc(a.caption)}</figcaption></figure>` : a.img ? `<figure class="ay-trophy"><img src="${a.img}" width="${a.w}" height="${a.h}" loading="lazy" alt="${esc(a.alt)}"><figcaption>${esc(a.caption)}</figcaption></figure>` : `<p class="ev-pending">${esc(a.caption)}</p>`}
+        ${a.img2 ? `<figure class="ay-stage"><img src="${a.img2}" srcset="${v(a.img2,720)} 720w, ${a.img2} 1366w" sizes="(max-width:900px) 92vw, 1104px" width="${a.w2}" height="${a.h2}" loading="lazy" decoding="async" alt="${esc(a.alt2)}"><figcaption>${esc(a.caption2)}</figcaption></figure>` : ''}
+        ${a.imgA ? `<figure class="ay-stage ay-follow"><img src="${a.imgA}" srcset="${v(a.imgA,840)} 840w, ${a.imgA} 1678w" sizes="(max-width:900px) 92vw, 1104px" width="${a.wA}" height="${a.hA}" loading="lazy" decoding="async" alt="${esc(a.alt)}"><figcaption>${esc(a.caption)}</figcaption></figure>` : a.img ? `<figure class="ay-trophy"><img src="${v(a.img,560)}" srcset="${v(a.img,560)} 560w, ${a.img} ${a.w}w" sizes="(max-width:900px) 92vw, 540px" width="${a.w}" height="${a.h}" loading="lazy" decoding="async" alt="${esc(a.alt)}"><figcaption>${esc(a.caption)}</figcaption></figure>` : `<p class="ev-pending">${esc(a.caption)}</p>`}
       </article>`;
   const body = `
 ${pageHeader('Awards & Recognition', 'Platinum Agency for Meraas, Nakheel &amp; Dubai Holding for 4 Consecutive Years.', 'Platinum Agency 2022, 2023, 2024 and 2025 — each year shown with its ceremony picture and award picture. Amber Homes Real Estate is the only company recognised as Platinum Agency for 4 Consecutive Years.', '/assets/img/awards/amber-homes-platinum-trophy-2025-wide.webp')}
@@ -359,7 +360,7 @@ ${faqBlock([FAQS[3], FAQS[4]], 'Recognition, clarified.')}`;
   const desc = 'News and coverage: the RAKBANK “She Means Business” feature, Khaleej Times and international coverage of Amber Homes’ Platinum recognition, Business Wire news, and the Black Onyx Awards video.';
   const schema = { '@context': 'https://schema.org', '@graph': [
     ...graphBase(),
-    webpageNode({ path: '/media', title, breadcrumb: [{ name: 'Home', path: '/' }, { name: 'Media', path: '/media' }] }),
+    webpageNode({ path: '/media', title, type: 'CollectionPage', breadcrumb: [{ name: 'Home', path: '/' }, { name: 'Media', path: '/media' }] }),
     {
       '@type': 'VideoObject',
       '@id': SITE.origin + '/media#black-onyx-video',
@@ -400,8 +401,11 @@ ${MEDIA.slice(1).filter(m => m.type !== 'Video').map(card).join('\n')}
           <p class="lede" style="font-size:1.02rem">Ceremony footage from the official Amber Homes Real Estate channel &mdash; the developers&rsquo; own stage, not a studio.</p>
           <div class="actions"><a class="link-arrow" href="https://www.youtube.com/watch?v=cEeE27OjNxg" rel="noopener">Watch on YouTube <span class="ext" aria-hidden="true">&#8599;</span></a></div>
         </div>
-        <div style="aspect-ratio:16/9;border:1px solid var(--hairline);background:var(--panel)">
-          <iframe src="https://www.youtube-nocookie.com/embed/cEeE27OjNxg" title="The Black Onyx Awards — Amber Homes Real Estate (YouTube video)" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen style="width:100%;height:100%;border:0"></iframe>
+        <div class="yt-wrap" style="aspect-ratio:16/9;border:1px solid var(--hairline);background:var(--panel)">
+          <button class="yt-facade" type="button" data-yt="cEeE27OjNxg" data-yt-title="The Black Onyx Awards — Amber Homes Real Estate (YouTube video)" aria-label="Play video: The Black Onyx Awards — Amber Homes Real Estate">
+            <img src="https://i.ytimg.com/vi/cEeE27OjNxg/hqdefault.jpg" alt="The Black Onyx Awards — Amber Homes Real Estate — video preview" width="480" height="360" loading="lazy" decoding="async">
+            <span class="yt-play" aria-hidden="true"></span>
+          </button>
         </div>
       </div>
       <p class="data-note reveal" style="margin-top:2.4rem">Every entry above links to its original outlet.</p>
@@ -560,7 +564,7 @@ ${pageHeader('Privacy Policy', 'Privacy, plainly stated.', 'What this website co
       </div>
     </div>
   </section>`;
-  write('/privacy', head({ title, desc, path: '/privacy', schema }) + header('') + body + footer(), { priority: '0.3' });
+  write('/privacy', head({ title, desc, path: '/privacy', schema, noindex: true }) + header('') + body + footer(), { sitemap: false });
 }
 
 /* ============================================================ TERMS */
@@ -612,7 +616,7 @@ ${pageHeader('Terms & Disclaimer', 'Terms of use, without the fog.', 'The rules 
       </div>
     </div>
   </section>`;
-  write('/terms', head({ title, desc, path: '/terms', schema }) + header('') + body + footer(), { priority: '0.3' });
+  write('/terms', head({ title, desc, path: '/terms', schema, noindex: true }) + header('') + body + footer(), { sitemap: false });
 }
 
 /* ============================================================ 404 */

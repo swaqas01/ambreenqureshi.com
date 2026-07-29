@@ -144,3 +144,17 @@
     requestAnimationFrame(loop);
   })();
 })();
+
+/* YouTube click-to-load facade */
+document.querySelectorAll('.yt-facade').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var id = btn.getAttribute('data-yt');
+    var ifr = document.createElement('iframe');
+    ifr.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1';
+    ifr.title = btn.getAttribute('data-yt-title') || 'YouTube video';
+    ifr.setAttribute('allow', 'accelerometer; autoplay; encrypted-media; picture-in-picture');
+    ifr.setAttribute('allowfullscreen', '');
+    ifr.style.cssText = 'width:100%;height:100%;border:0;position:absolute;inset:0';
+    btn.replaceWith(ifr);
+  });
+});
