@@ -124,7 +124,7 @@ body.loaded .hero-editorial{opacity:1;transform:none}
 .dev-logos{display:flex;align-items:center;gap:1.2rem;flex-wrap:wrap}
 .dev-logos .dl{display:flex;align-items:center;justify-content:center;height:20px}
 .dev-logos .dl img{height:100%;width:auto;max-width:140px;object-fit:contain;display:block}
-.dev-logos .dl-text{font-family:var(--sans);font-weight:900;font-size:1.28rem;letter-spacing:.03em;text-transform:uppercase;color:var(--text);line-height:1}
+.dev-logos .dl-text{font-family:var(--sans);font-weight:900;font-size:1.45rem;letter-spacing:.03em;text-transform:uppercase;color:var(--text);line-height:1}
 .dev-logos .divider{width:1px;height:18px;background:var(--hairline-strong)}
 .dev-note{font-family:var(--sans);font-size:.66rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:.6rem}
 
@@ -442,7 +442,7 @@ main,.site-footer,.site-header{position:relative;z-index:1}
   .dev-logos{gap:.7rem;flex-wrap:wrap}
   .dev-logos .dl{height:13px}
   .dev-logos .dl img{max-width:88px}
-  .dev-logos .dl-text{font-size:.86rem}
+  .dev-logos .dl-text{font-size:.97rem}
   .dev-logos .divider{height:11px}
   .timeline{margin-top:1.6rem}
   .timeline li{grid-template-columns:3.1rem 1fr;gap:.9rem;padding-block:.72rem;align-items:start}
