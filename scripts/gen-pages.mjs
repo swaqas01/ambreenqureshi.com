@@ -194,7 +194,7 @@ ${faqBlock(FAQS, 'Ambreen Qureshi, in plain answers.', '07', 'FAQ')}`;
     webpageNode({ path: '/about', title, type: 'ProfilePage', breadcrumb: [{ name: 'Home', path: '/' }, { name: 'About', path: '/about' }], extra: { mainEntity: { '@id': SITE.personId }, primaryImageOfPage: { '@type': 'ImageObject', url: SITE.origin + '/assets/img/ambreen-qureshi.jpg', width: 1080, height: 1080, caption: 'Ambreen Qureshi — Founder & Managing Director, Amber Homes Real Estate' } } })
   ]};
   const body = `
-${pageHeader('About', 'The founder behind the name on the door.', 'Who is Ambreen Qureshi? The Founder and Managing Director of Amber Homes Real Estate — a RERA-licensed Dubai brokerage she has led from a 2017 foundation to the record: Platinum Agency for Meraas, Nakheel & Dubai Holding for 4 Consecutive Years.', '/assets/img/awards/amber-homes-platinum-trophy-2024-wide.webp')}
+${pageHeader('About', 'Leadership that built the name on the door.', 'Who is Ambreen Qureshi? The Founder and Managing Director of Amber Homes Real Estate — a RERA-licensed Dubai brokerage she has led from a 2017 foundation to the record: Platinum Agency for Meraas, Nakheel & Dubai Holding for 4 Consecutive Years.', '/assets/img/awards/amber-homes-platinum-trophy-2024-wide.webp')}
   <section class="section">
     <div class="container">
       <div class="grid2" style="align-items:start">
@@ -221,10 +221,18 @@ ${pageHeader('About', 'The founder behind the name on the door.', 'Who is Ambree
         </div>
       </div>
 
+      <div class="quote-band reveal">
+        <p class="qb-line">&ldquo;Our philosophy has always centred on excellence, integrity, and performance.&rdquo;</p>
+        <p class="qb-src">Ambreen Qureshi &middot; Khaleej Times &middot; November 2025</p>
+      </div>
+      <div class="metric-row reveal" style="margin-top:2.2rem">
+${HOME.stats.map(s => `        <div class="metric"><div class="num">${esc(s.num)}</div><div class="cap">${esc(s.cap)}</div></div>`).join('\n')}
+      </div>
+
       <hr class="sep">
       <div class="lead-list reveal">
         <section class="lead-item">
-          <div class="lead-head"><h2>Background and company foundation</h2></div>
+          <div class="lead-head"><h2>From gold medalist to founder</h2></div>
           <div class="lead-body">
             <p>Ambreen graduated as a gold medalist in her Master&rsquo;s in Economics at Government College (GC), Lahore, and entered Dubai real estate in 2011 &mdash; developing a strong command of property investments, market cycles and master-planned communities through the market&rsquo;s ups and downs, the expertise on which she would later build a company.</p>
             <p>In 2017 she founded Amber Homes Real Estate, the company that carries her name: &ldquo;Amber&rdquo;, from Ambreen. What began as one determined entrepreneur&rsquo;s venture has grown into an award-recognised Dubai brokerage group with more than USD&nbsp;1.5 billion in cumulative company sales &mdash; built, year after year, under her leadership.</p>
@@ -232,13 +240,13 @@ ${pageHeader('About', 'The founder behind the name on the door.', 'Who is Ambree
           </div>
         </section>
         <section class="lead-item">
-          <div class="lead-head"><h2>Operational responsibilities</h2></div>
+          <div class="lead-head"><h2>How she runs the company</h2></div>
           <div class="lead-body">
             <p>As Managing Director, Ambreen is responsible for how the company actually runs: recruitment and training, client-care standards, transaction documentation and follow-through, escalation paths, and the accountability that keeps service quality consistent across a growing team.</p>
           </div>
         </section>
         <section class="lead-item">
-          <div class="lead-head"><h2>Leadership philosophy</h2></div>
+          <div class="lead-head"><h2>The standards she leads by</h2></div>
           <div class="lead-body">
             <p>Her approach is built on four working principles: operational discipline, client care, team standards and long-term reputation &mdash; the discipline behind how the company trains its people, documents its transactions and keeps its commitments.</p>
           </div>
@@ -254,12 +262,8 @@ ${HOME.timeline.items.map(t => `          <li><span class="yr">${t.year}</span><
       </div>
 
       <hr class="sep">
-      <div class="grid2 reveal">
-        <div class="quote-panel">
-          <p class="qp-line">&ldquo;Our philosophy has always centred on excellence, integrity, and performance.&rdquo;</p>
-          <p class="qp-src">Ambreen Qureshi &middot; Khaleej Times (KT Network), 14 Nov 2025</p>
-        </div>
-        <div class="quote-panel">
+      <div class="reveal">
+        <div class="quote-panel" style="max-width:76ch;margin-inline:auto">
           <p class="qp-line">&ldquo;Luxury real estate in Dubai is evolving at exceptional speed. Our clients rely on our insights, early-access opportunities, and developer relationships.&rdquo;</p>
           <p class="qp-src">Ambreen Qureshi &middot; Business Wire, 4 Dec 2025</p>
         </div>

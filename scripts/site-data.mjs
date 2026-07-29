@@ -21,6 +21,7 @@ export const SITE = {
   brn: '39777',                       // DLD licence — public on the Property Finder register
   gaId: '',                           // set GA4 Measurement ID here, then rebuild — analytics stays off while empty
   sameAs: [
+    'https://www.wikidata.org/wiki/Q132734671',
     'https://www.propertyfinder.ae/en/agent/ambreen-qureshi-145563',
     'https://www.amberhomes.ae/about-us'
   ]
