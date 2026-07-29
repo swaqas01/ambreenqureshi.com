@@ -23,6 +23,7 @@ export const SITE = {
   sameAs: [
     'https://www.wikidata.org/wiki/Q132734671',
     'https://about.me/ambreenqureshi',
+    'https://www.crunchbase.com/person/ambreen-qureshi-8090',
     'https://www.propertyfinder.ae/en/agent/ambreen-qureshi-145563',
     'https://www.amberhomes.ae/about-us'
   ]
