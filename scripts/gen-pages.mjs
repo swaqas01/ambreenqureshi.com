@@ -50,10 +50,14 @@ const graphBase = () => [personNode(), orgNode(), websiteNode()];
       <div class="hero-left">
         <p class="he-eyebrow">${esc(HOME.hero.eyebrow)}</p>
         <h1 class="visually-hidden">Ambreen Qureshi &mdash; Founder &amp; Managing Director of Amber Homes Real Estate, Dubai</h1>
+        <div class="feat-in">
+          <p class="dev-note">Featured in</p>
+          <div class="feat-outlets"><span>Khaleej Times</span><span class="divider" aria-hidden="true"></span><span>RAKBANK</span><span class="divider" aria-hidden="true"></span><span>Business Wire</span></div>
+        </div>
         <img class="hero-logo" src="/assets/img/ambreen-qureshi-logo-white.png" width="997" height="200" alt="Ambreen Qureshi" fetchpriority="high">
-        <p class="he-tag">${esc(HOME.hero.tagline)}</p>
+        <p class="he-tag">${HOME.hero.tagline}</p>
         <p class="he-award">${bb(HOME.hero.recognition)}</p>
-        <div>
+        <div class="dev-wrap">
           <p class="dev-note">Amber Homes — recognised across</p>
 ${heroDevs}
         </div>

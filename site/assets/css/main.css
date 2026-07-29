@@ -126,6 +126,10 @@ body.loaded .hero-editorial{opacity:1;transform:none}
 .dev-logos .dl-text{font-family:var(--sans);font-weight:900;font-size:1.28rem;letter-spacing:.03em;text-transform:uppercase;color:var(--text);line-height:1}
 .dev-logos .divider{width:1px;height:18px;background:var(--hairline-strong)}
 .dev-note{font-family:var(--sans);font-size:.66rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:.6rem}
+.feat-in .dev-note{color:var(--accent);margin-bottom:.55rem}
+.feat-outlets{display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
+.feat-outlets span:not(.divider){font-family:var(--sans);font-weight:800;font-size:.98rem;letter-spacing:.06em;text-transform:uppercase;color:var(--text);line-height:1}
+.feat-outlets .divider{width:1px;height:14px;background:var(--hairline-strong)}
 
 /* metrics */
 .metric-row{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--hairline);border-bottom:1px solid var(--hairline)}
@@ -368,11 +372,19 @@ main,.site-footer,.site-header{position:relative;z-index:1}
   .lead-item{padding-block:1.8rem;gap:1.2rem}
   .head-note{justify-self:start}
   .hero-editorial{min-height:0;padding-block:0 2rem;justify-content:flex-start}
-  .hero-bleed{position:relative;width:100%;height:min(96vw,440px);margin-bottom:0;background-position:center 18%}
+  .hero-bleed{position:relative;width:100%;height:min(112vw,500px);margin-bottom:0;background-position:center 18%}
   .hero-bleed::after{background:linear-gradient(0deg,#0D111A 4%,rgba(13,17,26,.6) 22%,rgba(13,17,26,.12) 46%,rgba(13,17,26,0) 64%)}
-  .hero-left{max-width:100%;gap:1.15rem;margin-top:-3.2rem}
+  .hero-left{max-width:100%;gap:1.15rem;margin-top:-2.6rem}
   .he-name{font-size:clamp(2.4rem,11vw,3.3rem)}
-  .he-tag{color:var(--muted-2);line-height:1.7}
+  .feat-in{order:1}
+  .hero-logo{order:2}
+  .he-eyebrow{order:3}
+  .he-tag{order:4}
+  .hero-left .actions{order:5;display:grid;grid-template-columns:1fr 1fr;gap:.8rem;width:100%}
+  .hero-left .actions .btn,.hero-left .actions .btn-ghost{justify-content:center;text-align:center;padding-inline:1rem}
+  .he-award{order:6}
+  .dev-wrap{order:7}
+  .he-tag{color:var(--muted-2);text-transform:uppercase;font-size:.8rem;letter-spacing:.05em;line-height:1.85;font-weight:400}
   .he-award{line-height:1.7;font-size:.74rem}
   .footer-grid{grid-template-columns:1fr 1fr}
   .timeline{grid-template-columns:1fr}
@@ -403,6 +415,9 @@ main,.site-footer,.site-header{position:relative;z-index:1}
   .overlay nav a{font-size:1.7rem}
   .site-header .container{padding-block:.85rem}
   .he-eyebrow{font-size:.66rem}
+  .feat-outlets{gap:.75rem}
+  .feat-outlets span:not(.divider){font-size:.84rem}
+  .feat-outlets .divider{height:11px}
   .dev-logos{gap:.7rem;flex-wrap:wrap}
   .dev-logos .dl{height:13px}
   .dev-logos .dl img{max-width:88px}
