@@ -61,7 +61,8 @@ p{margin:0}
 .lede{font-size:clamp(1.05rem,1.7vw,1.28rem);line-height:1.6;color:var(--muted-2);max-width:60ch;margin-top:1rem}
 .section-title-wide{max-width:34ch}
 .lede-wide{max-width:82ch}
-.lede strong,.meet-intro strong,.timeline .tx strong,.lead-body strong,.prose strong,.he-award strong{color:var(--text);font-weight:700}
+.lede strong,.meet-intro strong,.timeline .tx strong,.lead-body strong,.prose strong{color:var(--text);font-weight:700}
+.he-award strong{color:inherit;font-weight:700}
 .note{font-size:.82rem;color:var(--muted);line-height:1.55}
 .head-split{display:grid;grid-template-columns:1.4fr 1fr;gap:2rem;align-items:end}
 .head-note{color:var(--muted-2);max-width:44ch;justify-self:end}
