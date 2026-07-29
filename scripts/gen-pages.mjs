@@ -127,10 +127,10 @@ ${AWARDS.filter(a => a.group === 'platinum').map(a => `        <a class="award-c
           <div class="aw-body"><span class="aw-year aw-uniform">${esc(a.title)}</span><span class="aw-title">${esc(a.presenter)}</span></div>
         </a>`).join('\n')}
       </div>
-      <figure class="evfig">
-        <img src="/assets/img/awards/amber-homes-team-black-onyx-top-platinum-2025.webp" width="1206" height="766" loading="lazy" alt="The Amber Homes Real Estate team, led by Ambreen Qureshi and Saad Waqas, on stage — Platinum Agency 2025 — Meraas - Nakheel & Dubai Holding">
-        <figcaption>Platinum Agency 2025 &mdash; Meraas - Nakheel &amp; Dubai Holding &mdash; the Amber Homes team on stage. <a href="/awards">View Company Milestones &rarr;</a></figcaption>
-      </figure>
+      <div class="gallery" style="margin-top:2.2rem">
+${AWARDS.filter(a => a.group === 'platinum').map(a => `        <figure class="gfig"><a href="/awards#${a.id}"><img src="${a.img2}" width="${a.w2}" height="${a.h2}" loading="lazy" alt="${esc(a.alt2)}"></a><figcaption>${esc(a.title)} &mdash; Meraas - Nakheel &amp; Dubai Holding &mdash; the Amber Homes team on stage.</figcaption></figure>`).join('\n')}
+      </div>
+      <div class="actions" style="margin-top:1.4rem"><a class="link-arrow" href="/awards">View Company Milestones &rarr;</a></div>
     </div>
   </section>
 
@@ -841,7 +841,7 @@ Sitemap: ${SITE.origin}/sitemap.xml
 `);
 
 const SITEMAP_IMAGES = {
-  '/': ['/assets/img/ambreen-qureshi.jpg', '/assets/img/ambreen-qureshi-founder-managing-director.webp', '/assets/img/awards/amber-homes-team-black-onyx-top-platinum-2025.webp'],
+  '/': ['/assets/img/ambreen-qureshi.jpg', '/assets/img/ambreen-qureshi-founder-managing-director.webp', '/assets/img/awards/amber-homes-platinum-2025-ceremony.webp', '/assets/img/awards/amber-homes-platinum-2024-ceremony.webp', '/assets/img/awards/amber-homes-platinum-2023-ceremony.webp', '/assets/img/awards/amber-homes-platinum-2022-ceremony.webp'],
   '/about': ['/assets/img/ambreen-qureshi.jpg', '/assets/img/ambreen-qureshi-managing-director-portrait.webp'],
   '/awards': ['/assets/img/awards/amber-homes-black-onyx-platinum-2025.webp', '/assets/img/awards/amber-homes-black-onyx-platinum-2024.webp', '/assets/img/awards/amber-homes-black-onyx-platinum-2023.webp', '/assets/img/awards/amber-homes-team-black-onyx-top-platinum-2025.webp', '/assets/img/awards/amber-homes-binghatti-broker-award-2026.webp', '/assets/img/awards/amber-homes-dubai-holding-platinum-agents-2021.webp', '/assets/img/awards/amber-homes-nshama-town-square-2020.webp'],
   '/amber-homes': ['/assets/img/awards/amber-homes-black-onyx-platinum-2025.webp']
