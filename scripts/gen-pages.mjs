@@ -203,17 +203,6 @@ ${pageHeader('About', 'The founder behind the name on the door.', 'Who is Ambree
           <p>Her work focuses on the structure behind each client experience &mdash; how enquiries are managed, how documentation is followed through, how teams are trained and how consistent service is maintained as a brokerage grows.</p>
           <p>Under the joint leadership of Ambreen Qureshi and Founder and Managing Partner <a href="https://saadwaqas.com/" rel="noopener">Saad Waqas</a>, Amber Homes has developed relationships across Dubai&rsquo;s leading real-estate developers and earned the record: Platinum Agency for <strong>Meraas</strong>, <strong>Nakheel</strong> &amp; <strong>Dubai Holding</strong> for 4 Consecutive Years (2022&ndash;2025).</p>
           <p>Her entrepreneurial journey has also been featured by <strong>RAKBANK</strong> through its &ldquo;<strong>She Means Business</strong>&rdquo; campaign for female entrepreneurs in the UAE.</p>
-
-          <h2>Background and company foundation</h2>
-          <p>Ambreen graduated as a gold medalist in her Master&rsquo;s in Economics at Government College (GC), Lahore, and entered Dubai real estate in 2011 &mdash; developing a strong command of property investments, market cycles and master-planned communities through the market&rsquo;s ups and downs, the expertise on which she would later build a company.</p>
-          <p>In 2017 she founded Amber Homes Real Estate, the company that carries her name: &ldquo;Amber&rdquo;, from Ambreen. What began as one determined entrepreneur&rsquo;s venture has grown into an award-recognised Dubai brokerage group with more than USD&nbsp;1.5 billion in cumulative company sales &mdash; built, year after year, under her leadership.</p>
-          <p>The group has since expanded around the same operating discipline: Amber Homes Interiors launched in ${FACTS.interiorsYear}, and Amber Holiday Homes &mdash; the short-stay business that is particularly her brainchild &mdash; followed in ${FACTS.holidayHomesYear}.</p>
-
-          <h2>Operational responsibilities</h2>
-          <p>As Managing Director, Ambreen is responsible for how the company actually runs: recruitment and training, client-care standards, transaction documentation and follow-through, escalation paths, and the accountability that keeps service quality consistent across a growing team.</p>
-
-          <h2>Leadership philosophy</h2>
-          <p>Her approach is built on four working principles: operational discipline, client care, team standards and long-term reputation &mdash; the discipline behind how the company trains its people, documents its transactions and keeps its commitments.</p>
         </div>
         <div class="reveal">
           <img class="portrait" src="/assets/img/ambreen-qureshi-managing-director-portrait.webp" width="1200" height="1629" alt="Ambreen Qureshi, Founder and Managing Director of Amber Homes Real Estate, Dubai" fetchpriority="high">
@@ -229,6 +218,30 @@ ${pageHeader('About', 'The founder behind the name on the door.', 'Who is Ambree
             <tr><th scope="row">Group</th><td>Amber Homes Interiors (2019) &middot; Amber Holiday Homes (2021)</td></tr>
           </table>
         </div>
+      </div>
+
+      <hr class="sep">
+      <div class="lead-list reveal">
+        <section class="lead-item">
+          <div class="lead-head"><h2>Background and company foundation</h2></div>
+          <div class="lead-body">
+            <p>Ambreen graduated as a gold medalist in her Master&rsquo;s in Economics at Government College (GC), Lahore, and entered Dubai real estate in 2011 &mdash; developing a strong command of property investments, market cycles and master-planned communities through the market&rsquo;s ups and downs, the expertise on which she would later build a company.</p>
+            <p>In 2017 she founded Amber Homes Real Estate, the company that carries her name: &ldquo;Amber&rdquo;, from Ambreen. What began as one determined entrepreneur&rsquo;s venture has grown into an award-recognised Dubai brokerage group with more than USD&nbsp;1.5 billion in cumulative company sales &mdash; built, year after year, under her leadership.</p>
+            <p>The group has since expanded around the same operating discipline: Amber Homes Interiors launched in ${FACTS.interiorsYear}, and Amber Holiday Homes &mdash; the short-stay business that is particularly her brainchild &mdash; followed in ${FACTS.holidayHomesYear}.</p>
+          </div>
+        </section>
+        <section class="lead-item">
+          <div class="lead-head"><h2>Operational responsibilities</h2></div>
+          <div class="lead-body">
+            <p>As Managing Director, Ambreen is responsible for how the company actually runs: recruitment and training, client-care standards, transaction documentation and follow-through, escalation paths, and the accountability that keeps service quality consistent across a growing team.</p>
+          </div>
+        </section>
+        <section class="lead-item">
+          <div class="lead-head"><h2>Leadership philosophy</h2></div>
+          <div class="lead-body">
+            <p>Her approach is built on four working principles: operational discipline, client care, team standards and long-term reputation &mdash; the discipline behind how the company trains its people, documents its transactions and keeps its commitments.</p>
+          </div>
+        </section>
       </div>
 
       <hr class="sep">
@@ -310,17 +323,27 @@ ${additional.map(awardRow).join('\n')}
       <hr class="sep">
       <div class="reveal" id="rakbank">
         ${rail('03', 'RAKBANK entrepreneurship feature')}
-        <div class="prose">
-          <p>Alongside the company&rsquo;s developer recognitions, Ambreen Qureshi was featured by <strong>RAKBANK</strong> through its <strong>&ldquo;She Means Business&rdquo;</strong> campaign, highlighting female entrepreneurship in the UAE. The official feature, published on <strong>RAKBANK</strong>&rsquo;s Instagram in July 2026, introduces her as &ldquo;Meet Ambreen, Founder of Amber Homes Real Estate&rdquo;. <a href="https://www.instagram.com/reel/Da5C9TzsWJJ/" rel="noopener nofollow">Watch the official reel <span class="ext" aria-hidden="true">&#8599;</span></a> &middot; <a href="/media#rakbank">Media page entry</a>.</p>
+        <div class="lead-list">
+          <section class="lead-item" style="border-top:0;padding-top:.2rem">
+            <div class="lead-head"><h2>A business journey recognised by <strong>RAKBANK</strong>.</h2></div>
+            <div class="lead-body">
+              <p>Alongside the company&rsquo;s developer recognitions, Ambreen Qureshi was featured by <strong>RAKBANK</strong> through its <strong>&ldquo;She Means Business&rdquo;</strong> campaign, highlighting female entrepreneurship in the UAE. The official feature, published on <strong>RAKBANK</strong>&rsquo;s Instagram in July 2026, introduces her as &ldquo;Meet Ambreen, Founder of Amber Homes Real Estate&rdquo;. <a href="https://www.instagram.com/reel/Da5C9TzsWJJ/" rel="noopener nofollow">Watch the official reel <span class="ext" aria-hidden="true">&#8599;</span></a> &middot; <a href="/media#rakbank">Media page entry</a>.</p>
+            </div>
+          </section>
         </div>
       </div>
 
       <hr class="sep">
       <div class="reveal">
         ${rail('04', 'The record & methodology')}
-        <div class="prose">
-          <p>The four Platinum years are presented in the company&rsquo;s canonical form &mdash; <strong style="color:var(--text)">Platinum Agency 2022, 2023, 2024 and 2025 &mdash; Meraas - Nakheel &amp; Dubai Holding</strong> &mdash; with the ceremony picture and the award picture published for every year. Amber Homes Real Estate is the only company recognised as Platinum Agency for 4 Consecutive Years.</p>
-          <p>Corrections: if any wording here differs from the underlying certificate, write to <a href="mailto:${SITE.email}">${SITE.email}</a> and it will be corrected. Full source register: <a href="/evidence">Facts &amp; Sources</a>.</p>
+        <div class="lead-list">
+          <section class="lead-item" style="border-top:0;padding-top:.2rem">
+            <div class="lead-head"><h2>How the record is presented.</h2></div>
+            <div class="lead-body">
+              <p>The four Platinum years are presented in the company&rsquo;s canonical form &mdash; <strong style="color:var(--text)">Platinum Agency 2022, 2023, 2024 and 2025 &mdash; Meraas - Nakheel &amp; Dubai Holding</strong> &mdash; with the ceremony picture and the award picture published for every year. Amber Homes Real Estate is the only company recognised as Platinum Agency for 4 Consecutive Years.</p>
+              <p>Corrections: if any wording here differs from the underlying certificate, write to <a href="mailto:${SITE.email}">${SITE.email}</a> and it will be corrected. Full source register: <a href="/evidence">Facts &amp; Sources</a>.</p>
+            </div>
+          </section>
         </div>
       </div>
 ${ctaInline('Questions about the recognition record — or the company behind it?')}
@@ -408,13 +431,25 @@ ${EVIDENCE.map(e => `        <div class="ev-row reveal">
       </div>
 
       <hr class="sep">
-      <div class="prose reveal article-col">
-        <h2>How to read this record</h2>
-        <p><strong style="color:var(--text)">Personal recognition</strong> relates to Ambreen Qureshi herself (the RAKBANK &ldquo;She Means Business&rdquo; feature). <strong style="color:var(--text)">Company recognition</strong> was earned by Amber Homes Real Estate &mdash; the Platinum record and the developer awards. <strong style="color:var(--text)">News and coverage</strong> entries link to their original outlets — Khaleej Times, Business Wire, AP News, Yahoo Finance, Zawya and others. <strong style="color:var(--text)">Company figures</strong> are cumulative business figures from company records.</p>
-        <h2>Methodology</h2>
-        <p>Claims were compiled from the official Amber Homes website and awards record, award certificates and photographs held by the company, the public Property Finder broker register, Khaleej Times and Business Wire coverage, and the official company profile supplied by Amber Homes leadership in 2026. Where a claim rests only on company records, this page says so plainly.</p>
-        <h2>Corrections</h2>
-        <p>Spotted something that does not match its source? Write to <a href="mailto:${SITE.email}">${SITE.email}</a>. Corrections are reviewed by the Amber Homes operating team and published with an updated date stamp.</p>
+      <div class="lead-list reveal">
+        <section class="lead-item">
+          <div class="lead-head"><h2>How to read this record</h2></div>
+          <div class="lead-body">
+            <p><strong style="color:var(--text)">Personal recognition</strong> relates to Ambreen Qureshi herself (the RAKBANK &ldquo;She Means Business&rdquo; feature). <strong style="color:var(--text)">Company recognition</strong> was earned by Amber Homes Real Estate &mdash; the Platinum record and the developer awards. <strong style="color:var(--text)">News and coverage</strong> entries link to their original outlets — Khaleej Times, Business Wire, AP News, Yahoo Finance, Zawya and others. <strong style="color:var(--text)">Company figures</strong> are cumulative business figures from company records.</p>
+          </div>
+        </section>
+        <section class="lead-item">
+          <div class="lead-head"><h2>Methodology</h2></div>
+          <div class="lead-body">
+            <p>Claims were compiled from the official Amber Homes website and awards record, award certificates and photographs held by the company, the public Property Finder broker register, Khaleej Times and Business Wire coverage, and the official company profile supplied by Amber Homes leadership in 2026. Where a claim rests only on company records, this page says so plainly.</p>
+          </div>
+        </section>
+        <section class="lead-item">
+          <div class="lead-head"><h2>Corrections</h2></div>
+          <div class="lead-body">
+            <p>Spotted something that does not match its source? Write to <a href="mailto:${SITE.email}">${SITE.email}</a>. Corrections are reviewed by the Amber Homes operating team and published with an updated date stamp.</p>
+          </div>
+        </section>
       </div>
 ${ctaInline('Want a claim verified directly? Ask the team.')}
     </div>
@@ -485,19 +520,43 @@ ${ENQUIRY_TYPES.map(t => `              <option>${t}</option>`).join('\n')}
 ${pageHeader('Privacy Policy', 'Privacy, plainly stated.', 'What this website collects, why, and the choices you have. Last updated ' + SITE.buildDate + '.', '/assets/img/awards/amber-homes-platinum-trophy-2022-wide.webp')}
   <section class="section">
     <div class="container">
-      <div class="prose reveal article-col">
-        <h2>Who operates this website</h2>
-        <p>ambreenqureshi.com is the personal-brand website of Ambreen Qureshi, Founder &amp; Managing Director of Amber Homes Real Estate (Dubai, UAE — RERA ORN ${SITE.orn}). Enquiries submitted here are processed by Ambreen&rsquo;s team at Amber Homes Real Estate, Office 2102, Burj Al Salam Tower, Sheikh Zayed Road, Dubai.</p>
-        <h2>What we collect</h2>
-        <p>The contact form collects the details you choose to provide: name, email, phone/WhatsApp number, country of residence, enquiry type, preferred contact method and your message. The form uses an anti-spam honeypot and basic rate limiting; submission metadata (time, approximate origin) may be processed to prevent abuse.</p>
-        <h2>How it is used</h2>
-        <p>Your details are used to respond to your enquiry and, where relevant, to progress a client engagement through Amber Homes Real Estate. They are not sold. They are shared only with the Amber Homes team members needed to answer you, and with the infrastructure providers that transmit the message (hosting and email delivery).</p>
-        <h2>Cookies and analytics</h2>
-        <p>This site currently sets no advertising cookies. If privacy-respecting traffic analytics are enabled, they are used in aggregate to understand which pages are read; you can block analytics scripts without affecting the site. WhatsApp, YouTube embeds and external links take you to third-party services governed by their own policies (YouTube is embedded in privacy-enhanced &ldquo;nocookie&rdquo; mode).</p>
-        <h2>Retention and your rights</h2>
-        <p>Enquiry correspondence is retained for as long as needed to handle your matter and meet legal obligations that apply to a licensed Dubai brokerage, then deleted. You may request access to, correction of, or deletion of your personal data at any time by writing to <a href="mailto:${SITE.email}">${SITE.email}</a>.</p>
-        <h2>Contact</h2>
-        <p>Privacy questions: <a href="mailto:${SITE.email}">${SITE.email}</a> or <a href="mailto:${SITE.emailFallback}">${SITE.emailFallback}</a>, or by post to the office address above.</p>
+      <div class="lead-list reveal">
+        <section class="lead-item">
+          <div class="lead-head"><h2>Who operates this website</h2></div>
+          <div class="lead-body">
+            <p>ambreenqureshi.com is the personal-brand website of Ambreen Qureshi, Founder &amp; Managing Director of Amber Homes Real Estate (Dubai, UAE — RERA ORN ${SITE.orn}). Enquiries submitted here are processed by Ambreen&rsquo;s team at Amber Homes Real Estate, Office 2102, Burj Al Salam Tower, Sheikh Zayed Road, Dubai.</p>
+          </div>
+        </section>
+        <section class="lead-item">
+          <div class="lead-head"><h2>What we collect</h2></div>
+          <div class="lead-body">
+            <p>The contact form collects the details you choose to provide: name, email, phone/WhatsApp number, country of residence, enquiry type, preferred contact method and your message. The form uses an anti-spam honeypot and basic rate limiting; submission metadata (time, approximate origin) may be processed to prevent abuse.</p>
+          </div>
+        </section>
+        <section class="lead-item">
+          <div class="lead-head"><h2>How it is used</h2></div>
+          <div class="lead-body">
+            <p>Your details are used to respond to your enquiry and, where relevant, to progress a client engagement through Amber Homes Real Estate. They are not sold. They are shared only with the Amber Homes team members needed to answer you, and with the infrastructure providers that transmit the message (hosting and email delivery).</p>
+          </div>
+        </section>
+        <section class="lead-item">
+          <div class="lead-head"><h2>Cookies and analytics</h2></div>
+          <div class="lead-body">
+            <p>This site currently sets no advertising cookies. If privacy-respecting traffic analytics are enabled, they are used in aggregate to understand which pages are read; you can block analytics scripts without affecting the site. WhatsApp, YouTube embeds and external links take you to third-party services governed by their own policies (YouTube is embedded in privacy-enhanced &ldquo;nocookie&rdquo; mode).</p>
+          </div>
+        </section>
+        <section class="lead-item">
+          <div class="lead-head"><h2>Retention and your rights</h2></div>
+          <div class="lead-body">
+            <p>Enquiry correspondence is retained for as long as needed to handle your matter and meet legal obligations that apply to a licensed Dubai brokerage, then deleted. You may request access to, correction of, or deletion of your personal data at any time by writing to <a href="mailto:${SITE.email}">${SITE.email}</a>.</p>
+          </div>
+        </section>
+        <section class="lead-item">
+          <div class="lead-head"><h2>Contact</h2></div>
+          <div class="lead-body">
+            <p>Privacy questions: <a href="mailto:${SITE.email}">${SITE.email}</a> or <a href="mailto:${SITE.emailFallback}">${SITE.emailFallback}</a>, or by post to the office address above.</p>
+          </div>
+        </section>
       </div>
     </div>
   </section>`;
@@ -513,19 +572,43 @@ ${pageHeader('Privacy Policy', 'Privacy, plainly stated.', 'What this website co
 ${pageHeader('Terms & Disclaimer', 'Terms of use, without the fog.', 'The rules that govern this website and what its content is — and is not. Last updated ' + SITE.buildDate + '.', '/assets/img/awards/amber-homes-platinum-trophy-2022-wide.webp')}
   <section class="section">
     <div class="container">
-      <div class="prose reveal article-col">
-        <h2>General information only</h2>
-        <p>Content on ambreenqureshi.com is provided for general information about Ambreen Qureshi, Amber Homes Real Estate and the Dubai property market. It does not constitute — and must not be relied on as — legal, tax, financial, immigration or guaranteed investment advice, and it does not create a client relationship.</p>
-        <h2>Property information changes</h2>
-        <p>Real-estate information changes quickly. Availability, pricing, fees, regulations and projected returns must be independently confirmed before any decision or transaction. Nothing on this site guarantees investment performance, rental income, capital appreciation or search-engine outcomes.</p>
-        <h2>Engagements</h2>
-        <p>Client engagements, property transactions and brokerage services are provided by Amber Homes Real Estate, a RERA-licensed Dubai brokerage (ORN ${SITE.orn}), under its own terms of business — not through this website directly.</p>
-        <h2>Facts, figures and recognition</h2>
-        <p>Company recognitions shown here are held by Amber Homes Real Estate; the company sales figure is a cumulative business figure from company records, as set out on the <a href="/evidence">Facts &amp; Sources</a> page. If any statement differs from its underlying source, the source prevails and we will correct the page — write to <a href="mailto:${SITE.email}">${SITE.email}</a>.</p>
-        <h2>Intellectual property and acceptable use</h2>
-        <p>Text, photography and design on this site belong to Ambreen Qureshi and Amber Homes Real Estate or are used with permission (developer and partner marks belong to their owners). Quote with attribution and a link; do not misrepresent, scrape for spam, or attempt to disrupt the site or its forms.</p>
-        <h2>Liability</h2>
-        <p>To the maximum extent permitted by law, no liability is accepted for loss arising from reliance on the content of this website or of linked third-party sites. UAE law governs these terms.</p>
+      <div class="lead-list reveal">
+        <section class="lead-item">
+          <div class="lead-head"><h2>General information only</h2></div>
+          <div class="lead-body">
+            <p>Content on ambreenqureshi.com is provided for general information about Ambreen Qureshi, Amber Homes Real Estate and the Dubai property market. It does not constitute — and must not be relied on as — legal, tax, financial, immigration or guaranteed investment advice, and it does not create a client relationship.</p>
+          </div>
+        </section>
+        <section class="lead-item">
+          <div class="lead-head"><h2>Property information changes</h2></div>
+          <div class="lead-body">
+            <p>Real-estate information changes quickly. Availability, pricing, fees, regulations and projected returns must be independently confirmed before any decision or transaction. Nothing on this site guarantees investment performance, rental income, capital appreciation or search-engine outcomes.</p>
+          </div>
+        </section>
+        <section class="lead-item">
+          <div class="lead-head"><h2>Engagements</h2></div>
+          <div class="lead-body">
+            <p>Client engagements, property transactions and brokerage services are provided by Amber Homes Real Estate, a RERA-licensed Dubai brokerage (ORN ${SITE.orn}), under its own terms of business — not through this website directly.</p>
+          </div>
+        </section>
+        <section class="lead-item">
+          <div class="lead-head"><h2>Facts, figures and recognition</h2></div>
+          <div class="lead-body">
+            <p>Company recognitions shown here are held by Amber Homes Real Estate; the company sales figure is a cumulative business figure from company records, as set out on the <a href="/evidence">Facts &amp; Sources</a> page. If any statement differs from its underlying source, the source prevails and we will correct the page — write to <a href="mailto:${SITE.email}">${SITE.email}</a>.</p>
+          </div>
+        </section>
+        <section class="lead-item">
+          <div class="lead-head"><h2>Intellectual property and acceptable use</h2></div>
+          <div class="lead-body">
+            <p>Text, photography and design on this site belong to Ambreen Qureshi and Amber Homes Real Estate or are used with permission (developer and partner marks belong to their owners). Quote with attribution and a link; do not misrepresent, scrape for spam, or attempt to disrupt the site or its forms.</p>
+          </div>
+        </section>
+        <section class="lead-item">
+          <div class="lead-head"><h2>Liability</h2></div>
+          <div class="lead-body">
+            <p>To the maximum extent permitted by law, no liability is accepted for loss arising from reliance on the content of this website or of linked third-party sites. UAE law governs these terms.</p>
+          </div>
+        </section>
       </div>
     </div>
   </section>`;
