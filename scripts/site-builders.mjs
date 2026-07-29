@@ -80,7 +80,8 @@ export function personNode() {
     alternateName: 'Ambreen Kiran Qureshi',
     alumniOf: { '@type': 'CollegeOrUniversity', name: 'Government College (GC), Lahore' },
     url: SITE.origin + '/',
-    image: SITE.origin + '/assets/img/ambreen-qureshi.jpg',
+    image: { '@type': 'ImageObject', '@id': SITE.origin + '/#primaryimage', url: SITE.origin + '/assets/img/ambreen-qureshi.jpg', contentUrl: SITE.origin + '/assets/img/ambreen-qureshi.jpg', width: 1080, height: 1080, caption: 'Ambreen Qureshi — Founder & Managing Director, Amber Homes Real Estate, Dubai' },
+    subjectOf: { '@type': 'VideoObject', name: '\u201cShe Means Business\u201d — RAKBANK feature: Meet Ambreen, Founder of Amber Homes Real Estate', url: 'https://www.instagram.com/reel/Da5C9TzsWJJ/', thumbnailUrl: SITE.origin + '/assets/img/ambreen-qureshi.jpg', uploadDate: '2026-07' },
     jobTitle: 'Founder & Managing Director',
     description: 'Founder and Managing Director of Amber Homes Real Estate, a RERA-licensed Dubai brokerage founded in 2017. She leads the company’s operations, team, processes and client-care standards, and was featured by RAKBANK in its “She Means Business” campaign for female entrepreneurs in the UAE.',
     worksFor: { '@id': SITE.orgId },
@@ -114,7 +115,24 @@ export function orgNode() {
     areaServed: 'Dubai, United Arab Emirates',
     telephone: '+97143684497',
     identifier: [{ '@type': 'PropertyValue', name: 'RERA ORN', value: SITE.orn }],
-    employee: { '@id': SITE.personId }
+    employee: { '@id': SITE.personId },
+    logo: { '@type': 'ImageObject', url: SITE.origin + '/assets/img/logos/amber-homes-gold.png', width: 76, height: 76 },
+    award: [
+      'Platinum Agency 2022 — Meraas - Nakheel & Dubai Holding',
+      'Platinum Agency 2023 — Meraas - Nakheel & Dubai Holding',
+      'Platinum Agency 2024 — Meraas - Nakheel & Dubai Holding',
+      'Platinum Agency 2025 — Meraas - Nakheel & Dubai Holding',
+      'Platinum Agency for Meraas, Nakheel & Dubai Holding for 4 Consecutive Years (2022–2025)',
+      'Nshama Town Square Dubai Appreciation Award 2020',
+      'Binghatti Broker Recognition Award 2026'
+    ],
+    sameAs: [
+      'https://www.wikidata.org/wiki/Q132734620',
+      'https://www.instagram.com/amberhomes.ae/',
+      'https://www.facebook.com/AmberHomes.ae',
+      'https://www.linkedin.com/company/amberhomes',
+      'https://www.youtube.com/channel/UCBDM67ssbEyHePyv96YApew'
+    ]
   };
 }
 
