@@ -667,7 +667,7 @@ Sitemap: ${SITE.origin}/sitemap.xml
 const SITEMAP_IMAGES = {
   '/': ['/assets/img/ambreen-qureshi.jpg', '/assets/img/ambreen-qureshi-founder-managing-director.webp', '/assets/img/awards/amber-homes-platinum-2025-ceremony.webp', '/assets/img/awards/amber-homes-platinum-2024-ceremony.webp', '/assets/img/awards/amber-homes-platinum-2023-ceremony.webp', '/assets/img/awards/amber-homes-platinum-2022-ceremony.webp'],
   '/about': ['/assets/img/ambreen-qureshi.jpg', '/assets/img/ambreen-qureshi-managing-director-portrait.webp'],
-  '/awards': ['/assets/img/awards/amber-homes-black-onyx-platinum-2025.webp', '/assets/img/awards/amber-homes-black-onyx-platinum-2024.webp', '/assets/img/awards/amber-homes-black-onyx-platinum-2023.webp', '/assets/img/awards/amber-homes-team-black-onyx-top-platinum-2025.webp', '/assets/img/awards/amber-homes-binghatti-broker-award-2026.webp', '/assets/img/awards/amber-homes-dubai-holding-platinum-agents-2021.webp', '/assets/img/awards/amber-homes-nshama-town-square-2020.webp']
+  '/awards': ['/assets/img/awards/amber-homes-platinum-award-2025.webp', '/assets/img/awards/amber-homes-platinum-award-2024.webp', '/assets/img/awards/amber-homes-platinum-award-2023.webp', '/assets/img/awards/amber-homes-platinum-award-2022.webp', '/assets/img/awards/amber-homes-team-black-onyx-top-platinum-2025.webp', '/assets/img/awards/amber-homes-binghatti-broker-award-2026.webp', '/assets/img/awards/amber-homes-nshama-town-square-2020.webp']
 };
 writeFileSync(join(OUT, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
