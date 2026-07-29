@@ -11,7 +11,7 @@ export const esc = (s) => String(s)
 const abs = (path) => SITE.origin + (path === '/' ? '/' : path);
 
 /* ---------- head ---------- */
-export function head({ title, desc, path, ogType = 'website', ogImage = '/assets/og/og-default.png', ogImageAlt = 'Ambreen Qureshi — Founder & Managing Director, Amber Homes Real Estate, Dubai', schema, preloadImage, articleDates }) {
+export function head({ title, desc, path, ogType = 'website', ogImage = '/assets/og/og-default.png', ogImageW = 1200, ogImageH = 630, ogImageAlt = 'Ambreen Qureshi — Founder & Managing Director, Amber Homes Real Estate, Dubai', schema, preloadImage, articleDates }) {
   const canonical = abs(path);
   const ga = SITE.gaId ? `
 <script async src="https://www.googletagmanager.com/gtag/js?id=${SITE.gaId}"></script>
@@ -27,6 +27,7 @@ export function head({ title, desc, path, ogType = 'website', ogImage = '/assets
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(desc)}">
 <link rel="canonical" href="${canonical}">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta name="theme-color" content="${SITE.themeColor}">
 <meta property="og:type" content="${ogType}">
 <meta property="og:title" content="${esc(title)}">
@@ -34,8 +35,8 @@ export function head({ title, desc, path, ogType = 'website', ogImage = '/assets
 <meta property="og:url" content="${canonical}">
 <meta property="og:site_name" content="Ambreen Qureshi">
 <meta property="og:image" content="${SITE.origin}${ogImage}">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+<meta property="og:image:width" content="${ogImageW}">
+<meta property="og:image:height" content="${ogImageH}">
 <meta property="og:image:alt" content="${esc(ogImageAlt)}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="${esc(title)}">
@@ -67,7 +68,7 @@ export function personNode() {
     alternateName: 'Ambreen Kiran Qureshi',
     alumniOf: { '@type': 'CollegeOrUniversity', name: 'Government College (GC), Lahore' },
     url: SITE.origin + '/',
-    image: SITE.origin + '/assets/img/ambreen-qureshi-founder-managing-director.webp',
+    image: SITE.origin + '/assets/img/ambreen-qureshi.jpg',
     jobTitle: 'Founder & Managing Director',
     description: 'Founder and Managing Director of Amber Homes Real Estate, a RERA-licensed Dubai brokerage founded in 2017. She leads the company’s operations, team, processes and client-care standards, and was featured by RAKBANK in its “She Means Business” campaign for female entrepreneurs in the UAE.',
     worksFor: { '@id': SITE.orgId },

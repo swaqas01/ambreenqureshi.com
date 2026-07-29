@@ -30,7 +30,7 @@ const graphBase = () => [personNode(), orgNode(), websiteNode()];
 {
   const schema = { '@context': 'https://schema.org', '@graph': [
     ...graphBase(),
-    webpageNode({ path: '/', title: HOME.metaTitle, type: 'ProfilePage', extra: { mainEntity: { '@id': SITE.personId } } }),
+    webpageNode({ path: '/', title: HOME.metaTitle, type: 'ProfilePage', extra: { mainEntity: { '@id': SITE.personId }, primaryImageOfPage: { '@type': 'ImageObject', url: SITE.origin + '/assets/img/ambreen-qureshi.jpg', width: 1080, height: 1080, caption: 'Ambreen Qureshi — Founder & Managing Director, Amber Homes Real Estate' } } }),
     faqNode(FAQS, '/')
   ]};
 
@@ -45,7 +45,7 @@ const graphBase = () => [personNode(), orgNode(), websiteNode()];
   const body = `
   <!-- Hero -->
   <section class="hero-editorial">
-    <div class="hero-bleed" role="img" aria-label="${esc(HOME.hero.imgAlt)}"></div>
+    <div class="hero-bleed"><img src="/assets/img/ambreen-qureshi-founder-managing-director.webp" width="1080" height="1080" fetchpriority="high" alt="${esc(HOME.hero.imgAlt)}"></div>
     <div class="container">
       <div class="hero-left">
         <p class="he-eyebrow">${esc(HOME.hero.eyebrow)}</p>
@@ -69,10 +69,13 @@ ${heroDevs}
   <section class="section">
     <div class="container reveal">
       ${rail('01', 'Meet Ambreen Qureshi')}
-      <div class="meet-intro">
-        <h2 class="section-title">${esc(HOME.meet.heading)}</h2>
-${HOME.meet.paras.map(p => `        <p>${esc(p)}</p>`).join('\n')}
-        <p style="margin-top:1.3rem"><a class="link-arrow" href="/about">Read the full profile &rarr;</a></p>
+      <div class="meet-grid">
+        <div class="meet-portrait"><img src="/assets/img/ambreen-qureshi.jpg" width="1080" height="1080" loading="lazy" alt="Ambreen Qureshi — Founder and Managing Director of Amber Homes Real Estate, Dubai"></div>
+        <div class="meet-intro">
+          <h2 class="section-title">${esc(HOME.meet.heading)}</h2>
+${HOME.meet.paras.map(p => `          <p>${esc(p)}</p>`).join('\n')}
+          <p style="margin-top:1.3rem"><a class="link-arrow" href="/about">Read the full profile &rarr;</a></p>
+        </div>
       </div>
       <div class="metric-row mt-metrics">
 ${HOME.stats.map(s => `        <div class="metric"><div class="num">${esc(s.num)}</div><div class="cap">${esc(s.cap)}</div></div>`).join('\n')}
@@ -224,7 +227,7 @@ ${ARTICLES.map(a => `        <a class="acard" href="/insights/${a.slug}">
 
 ${faqBlock(FAQS, 'Ambreen Qureshi, in plain answers.', '10', 'FAQ')}`;
 
-  write('/', head({ title: HOME.metaTitle, desc: HOME.metaDesc, path: '/', ogType: 'profile', schema, preloadImage: '/assets/img/ambreen-qureshi-founder-managing-director.webp' }) + header('/') + body + footer(), { priority: '1.0' });
+  write('/', head({ title: HOME.metaTitle, desc: HOME.metaDesc, path: '/', ogType: 'profile', schema, preloadImage: '/assets/img/ambreen-qureshi-founder-managing-director.webp', ogImage: '/assets/img/ambreen-qureshi.jpg', ogImageW: 1080, ogImageH: 1080, ogImageAlt: 'Ambreen Qureshi — Founder & Managing Director of Amber Homes Real Estate, Dubai' }) + header('/') + body + footer(), { priority: '1.0' });
 }
 
 /* ============================================================ ABOUT */
@@ -233,7 +236,7 @@ ${faqBlock(FAQS, 'Ambreen Qureshi, in plain answers.', '10', 'FAQ')}`;
   const desc = 'The biography of Ambreen Qureshi: gold medalist in Economics, leading in Dubai real estate since 2011, founder of Amber Homes Real Estate (2017), Amber Homes Interiors (2019) and Amber Holiday Homes (2021). Featured by RAKBANK in “She Means Business”.';
   const schema = { '@context': 'https://schema.org', '@graph': [
     ...graphBase(),
-    webpageNode({ path: '/about', title, type: 'ProfilePage', breadcrumb: [{ name: 'Home', path: '/' }, { name: 'About', path: '/about' }], extra: { mainEntity: { '@id': SITE.personId } } })
+    webpageNode({ path: '/about', title, type: 'ProfilePage', breadcrumb: [{ name: 'Home', path: '/' }, { name: 'About', path: '/about' }], extra: { mainEntity: { '@id': SITE.personId }, primaryImageOfPage: { '@type': 'ImageObject', url: SITE.origin + '/assets/img/ambreen-qureshi.jpg', width: 1080, height: 1080, caption: 'Ambreen Qureshi — Founder & Managing Director, Amber Homes Real Estate' } } })
   ]};
   const body = `
 ${pageHeader('About', 'The founder behind the name on the door.', 'Who is Ambreen Qureshi? The Founder and Managing Director of Amber Homes Real Estate — a RERA-licensed Dubai brokerage she has led from a 2017 foundation to the record: Platinum Agency for Meraas, Nakheel & Dubai Holding for 4 Consecutive Years.')}
@@ -298,7 +301,7 @@ ${ctaInline('For media, partnership or client enquiries, Ambreen’s team respon
     </div>
   </section>
 ${faqBlock(FAQS.slice(0, 5), 'Common questions about Ambreen.')}`;
-  write('/about', head({ title, desc, path: '/about', ogType: 'profile', schema }) + header('/about') + body + footer(), { priority: '0.9' });
+  write('/about', head({ title, desc, path: '/about', ogType: 'profile', schema, ogImage: '/assets/img/ambreen-qureshi.jpg', ogImageW: 1080, ogImageH: 1080, ogImageAlt: 'Ambreen Qureshi — Founder & Managing Director of Amber Homes Real Estate, Dubai' }) + header('/about') + body + footer(), { priority: '0.9' });
 }
 
 /* ============================================================ LEADERSHIP */
@@ -831,8 +834,8 @@ Sitemap: ${SITE.origin}/sitemap.xml
 `);
 
 const SITEMAP_IMAGES = {
-  '/': ['/assets/img/ambreen-qureshi-founder-managing-director.webp', '/assets/img/awards/amber-homes-team-black-onyx-top-platinum-2025.webp'],
-  '/about': ['/assets/img/ambreen-qureshi-managing-director-portrait.webp'],
+  '/': ['/assets/img/ambreen-qureshi.jpg', '/assets/img/ambreen-qureshi-founder-managing-director.webp', '/assets/img/awards/amber-homes-team-black-onyx-top-platinum-2025.webp'],
+  '/about': ['/assets/img/ambreen-qureshi.jpg', '/assets/img/ambreen-qureshi-managing-director-portrait.webp'],
   '/awards': ['/assets/img/awards/amber-homes-black-onyx-platinum-2025.webp', '/assets/img/awards/amber-homes-black-onyx-platinum-2024.webp', '/assets/img/awards/amber-homes-black-onyx-platinum-2023.webp', '/assets/img/awards/amber-homes-team-black-onyx-top-platinum-2025.webp', '/assets/img/awards/amber-homes-binghatti-broker-award-2026.webp', '/assets/img/awards/amber-homes-dubai-holding-platinum-agents-2021.webp', '/assets/img/awards/amber-homes-nshama-town-square-2020.webp'],
   '/amber-homes': ['/assets/img/awards/amber-homes-black-onyx-platinum-2025.webp']
 };
