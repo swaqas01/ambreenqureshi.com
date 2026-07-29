@@ -81,7 +81,7 @@ export const HOME = {
     { num: 'RAKBANK', cap: 'Featured — “She Means Business” female entrepreneur' }
   ],
   meet: {
-    heading: 'The operational leadership behind Amber Homes.',
+    heading: 'The Leadership Behind Amber Homes.',
     paras: [
       'Ambreen Qureshi is the Founder and Managing Director of Amber Homes Real Estate, an award-winning Dubai brokerage established in 2017. Under her leadership, the company has earned Top Platinum Sales Agency recognition from Dubai Holding, Meraas and Nakheel for four consecutive years.',
       'A gold medalist in Economics, Ambreen has worked in Dubai real estate since 2011, building expertise in property investment, team development and operational excellence. She leads the standards behind Amber Homes, from client care and training to documentation and transaction management.',
