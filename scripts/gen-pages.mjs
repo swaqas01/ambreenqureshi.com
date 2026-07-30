@@ -639,7 +639,7 @@ ${pageHeader('Terms & Disclaimer', 'Terms of use, without the fog.', 'The rules 
       </div>
     </div>
   </section>`;
-  write('/404.html', head({ title: 'Page not found | Ambreen Qureshi', desc: 'The page you requested does not exist. Find Ambreen Qureshi’s profile, leadership approach, awards record and contact routes from the homepage.', path: '/404.html', schema }) + header('') + body + footer(), { sitemap: false });
+  write('/404.html', head({ title: 'Page not found | Ambreen Qureshi', desc: 'The page you requested does not exist. Find Ambreen Qureshi’s profile, leadership approach, awards record and contact routes from the homepage.', path: '/404.html', schema, noindex: true }) + header('') + body + footer(), { sitemap: false });
 }
 
 /* ============================================================ robots / sitemap / llms / rss / indexnow */
