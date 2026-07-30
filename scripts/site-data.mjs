@@ -19,7 +19,7 @@ export const SITE = {
   address: 'Office 2102, Burj Al Salam Tower, Sheikh Zayed Road, Dubai, UAE',
   orn: '18690',
   brn: '39777',                       // DLD licence — public on the Property Finder register
-  gaId: '',                           // set GA4 Measurement ID here, then rebuild — analytics stays off while empty
+  gaId: 'G-9049Q5WTMS',               // GA4 Measurement ID (AmbreenQureshi.com property, Saad Waqas account)
   sameAs: [
     'https://www.wikidata.org/wiki/Q132734671',
     'https://about.me/ambreenqureshi',
