@@ -69,7 +69,7 @@ export const HOME = {
   metaDesc: 'Ambreen Qureshi is the Founder and Managing Director of Amber Homes Real Estate, a RERA-licensed Dubai brokerage (est. 2017) Platinum Agency for Meraas, Nakheel & Dubai Holding for 4 Consecutive Years (2022–2025). Featured by RAKBANK in “She Means Business”.',
   hero: {
     eyebrow: 'Founder & Managing Director · Amber Homes Real Estate',
-    tagline: 'Building an award-recognised Dubai real estate company through disciplined operations, client care and long-term leadership.',
+    tagline: 'The entrepreneur behind Amber Homes Real Estate — driving the sales, developer partnerships and client relationships behind four consecutive Platinum Agency years.',
     recognition: 'Featured by RAKBANK in “She Means Business” · Platinum Agency for Meraas, Nakheel & Dubai Holding for 4 Consecutive Years',
     ctaPrimary: { href: '/about', label: 'About Ambreen' },
     ctaSecondary: { href: '/contact', label: 'Contact Amber Homes' },
@@ -82,21 +82,21 @@ export const HOME = {
     { num: 'RAKBANK', cap: 'Featured — “She Means Business” female entrepreneur' }
   ],
   meet: {
-    heading: 'The Leadership Behind Amber Homes.',
+    heading: 'The entrepreneur behind Amber Homes.',
     paras: [
-      'Ambreen Qureshi is the Founder and Managing Director of Amber Homes Real Estate, an award-winning Dubai brokerage established in 2017. Under her leadership, the company has earned Top Platinum Sales Agency recognition from Dubai Holding, Meraas and Nakheel for four consecutive years.',
-      'A gold medalist in Economics, Ambreen has worked in Dubai real estate since 2011, building expertise in property investment, team development and operational excellence. She leads the standards behind Amber Homes, from client care and training to documentation and transaction management.',
-      'The name \u201cAmber Homes\u201d is derived from Ambreen, reflecting the personal vision behind the company.'
+      'Ambreen Qureshi is the Founder and Managing Director of Amber Homes Real Estate \u2014 the award-winning Dubai brokerage she built from the ground up in 2017. Under her ownership, the company has become a Top Platinum Sales Agency for Dubai Holding, Meraas and Nakheel for four consecutive years.',
+      'A gold medalist in Economics, Ambreen began in Dubai real estate in 2011 and built her career on closing deals, growing sales and earning the trust of the market\u2019s leading developers. She drives Amber Homes\u2019 sales performance, owns its developer relationships, and sets the standard for how clients are looked after.',
+      'The name \u201cAmber Homes\u201d is derived from Ambreen \u2014 the company is hers, in name and in vision.'
     ]
   },
   pillars: {
-    heading: 'Growth is built through the systems clients rarely see.',
-    note: 'The leadership approach behind Amber Homes — in practice, not in slogans.',
+    heading: 'How Ambreen grows Amber Homes.',
+    note: 'Sales, entrepreneurship, developer relationships and client relationships — where an owner actually spends her time.',
     items: [
-      { title: 'Operational discipline', text: 'Clear processes, defined responsibilities and consistent follow-through across the brokerage.' },
-      { title: 'Client care', text: 'Ensuring buyers and sellers remain informed from the first enquiry through documentation, completion and handover.' },
-      { title: 'Team standards', text: 'Building a culture where service quality is not dependent on which team member happens to answer the phone.' },
-      { title: 'Long-term reputation', text: 'Prioritising trust, consistency and sustainable company relationships rather than short-term visibility.' }
+      { title: 'Sales leadership', text: 'Driving the sales performance that made Amber Homes a Platinum Agency for four consecutive years.' },
+      { title: 'Entrepreneurship', text: 'Turning a single founding idea into a group — Amber Homes Real Estate, Interiors and Holiday Homes.' },
+      { title: 'Developer relationships', text: 'Owning the relationships with Meraas, Nakheel and Dubai Holding that secure allocations and early access for clients.' },
+      { title: 'Client relationships', text: 'Standing personally behind the client experience, from first conversation to handover and beyond.' }
     ]
   },
   timeline: {
@@ -119,7 +119,7 @@ export const HOME = {
     eyebrow: 'Women in Business',
     heading: 'A business journey recognised by RAKBANK.',
     paras: [
-      'Ambreen Qureshi’s entrepreneurial journey was featured by RAKBANK through its “She Means Business” campaign, highlighting the ambition, resilience and operational leadership involved in building Amber Homes Real Estate.',
+      'Ambreen Qureshi’s entrepreneurial journey was featured by RAKBANK through its “She Means Business” campaign, spotlighting the ambition and resilience of building Amber Homes Real Estate from a single idea into an award-winning group.',
       'In the official feature on RAKBANK’s Instagram, the bank introduces her simply: “Meet Ambreen, Founder of Amber Homes Real Estate” — her story of ambition and resilience, told as part of the #SheMeansBusiness campaign spotlighting women entrepreneurs across the UAE.'
     ],
     cta: { href: 'https://www.instagram.com/reel/Da5C9TzsWJJ/', label: 'Watch the RAKBANK Feature' }
@@ -127,8 +127,8 @@ export const HOME = {
   amber: {
     heading: 'The company she built and continues to lead.',
     paras: [
-      'Founded in Dubai in 2017, Amber Homes Real Estate operates across off-plan, ready and luxury property. As Founder and Managing Director, Ambreen oversees the operational structure supporting the company’s advisors, clients and transactions.',
-      'Amber Homes operates under RERA ORN 18690, with more than USD 1.5 billion in cumulative company sales. Its record — Platinum Agency for Meraas, Nakheel & Dubai Holding for 4 Consecutive Years — reflects the consistency of the wider team and its operating standards.'
+      'Founded in Dubai in 2017, Amber Homes Real Estate operates across off-plan, ready and luxury property. Ambreen built it from the ground up and continues to own and lead it — driving sales, developer partnerships and the client relationships at the heart of the business.',
+      'Amber Homes operates under RERA ORN 18690, with more than USD 1.5 billion in cumulative company sales. Its record — Platinum Agency for Meraas, Nakheel & Dubai Holding for 4 Consecutive Years — reflects the developer relationships and sales performance she has built year after year.'
     ]
   },
   cta: {
@@ -377,8 +377,8 @@ export const MEDIA = [
 /* ---------------- FAQs (visible + schema) ---------------- */
 
 export const FAQS = [
-  { q: 'Who is Ambreen Qureshi?', a: 'Ambreen Qureshi is the Founder and Managing Director of Amber Homes Real Estate, a RERA-licensed Dubai brokerage founded in 2017 (ORN 18690). She has worked in Dubai real estate since 2011.' },
-  { q: 'What is Ambreen Qureshi’s role at Amber Homes?', a: 'She leads the company’s operations, team, processes and client-care standards — the structure behind how enquiries, documentation and transactions are managed as the brokerage grows.' },
+  { q: 'Who is Ambreen Qureshi?', a: 'Ambreen Qureshi is the Founder and Managing Director of Amber Homes Real Estate, a RERA-licensed Dubai brokerage she founded in 2017 (ORN 18690). An entrepreneur who has worked in Dubai real estate since 2011, she built the company into a Platinum Agency for four consecutive years.' },
+  { q: 'What is Ambreen Qureshi’s role at Amber Homes?', a: 'As owner and Managing Director, she drives the company’s sales, owns its relationships with Dubai’s leading developers, and leads its client relationships — the commercial engine behind Amber Homes’ growth.' },
   { q: 'Is Ambreen Qureshi the founder of Amber Homes?', a: 'Yes. She is publicly identified as Founder and Managing Director of Amber Homes Real Estate, which she leads together with Founder and Managing Partner Saad Waqas. The company is named after her — “Amber”, from Ambreen.' },
   { q: 'What recognition has Amber Homes received?', a: 'Platinum Agency 2022, 2023, 2024 and 2025 — Meraas - Nakheel & Dubai Holding. Amber Homes Real Estate is the only company recognised as Platinum Agency for 4 Consecutive Years. Further recognition: Nshama (2020) and Binghatti (2026).' },
   { q: 'Was Ambreen Qureshi featured by RAKBANK?', a: 'Yes. Her entrepreneurial journey was featured through RAKBANK’s “She Means Business” campaign, which highlights female entrepreneurship in the UAE.' },
