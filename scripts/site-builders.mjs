@@ -24,7 +24,7 @@ export const bb = (s) => esc(s)
   .replaceAll('Dubai Holding', '<strong>Dubai Holding</strong>');
 
 /* ---------- head ---------- */
-export function head({ title, desc, path, ogType = 'website', ogImage = '/assets/og/og-default.png', ogImageW = 1200, ogImageH = 630, ogImageAlt = 'Ambreen Qureshi — Founder & Managing Director, Amber Homes Real Estate, Dubai', schema, preloadImage, articleDates, noindex = false }) {
+export function head({ title, desc, path, ogType = 'website', ogImage = '/assets/og/og-default.jpg', ogImageW = 1200, ogImageH = 630, ogImageAlt = 'Ambreen Qureshi — Founder & Managing Director, Amber Homes Real Estate, Dubai', schema, preloadImage, articleDates, noindex = false }) {
   const canonical = abs(path);
   const ga = SITE.gaId ? `
 <script async src="https://www.googletagmanager.com/gtag/js?id=${SITE.gaId}"></script>

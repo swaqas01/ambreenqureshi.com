@@ -36,9 +36,9 @@ const graphBase = () => [personNode(), orgNode(), websiteNode()];
   ]};
 
   const heroDevs = `          <div class="dev-logos">
-            <span class="dl"><img src="/assets/img/logos/meraas-white.png" alt="Meraas" width="150" height="23"></span>
+            <span class="dl"><img src="/assets/img/logos/meraas-white.webp" alt="Meraas" width="150" height="23" loading="lazy" decoding="async"></span>
             <span class="divider" aria-hidden="true"></span>
-            <span class="dl"><img src="/assets/img/logos/nakheel-white.png" alt="Nakheel" width="120" height="26"></span>
+            <span class="dl"><img src="/assets/img/logos/nakheel-white.webp" alt="Nakheel" width="120" height="26" loading="lazy" decoding="async"></span>
             <span class="divider" aria-hidden="true"></span>
             <span class="dl"><span class="dl-text">Dubai Holding</span></span>
           </div>`;
@@ -71,7 +71,7 @@ ${heroDevs}
     <div class="container reveal">
       ${rail('01', 'Meet Ambreen Qureshi')}
       <div class="meet-grid">
-        <div class="meet-portrait"><img src="/assets/img/ambreen-qureshi.jpg" srcset="/assets/img/ambreen-qureshi-640.jpg 640w, /assets/img/ambreen-qureshi.jpg 1080w" sizes="(max-width:900px) 92vw, 420px" width="1080" height="1080" loading="lazy" decoding="async" alt="Ambreen Qureshi — Founder and Managing Director of Amber Homes Real Estate, Dubai"></div>
+        <div class="meet-portrait"><img src="/assets/img/ambreen-qureshi-1080.webp" srcset="/assets/img/ambreen-qureshi-640.webp 640w, /assets/img/ambreen-qureshi-1080.webp 1080w" sizes="(max-width:900px) 92vw, 420px" width="1080" height="1080" loading="lazy" decoding="async" alt="Ambreen Qureshi — Founder and Managing Director of Amber Homes Real Estate, Dubai"></div>
         <div class="meet-intro">
           <h2 class="section-title">${esc(HOME.meet.heading)}</h2>
 ${HOME.meet.paras.map(p => `          <p>${bb(p)}</p>`).join('\n')}
@@ -355,7 +355,7 @@ ${ctaInline('Questions about the recognition record — or the company behind it
     </div>
   </section>
 ${faqBlock([FAQS[3], FAQS[4]], 'Recognition, clarified.')}`;
-  write('/awards', head({ title, desc, path: '/awards', schema, ogImage: '/assets/og/og-awards.png', ogImageAlt: 'Amber Homes Real Estate — Platinum Award, The Black Onyx Awards 2025' }) + header('/awards') + body + footer(), { priority: '0.9' });
+  write('/awards', head({ title, desc, path: '/awards', schema, ogImage: '/assets/og/og-awards.jpg', ogImageAlt: 'Amber Homes Real Estate — Platinum Award, The Black Onyx Awards 2025' }) + header('/awards') + body + footer(), { priority: '0.9' });
 }
 
 /* ============================================================ MEDIA */

@@ -108,9 +108,7 @@ p{margin:0}
 /* ============================================================
    HERO — editorial, bleeding portrait (Lato)
    ============================================================ */
-.hero-editorial{position:relative;min-height:min(88vh,820px);display:flex;flex-direction:column;justify-content:center;overflow:hidden;padding-block:3rem 3.2rem;opacity:0;transform:translateY(14px);transition:opacity .9s ease,transform .9s ease}
-body.loaded .hero-editorial{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){.hero-editorial{opacity:1;transform:none;transition:none}}
+.hero-editorial{position:relative;min-height:min(88vh,820px);display:flex;flex-direction:column;justify-content:center;overflow:hidden;padding-block:3rem 3.2rem}
 .hero-bleed{position:absolute;top:0;right:0;bottom:0;width:44%;background:url(/assets/img/ambreen-qureshi-founder-managing-director.webp) center top/cover no-repeat;z-index:0}
 .hero-bleed::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#0D111A 0%,rgba(13,17,26,.78) 14%,rgba(13,17,26,.16) 46%,rgba(13,17,26,0) 72%)}
 .hero-editorial .container{position:relative;z-index:2;width:100%}
