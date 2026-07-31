@@ -9,6 +9,15 @@ const assetVer = (rel) => { try { return createHash('md5').update(readFileSync(n
 const CSS_V = assetVer('css/main.css');
 const JS_V = assetVer('js/main.js');
 
+// Google Image License / photo-metadata — applied to every content ImageObject
+export const IMG_RIGHTS = {
+  creator: { '@type': 'Organization', name: 'Amber Homes Real Estate', url: 'https://www.amberhomes.ae/' },
+  creditText: 'Amber Homes Real Estate',
+  copyrightNotice: '© Amber Homes Real Estate',
+  license: SITE.origin + '/terms',
+  acquireLicensePage: SITE.origin + '/contact'
+};
+
 export const esc = (s) => String(s)
   .replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;')
   .replaceAll('"', '&quot;');
@@ -80,7 +89,7 @@ export function personNode() {
     alternateName: 'Ambreen Kiran Qureshi',
     alumniOf: { '@type': 'CollegeOrUniversity', name: 'Government College (GC), Lahore' },
     url: SITE.origin + '/',
-    image: { '@type': 'ImageObject', '@id': SITE.origin + '/#primaryimage', url: SITE.origin + '/assets/img/ambreen-qureshi.jpg', contentUrl: SITE.origin + '/assets/img/ambreen-qureshi.jpg', width: 1080, height: 1080, caption: 'Ambreen Qureshi — Founder & Managing Director, Amber Homes Real Estate, Dubai' },
+    image: { '@type': 'ImageObject', '@id': SITE.origin + '/#primaryimage', url: SITE.origin + '/assets/img/ambreen-qureshi.jpg', contentUrl: SITE.origin + '/assets/img/ambreen-qureshi.jpg', width: 1080, height: 1080, caption: 'Ambreen Qureshi — Founder & Managing Director, Amber Homes Real Estate, Dubai', ...IMG_RIGHTS },
     subjectOf: { '@type': 'VideoObject', name: '\u201cShe Means Business\u201d — RAKBANK feature: Meet Ambreen, Founder of Amber Homes Real Estate', url: 'https://www.instagram.com/reel/Da5C9TzsWJJ/', thumbnailUrl: SITE.origin + '/assets/img/ambreen-qureshi.jpg', uploadDate: '2026-07' },
     jobTitle: 'Founder & Managing Director',
     description: 'Founder and Managing Director of Amber Homes Real Estate, a RERA-licensed Dubai brokerage she built in 2017. She owns and leads the company — driving sales, developer partnerships and client relationships — and was featured by RAKBANK in its “She Means Business” campaign for female entrepreneurs in the UAE.',
@@ -116,7 +125,7 @@ export function orgNode() {
     telephone: '+97143684497',
     identifier: [{ '@type': 'PropertyValue', name: 'RERA ORN', value: SITE.orn }],
     employee: { '@id': SITE.personId },
-    logo: { '@type': 'ImageObject', url: SITE.origin + '/assets/img/logos/amber-homes-gold.png', width: 76, height: 76 },
+    logo: { '@type': 'ImageObject', url: SITE.origin + '/assets/img/logos/amber-homes-gold.png', width: 76, height: 76, ...IMG_RIGHTS },
     award: [
       'Platinum Agency 2022 — Meraas - Nakheel & Dubai Holding',
       'Platinum Agency 2023 — Meraas - Nakheel & Dubai Holding',

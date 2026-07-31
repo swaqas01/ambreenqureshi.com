@@ -6,7 +6,7 @@ import { mkdirSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { SITE, NAV, HOME, FACTS, AWARDS, MEDIA, FAQS, ARTICLES, EVIDENCE, ENQUIRY_TYPES } from './site-data.mjs';
-import { esc, bb, head, header, footer, rail, pageHeader, faqBlock, ctaInline, personNode, orgNode, websiteNode, webpageNode, faqNode } from './site-builders.mjs';
+import { esc, bb, head, header, footer, rail, pageHeader, faqBlock, ctaInline, personNode, orgNode, websiteNode, webpageNode, faqNode, IMG_RIGHTS } from './site-builders.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const OUT = join(ROOT, 'site');
@@ -31,7 +31,7 @@ const graphBase = () => [personNode(), orgNode(), websiteNode()];
 {
   const schema = { '@context': 'https://schema.org', '@graph': [
     ...graphBase(),
-    webpageNode({ path: '/', title: HOME.metaTitle, type: 'ProfilePage', extra: { mainEntity: { '@id': SITE.personId }, primaryImageOfPage: { '@type': 'ImageObject', url: SITE.origin + '/assets/img/ambreen-qureshi.jpg', width: 1080, height: 1080, caption: 'Ambreen Qureshi — Founder & Managing Director, Amber Homes Real Estate' } } }),
+    webpageNode({ path: '/', title: HOME.metaTitle, type: 'ProfilePage', extra: { mainEntity: { '@id': SITE.personId }, primaryImageOfPage: { '@id': SITE.origin + '/#primaryimage' } } }),
     faqNode(FAQS, '/')
   ]};
 
@@ -191,7 +191,7 @@ ${faqBlock(FAQS, 'Ambreen Qureshi, in plain answers.', '07', 'FAQ')}`;
   const desc = 'The biography of Ambreen Qureshi: gold medalist in Economics, leading in Dubai real estate since 2011, founder of Amber Homes Real Estate (2017), Amber Homes Interiors (2019) and Amber Holiday Homes (2021). Featured by RAKBANK in “She Means Business”.';
   const schema = { '@context': 'https://schema.org', '@graph': [
     ...graphBase(),
-    webpageNode({ path: '/about', title, type: 'ProfilePage', breadcrumb: [{ name: 'Home', path: '/' }, { name: 'About', path: '/about' }], extra: { mainEntity: { '@id': SITE.personId }, primaryImageOfPage: { '@type': 'ImageObject', url: SITE.origin + '/assets/img/ambreen-qureshi.jpg', width: 1080, height: 1080, caption: 'Ambreen Qureshi — Founder & Managing Director, Amber Homes Real Estate' } } })
+    webpageNode({ path: '/about', title, type: 'ProfilePage', breadcrumb: [{ name: 'Home', path: '/' }, { name: 'About', path: '/about' }], extra: { mainEntity: { '@id': SITE.personId }, primaryImageOfPage: { '@id': SITE.origin + '/#primaryimage' } } })
   ]};
   const body = `
 ${pageHeader('About', 'Leadership that built the name on the door.', 'Who is Ambreen Qureshi? The Founder and Managing Director of Amber Homes Real Estate — a RERA-licensed Dubai brokerage she built from a 2017 foundation into the record: Platinum Agency for Meraas, Nakheel & Dubai Holding for 4 Consecutive Years.', '/assets/img/awards/amber-homes-platinum-trophy-2024-wide.webp')}
@@ -288,8 +288,8 @@ ${faqBlock(FAQS.slice(0, 5), 'Common questions about Ambreen.')}`;
       '@type': 'ImageObject',
       contentUrl: SITE.origin + (a.imgA || a.img),
       caption: a.caption,
-      creditText: a.presenter,
-      width: a.imgA ? a.wA : a.w, height: a.imgA ? a.hA : a.h
+      width: a.imgA ? a.wA : a.w, height: a.imgA ? a.hA : a.h,
+      ...IMG_RIGHTS
     }))
   ]};
   const awardRow = (a) => `      <article class="award-year reveal" id="${a.id}">
@@ -608,7 +608,7 @@ ${pageHeader('Terms & Disclaimer', 'Terms of use, without the fog.', 'The rules 
         <section class="lead-item">
           <div class="lead-head"><h2>Intellectual property and acceptable use</h2></div>
           <div class="lead-body">
-            <p>Text, photography and design on this site belong to Ambreen Qureshi and Amber Homes Real Estate or are used with permission (developer and partner marks belong to their owners). Quote with attribution and a link; do not misrepresent, scrape for spam, or attempt to disrupt the site or its forms.</p>
+            <p>Text, photography and design on this site belong to Ambreen Qureshi and Amber Homes Real Estate or are used with permission (developer and partner marks belong to their owners). Quote with attribution and a link; do not misrepresent, scrape for spam, or attempt to disrupt the site or its forms. Photographs and images are &copy; Amber Homes Real Estate; to license an image for reuse, request permission through the <a href="/contact">contact page</a>.</p>
           </div>
         </section>
         <section class="lead-item">
