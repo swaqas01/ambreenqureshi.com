@@ -167,6 +167,10 @@ export function webpageNode({ path, title, breadcrumb, type = 'WebPage', extra =
     about: { '@id': SITE.personId },
     inLanguage: 'en',
     dateModified: SITE.buildDate,
+    lastReviewed: SITE.buildDate,
+    author: { '@id': SITE.personId },
+    publisher: { '@id': SITE.orgId },
+    reviewedBy: { '@id': SITE.orgId },
     ...extra
   };
   if (breadcrumb) {
@@ -232,19 +236,25 @@ export function footer() {
         <a href="/about">About</a>
         <a href="/awards">Awards &amp; Recognition</a>
         <a href="/media">Media</a>
-        <a href="https://www.amberhomes.ae/" rel="noopener">Amber Homes<span class="ext" aria-hidden="true"> &#8599;</span></a>
         <a href="/evidence">Facts &amp; Sources</a>
+        <a href="/contact">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Amber Homes</h4>
+        <a href="https://www.amberhomes.ae/about-us" rel="noopener">Corporate profile<span class="ext" aria-hidden="true"> &#8599;</span></a>
+        <a href="https://www.amberhomes.ae/properties" rel="noopener">Live property listings<span class="ext" aria-hidden="true"> &#8599;</span></a>
+        <a href="https://www.amberhomes.ae/awards" rel="noopener">Company awards record<span class="ext" aria-hidden="true"> &#8599;</span></a>
+        <a href="https://www.amberhomes.ae/careers" rel="noopener">Careers at Amber Homes<span class="ext" aria-hidden="true"> &#8599;</span></a>
       </div>
       <div class="footer-col">
         <h4>Connect</h4>
         <a href="/contact">Connect</a>
-        <a href="https://www.amberhomes.ae/" rel="noopener">Amber Homes Real Estate<span class="ext" aria-hidden="true"> &#8599;</span></a>
         <a href="https://saadwaqas.com/" rel="noopener">Saad Waqas &mdash; Managing Partner<span class="ext" aria-hidden="true"> &#8599;</span></a>
       </div>
     </div>
     <div class="footer-legal">
       <span>&copy; 2026 Ambreen Qureshi. All rights reserved. &middot; Amber Homes Real Estate &middot; RERA ORN ${SITE.orn} &middot; Dubai, UAE</span>
-      <span><a href="/privacy">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="/terms">Terms &amp; Disclaimer</a></span>
+      <span>Last reviewed ${SITE.buildDate} &nbsp;&middot;&nbsp; <a href="/evidence">Facts &amp; Sources</a> &nbsp;&middot;&nbsp; <a href="/privacy">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="/terms">Terms &amp; Disclaimer</a></span>
     </div>
     <p class="footer-legal footer-disclaimer">Information on this website is general in nature. Property information, availability and pricing change and require independent confirmation. Nothing here constitutes guaranteed investment, legal, tax or financial advice. Client engagements are handled through Amber Homes Real Estate (RERA ORN ${SITE.orn}).</p>
   </div>

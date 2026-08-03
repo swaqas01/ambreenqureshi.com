@@ -8,7 +8,7 @@ export const SITE = {
   name: 'Ambreen Qureshi',
   title: 'Founder & Managing Director, Amber Homes Real Estate',
   themeColor: '#0D111A',
-  buildDate: '2026-07-29',
+  buildDate: '2026-08-03',
   personId: 'https://ambreenqureshi.com/#person',
   orgId: 'https://www.amberhomes.ae/#organization',
   whatsapp: '971544556731',           // official Amber Homes WhatsApp (amberhomes.ae)
@@ -104,10 +104,10 @@ export const HOME = {
     note: '',
     items: [
       { year: '2011', text: 'Ambreen enters Dubai real estate, building command of property investment, market cycles and master-planned communities — the foundations on which Amber Homes is later built.', href: '/about' },
-      { year: '2017', text: 'Amber Homes Real Estate founded in Dubai — RERA ORN 18690. The company is named after her: “Amber”, from Ambreen.', href: '/amber-homes' },
-      { year: '2019', text: 'Amber Homes Interiors launched, extending the group beyond brokerage.', href: '/amber-homes' },
+      { year: '2017', text: 'Amber Homes Real Estate founded in Dubai — RERA ORN 18690. The company is named after her: “Amber”, from Ambreen.', href: 'https://www.amberhomes.ae/' },
+      { year: '2019', text: 'Amber Homes Interiors launched, extending the group beyond brokerage.', href: 'https://www.amberhomes.ae/' },
       { year: '2020', text: 'Nshama Town Square appreciation recognition for performance and partnership.', href: '/awards#recognition-2020' },
-      { year: '2021', text: 'Amber Holiday Homes founded — particularly Ambreen’s brainchild.', href: '/amber-homes' },
+      { year: '2021', text: 'Amber Holiday Homes founded — particularly Ambreen’s brainchild.', href: 'https://www.amberhomes.ae/' },
       { year: '2022', text: 'Platinum Agency 2022 — Meraas - Nakheel & Dubai Holding. The record begins.', href: '/awards#recognition-2022' },
       { year: '2023', text: 'Platinum Agency 2023 — Meraas - Nakheel & Dubai Holding.', href: '/awards#recognition-2023' },
       { year: '2024', text: 'Platinum Agency 2024 — Meraas - Nakheel & Dubai Holding.', href: '/awards#recognition-2024' },
@@ -367,7 +367,7 @@ export const MEDIA = [
     outlet: 'YouTube — Amber Homes',
     type: 'Video',
     title: 'The Black Onyx Awards | Amber Homes Real Estate',
-    date: 'Video record',
+    date: 'Sep 2024',
     desc: 'Ceremony footage from the Black Onyx Awards on the official Amber Homes channel.',
     href: 'https://www.youtube.com/watch?v=cEeE27OjNxg',
     note: 'Official Amber Homes channel'
@@ -485,6 +485,7 @@ export const EVIDENCE = [
     claim: 'Ambreen Qureshi is Founder and Managing Director of Amber Homes Real Estate',
     detail: 'Named as Founder and Managing Director across the official Amber Homes website, its leadership profiles, and December 2025 news coverage.',
     tag: 'Primary source',
+    verified: '2026-08-03',
     links: [
       { label: 'AmberHomes.ae — About / leadership', href: 'https://www.amberhomes.ae/about-us' },
       { label: 'RAKBANK official reel — “Meet Ambreen, Founder of Amber Homes Real Estate”', href: 'https://www.instagram.com/reel/Da5C9TzsWJJ/' },
@@ -495,18 +496,21 @@ export const EVIDENCE = [
     claim: 'Amber Homes Real Estate — founded in Dubai in 2017, RERA ORN 18690',
     detail: 'Company founding year and RERA Office Registration Number as published by the company and used across its regulatory footprint.',
     tag: 'Registry / corporate',
+    verified: '2026-08-03',
     links: [{ label: 'AmberHomes.ae', href: 'https://www.amberhomes.ae/' }]
   },
   {
     claim: 'Leading in Dubai real estate since 2011; DLD-licensed (BRN 39777)',
     detail: 'Leadership career start supplied by Amber Homes (official profile, 2026): she entered the market in 2011, developing command of property investments, market cycles and master-planned communities. Her DLD licence (BRN 39777) is independently visible on the public register.',
     tag: 'Company profile + public register',
+    verified: '2026-08-03',
     links: [{ label: 'Property Finder — public register listing', href: 'https://www.propertyfinder.ae/en/agent/ambreen-qureshi-145563' }]
   },
   {
     claim: 'Platinum Agency for Meraas, Nakheel & Dubai Holding for 4 Consecutive Years (2022–2025)',
     detail: 'The company’s canonical record: Platinum Agency 2022 · Platinum Agency 2023 · Platinum Agency 2024 · Platinum Agency 2025 — each from Meraas - Nakheel & Dubai Holding. Amber Homes Real Estate is the only company recognised as Platinum Agency for 4 Consecutive Years. Ceremony and award photographs for every year are published on the awards page.',
     tag: 'Award record + news',
+    verified: '2026-08-03',
     links: [
       { label: 'Khaleej Times, 14 Nov 2025 (KT Network)', href: 'https://www.khaleejtimes.com/kt-network/amber-homes-real-estate-awarded-top-platinum-sales-agency-by-meraas-nakheel-and-dubai-holding-for-the-fourth-year-in-a-row' },
       { label: 'Amber Homes — awards page', href: 'https://www.amberhomes.ae/awards' },
@@ -517,30 +521,35 @@ export const EVIDENCE = [
     claim: 'Additional company recognition — Binghatti 2026, Nshama 2020',
     detail: 'Binghatti Broker Recognition Award (2026, “for outstanding service to clients”); Nshama Town Square Appreciation Award (2020). Verified against award photographs held by the company.',
     tag: 'Award record',
+    verified: '2026-08-03',
     links: [{ label: 'Photographs and wording — /awards', href: '/awards' }]
   },
   {
     claim: 'USD 1.5 billion+ cumulative company sales',
     detail: 'Cumulative business figure from company records. Company-level performance of “over USD 1.5 billion in transactions in recent years” also appears in the company’s December 2025 Business Wire release.',
     tag: 'Company records',
+    verified: '2026-08-03',
     links: [{ label: 'Business Wire, Dec 2025', href: 'https://www.businesswire.com/news/home/20251204865132/en/Dubais-Luxury-Real-Estate-Boom-Places-Amber-Homes-Real-Estate-at-the-Center-of-Global-High-Net-Worth-Investment-Momentum' }]
   },
   {
     claim: 'Featured by RAKBANK in “She Means Business”',
     detail: 'Verified: RAKBANK’s official Instagram published the feature in July 2026, introducing her as “Meet Ambreen, Founder of Amber Homes Real Estate” under the #SheMeansBusiness campaign. Presented as a campaign feature (not an award or nomination).',
     tag: 'Verified — official RAKBANK channel',
+    verified: '2026-08-03',
     links: [{ label: 'RAKBANK — official reel (Instagram)', href: 'https://www.instagram.com/reel/Da5C9TzsWJJ/' }, { label: 'Media page — RAKBANK entry', href: '/media#rakbank' }]
   },
   {
     claim: 'Education — Gold medalist, Master’s in Economics (Government College, Lahore)',
     detail: 'Supplied by Amber Homes leadership (official company profile, 2026).',
     tag: 'Company profile',
+    verified: '2026-08-03',
     links: []
   },
   {
     claim: 'Amber Homes Interiors (2019) and Amber Holiday Homes (2021)',
     detail: 'Group expansion dates per the official Amber Homes leadership profile. Amber Holiday Homes operates as a sister company for short-stay rental.',
     tag: 'Company profile',
+    verified: '2026-08-03',
     links: [{ label: 'AmberHomes.ae', href: 'https://www.amberhomes.ae/' }]
   }
 ];
@@ -552,4 +561,28 @@ export const ENQUIRY_TYPES = [
   'Media or interview',
   'Leadership or speaking enquiry',
   'General enquiry'
+];
+
+/* ---------------- what this site claims she is known for ---------------- */
+
+export const KNOWN_FOR = {
+  heading: 'What Ambreen Qureshi is known for.',
+  note: 'The topics this site is the source of truth on — each one evidenced, not asserted.',
+  items: [
+    { label: 'Founding and owning a Dubai brokerage', text: 'Built Amber Homes Real Estate from a single idea in 2017 into a licensed group of three companies.', href: '/about' },
+    { label: 'Four consecutive Platinum Agency years', text: 'The company record — Platinum Agency for Meraas, Nakheel & Dubai Holding, 2022 to 2025, with a photograph and a source for every year.', href: '/awards' },
+    { label: 'Developer relationships', text: 'The partnerships with Meraas, Nakheel, Dubai Holding, Binghatti and Nshama that sit behind the recognition record.', href: '/awards' },
+    { label: 'Female entrepreneurship in the UAE', text: 'Featured by RAKBANK in its “She Means Business” campaign for women building businesses in the Emirates.', href: '/media#rakbank' },
+    { label: 'A sourced factual record', text: 'Every claim on this site is listed with its source, its evidence type and the date it was last verified.', href: '/evidence' }
+  ]
+};
+
+/* ---------------- change log (published on /evidence) ---------------- */
+
+export const CHANGELOG = [
+  { date: '3 August 2026', text: 'Career start year reviewed against the public Property Finder broker profile, which records 2012. The company confirms 2011 as correct; the external profile has been flagged for correction so every source agrees.' },
+  { date: '3 August 2026', text: 'Awards page reframed to state Ambreen’s leadership role explicitly and to point to Amber Homes Real Estate as the canonical owner of the company award record, rather than reproducing the corporate wording.' },
+  { date: '3 August 2026', text: 'Verification dates added to every row of this register, and this change log published.' },
+  { date: '3 August 2026', text: 'Image rights and licensing metadata published for every photograph on the site, so award and portrait images can be credited and licensed properly.' },
+  { date: '29 July 2026', text: 'The RAKBANK “She Means Business” entry classified precisely as a campaign feature — not an award and not a nomination — after reviewing the official RAKBANK post.' }
 ];

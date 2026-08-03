@@ -5,7 +5,7 @@
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { SITE, NAV, HOME, FACTS, AWARDS, MEDIA, FAQS, ARTICLES, EVIDENCE, ENQUIRY_TYPES } from './site-data.mjs';
+import { SITE, NAV, HOME, FACTS, AWARDS, MEDIA, FAQS, ARTICLES, EVIDENCE, ENQUIRY_TYPES, KNOWN_FOR, CHANGELOG } from './site-data.mjs';
 import { esc, bb, head, header, footer, rail, pageHeader, faqBlock, ctaInline, personNode, orgNode, websiteNode, webpageNode, faqNode, IMG_RIGHTS } from './site-builders.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -168,6 +168,18 @@ ${MEDIA.slice(1, 4).map(m => `        <a class="press-row" href="${m.href}" rel=
     </div>
   </section>
 
+  <!-- 07 Known for -->
+  <section class="section">
+    <div class="container reveal">
+      ${rail('07', 'Known for')}
+      <h2 class="section-title">${esc(KNOWN_FOR.heading)}</h2>
+      <p class="lede lede-wide">${esc(KNOWN_FOR.note)}</p>
+      <ul class="known-list">
+${KNOWN_FOR.items.map(k => `        <li class="known-item"><a href="${k.href}"><span class="kn-label">${esc(k.label)}</span><span class="kn-text">${esc(k.text)}</span><span class="kn-arr" aria-hidden="true">&rarr;</span></a></li>`).join('\n')}
+      </ul>
+    </div>
+  </section>
+
   <!-- CTA -->
   <section class="section">
     <div class="container reveal cta-band">
@@ -180,7 +192,7 @@ ${MEDIA.slice(1, 4).map(m => `        <a class="press-row" href="${m.href}" rel=
     </div>
   </section>
 
-${faqBlock(FAQS, 'Ambreen Qureshi, in plain answers.', '07', 'FAQ')}`;
+${faqBlock(FAQS, 'Ambreen Qureshi, in plain answers.', '08', 'FAQ')}`;
 
   write('/', head({ title: HOME.metaTitle, desc: HOME.metaDesc, path: '/', ogType: 'profile', schema, preloadImage: '/assets/img/ambreen-qureshi-founder-managing-director.webp', ogImage: '/assets/img/ambreen-qureshi.jpg', ogImageW: 1080, ogImageH: 1080, ogImageAlt: 'Ambreen Qureshi — Founder & Managing Director of Amber Homes Real Estate, Dubai' }) + header('/') + body + footer(), { priority: '1.0' });
 }
@@ -277,8 +289,8 @@ ${faqBlock(FAQS.slice(0, 5), 'Common questions about Ambreen.')}`;
 
 /* ============================================================ AWARDS */
 {
-  const title = 'Awards & Recognition — Amber Homes Real Estate | Ambreen Qureshi';
-  const desc = 'The complete, evidence-led recognition record: Platinum Agency for Meraas, Nakheel & Dubai Holding for 4 Consecutive Years (2022–2025), plus Nshama 2020 and Binghatti 2026 — with photographs, exact wording and sources.';
+  const title = 'The Leadership Behind Amber Homes’ Awards | Ambreen Qureshi';
+  const desc = 'Ambreen Qureshi’s role in the record: the sales performance, developer relationships and client standards behind Amber Homes Real Estate’s Platinum Agency recognition for Meraas, Nakheel & Dubai Holding four years running (2022–2025), with photographs and sources for every year.';
   const platinum = AWARDS.filter(a => a.group === 'platinum');
   const additional = AWARDS.filter(a => a.group === 'additional');
   const schema = { '@context': 'https://schema.org', '@graph': [
@@ -306,11 +318,26 @@ ${faqBlock(FAQS.slice(0, 5), 'Common questions about Ambreen.')}`;
         ${a.imgA ? `<figure class="ay-stage ay-follow"><img src="${a.imgA}" srcset="${v(a.imgA,840)} 840w, ${a.imgA} 1678w" sizes="(max-width:900px) 92vw, 1104px" width="${a.wA}" height="${a.hA}" loading="lazy" decoding="async" alt="${esc(a.alt)}"><figcaption>${esc(a.caption)}</figcaption></figure>` : a.img ? `<figure class="ay-trophy"><img src="${v(a.img,560)}" srcset="${v(a.img,560)} 560w, ${a.img} ${a.w}w" sizes="(max-width:900px) 92vw, 540px" width="${a.w}" height="${a.h}" loading="lazy" decoding="async" alt="${esc(a.alt)}"><figcaption>${esc(a.caption)}</figcaption></figure>` : `<p class="ev-pending">${esc(a.caption)}</p>`}
       </article>`;
   const body = `
-${pageHeader('Awards & Recognition', 'Platinum Agency for Meraas, Nakheel &amp; Dubai Holding for 4 Consecutive Years.', 'Platinum Agency 2022, 2023, 2024 and 2025 — each year shown with its ceremony picture and award picture. Amber Homes Real Estate is the only company recognised as Platinum Agency for 4 Consecutive Years.', '/assets/img/awards/amber-homes-platinum-trophy-2025-wide.webp')}
+${pageHeader('Awards & Recognition', 'The leadership behind four consecutive Platinum years.', 'The awards on this page were earned by Amber Homes Real Estate. What this page sets out is the part Ambreen Qureshi played in earning them — the sales performance, developer relationships and client standards behind Platinum Agency 2022, 2023, 2024 and 2025.', '/assets/img/awards/amber-homes-platinum-trophy-2025-wide.webp')}
   <section class="section">
     <div class="container">
       <div class="reveal">
-        ${rail('01', 'Platinum Agency for Meraas, Nakheel & Dubai Holding · 2022–2025')}
+        ${rail('01', 'Her role in the record')}
+        <div class="lead-list">
+          <section class="lead-item" style="border-top:0;padding-top:.2rem">
+            <div class="lead-head"><h2>Whose award is this?</h2></div>
+            <div class="lead-body">
+              <p>A distinction worth making plainly, because it is often blurred. The Platinum Agency recognitions are <strong style="color:var(--text)">company awards</strong>. They belong to Amber Homes Real Estate, and Amber Homes publishes its own canonical record of them &mdash; <a href="https://www.amberhomes.ae/awards" rel="noopener">the company awards record<span class="ext" aria-hidden="true"> &#8599;</span></a>. This site does not restate that record as though it were a personal honour.</p>
+              <p>What belongs to Ambreen Qureshi is the work behind it. As Founder and Managing Director she owns the developer relationships with <strong>Meraas</strong>, <strong>Nakheel</strong> and <strong>Dubai Holding</strong> that the recognition is measured against, drives the sales performance the ranking is based on, and sets the client standards the agency is judged by. Four consecutive years is the part that is hard: any brokerage can have one strong year, and repeating it in a market that turns quickly is a leadership result rather than a lucky one.</p>
+              <p>Each year below is shown with its ceremony photograph, its award photograph and a source, so the claim can be checked rather than taken on trust.</p>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <hr class="sep">
+      <div class="reveal">
+        ${rail('02', 'Platinum Agency for Meraas, Nakheel & Dubai Holding · 2022–2025')}
         <p class="lede lede-wide">Amber Homes Real Estate holds the record: Platinum Agency for <strong>Meraas</strong>, <strong>Nakheel</strong> &amp; <strong>Dubai Holding</strong> for 4 Consecutive Years (2022&ndash;2025) &mdash; Platinum Agency 2022, 2023, 2024 and 2025, each from Meraas - Nakheel &amp; Dubai Holding. Amber Homes Real Estate is the only company recognised as Platinum Agency for 4 Consecutive Years.</p>
       </div>
       <div class="evidence-list">
@@ -319,7 +346,7 @@ ${platinum.map(awardRow).join('\n')}
 
       <hr class="sep">
       <div class="reveal">
-        ${rail('02', 'Additional company recognition')}
+        ${rail('03', 'Additional company recognition')}
       </div>
       <div class="evidence-list ev-duo">
 ${additional.map(awardRow).join('\n')}
@@ -327,7 +354,7 @@ ${additional.map(awardRow).join('\n')}
 
       <hr class="sep">
       <div class="reveal" id="rakbank">
-        ${rail('03', 'RAKBANK entrepreneurship feature')}
+        ${rail('04', 'RAKBANK entrepreneurship feature')}
         <div class="lead-list">
           <section class="lead-item" style="border-top:0;padding-top:.2rem">
             <div class="lead-head"><h2>A business journey recognised by <strong>RAKBANK</strong>.</h2></div>
@@ -340,12 +367,13 @@ ${additional.map(awardRow).join('\n')}
 
       <hr class="sep">
       <div class="reveal">
-        ${rail('04', 'The record & methodology')}
+        ${rail('05', 'The record & methodology')}
         <div class="lead-list">
           <section class="lead-item" style="border-top:0;padding-top:.2rem">
             <div class="lead-head"><h2>How the record is presented.</h2></div>
             <div class="lead-body">
-              <p>The four Platinum years are presented in the company&rsquo;s canonical form &mdash; <strong style="color:var(--text)">Platinum Agency 2022, 2023, 2024 and 2025 &mdash; Meraas - Nakheel &amp; Dubai Holding</strong> &mdash; with the ceremony picture and the award picture published for every year. Amber Homes Real Estate is the only company recognised as Platinum Agency for 4 Consecutive Years.</p>
+              <p>Award titles are transcribed from the certificates themselves rather than paraphrased, which is why the wording reads as it does: <strong style="color:var(--text)">Platinum Agency 2022, 2023, 2024 and 2025 &mdash; Meraas - Nakheel &amp; Dubai Holding</strong>. Every year carries both its ceremony photograph and its award photograph, because a recognition with no picture and no source is an assertion.</p>
+              <p>The company record is maintained by Amber Homes Real Estate and published on its own site &mdash; <a href="https://www.amberhomes.ae/awards" rel="noopener">amberhomes.ae/awards<span class="ext" aria-hidden="true"> &#8599;</span></a>. Where this page and that record differ, the company record is the one to trust.</p>
               <p>Corrections: if any wording here differs from the underlying certificate, write to <a href="mailto:${SITE.email}">${SITE.email}</a> and it will be corrected. Full source register: <a href="/evidence">Facts &amp; Sources</a>.</p>
             </div>
           </section>
@@ -386,6 +414,14 @@ ${faqBlock([FAQS[3], FAQS[4]], 'Recognition, clarified.')}`;
       ? `        <a class="press-row" ${m.id ? `id="${m.id}" ` : ''}href="${m.href}" rel="noopener nofollow">${inner}\n        </a>`
       : `        <div class="press-row" ${m.id ? `id="${m.id}" ` : ''}style="cursor:default">${inner}\n        </div>`;
   };
+  const mYear = (m) => { const y = String(m.date).match(/(20\d{2})/); return y ? y[1] : ''; };
+  const mYears = [...new Set(MEDIA.map(mYear).filter(Boolean))].sort().reverse();
+  const chronology = mYears.map(y => `          <li class="chrono-year">
+            <span class="cy-year">${y}</span>
+            <ul class="cy-items">
+${MEDIA.filter(m => mYear(m) === y).map(m => `              <li><span class="cy-outlet">${esc(m.outlet)}</span> <span class="cy-title">${esc(m.title)}</span> <span class="cy-date">${esc(m.date)}</span></li>`).join('\n')}
+            </ul>
+          </li>`).join('\n');
   const body = `
 ${pageHeader('Media', 'Leadership and company recognition in the public record.', 'News, coverage and official features — every entry links to its original source.', '/assets/img/awards/amber-homes-platinum-trophy-2023-wide.webp')}
   <section class="section">
@@ -412,7 +448,14 @@ ${MEDIA.slice(1).filter(m => m.type !== 'Video').map(card).join('\n')}
           </button>
         </div>
       </div>
-      <p class="data-note reveal" style="margin-top:2.4rem">Every entry above links to its original outlet.</p>
+      <hr class="sep">
+      <div class="reveal">${rail('04', 'Media chronology')}
+        <p class="lede lede-wide">The same coverage in date order &mdash; useful for anyone tracing when the record was built rather than browsing it.</p>
+        <ol class="chrono">
+${chronology}
+        </ol>
+      </div>
+      <p class="data-note reveal" style="margin-top:2.4rem">Every entry above links to its original outlet. Summaries are written for this site; the full articles remain with their publishers.</p>
 ${ctaInline('Media or interview enquiry? Ambreen’s team responds in confidence.')}
     </div>
   </section>`;
@@ -434,7 +477,7 @@ ${pageHeader('Facts & Sources', 'Every claim on this site, with its source.', 'A
       <div class="evidence-list">
 ${EVIDENCE.map(e => `        <div class="ev-row reveal">
           <div class="ev-what"><h2>${esc(e.claim)}</h2><p>${esc(e.detail)}</p></div>
-          <div class="ev-proof"><span class="ev-tag">${esc(e.tag)}</span>${e.links.map(l => `<a href="${l.href}" rel="noopener${l.href.startsWith('http') ? ' nofollow' : ''}">${esc(l.label)}${l.href.startsWith('http') ? ' <span class="ext" aria-hidden="true">&#8599;</span>' : ''}</a>`).join('')}${e.links.length === 0 ? '<span class="ev-pending">Held in company records; available to verify on request.</span>' : ''}</div>
+          <div class="ev-proof"><span class="ev-tag">${esc(e.tag)}</span>${e.links.map(l => `<a href="${l.href}" rel="noopener${l.href.startsWith('http') ? ' nofollow' : ''}">${esc(l.label)}${l.href.startsWith('http') ? ' <span class="ext" aria-hidden="true">&#8599;</span>' : ''}</a>`).join('')}${e.links.length === 0 ? '<span class="ev-pending">Held in company records; available to verify on request.</span>' : ''}<span class="ev-verified">Last verified <time datetime="${e.verified}">${e.verified}</time></span></div>
         </div>`).join('\n')}
       </div>
 
@@ -458,6 +501,15 @@ ${EVIDENCE.map(e => `        <div class="ev-row reveal">
             <p>Spotted something that does not match its source? Write to <a href="mailto:${SITE.email}">${SITE.email}</a>. Corrections are reviewed by the Amber Homes operating team and published with an updated date stamp.</p>
           </div>
         </section>
+      </div>
+
+      <hr class="sep">
+      <div class="reveal">
+        ${rail('02', 'Change log')}
+        <p class="lede lede-wide">What has changed on this site and why. A record that is only ever revised silently is not a record.</p>
+        <ol class="changelog">
+${CHANGELOG.map(c => `          <li><span class="cl-date">${esc(c.date)}</span><span class="cl-text">${esc(c.text)}</span></li>`).join('\n')}
+        </ol>
       </div>
 ${ctaInline('Want a claim verified directly? Ask the team.')}
     </div>
