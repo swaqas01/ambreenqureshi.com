@@ -474,6 +474,7 @@ ${ctaInline('Media or interview enquiry? Ambreen’s team responds in confidence
 ${pageHeader('Facts & Sources', 'Every claim on this site, with its source.', 'A claim you cannot check does not belong on a personal-brand website. This register lists what this site says, where each statement comes from, and how to request a correction. Last updated ' + SITE.buildDate + '.', '/assets/img/awards/amber-homes-platinum-trophy-2022-wide.webp')}
   <section class="section">
     <div class="container">
+      <div class="reveal">${rail('01', 'The source register')}</div>
       <div class="evidence-list">
 ${EVIDENCE.map(e => `        <div class="ev-row reveal">
           <div class="ev-what"><h2>${esc(e.claim)}</h2><p>${esc(e.detail)}</p></div>

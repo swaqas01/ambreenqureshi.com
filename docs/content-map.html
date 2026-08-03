@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AmbreenQureshi.com — Content Map</title>
+<style>
+  :root{
+    --canvas:#0D111A; --panel:#12161F; --panel-2:#161C27;
+    --text:#EFF1F5; --muted:#8B93A6; --muted-2:#B9C0CE;
+    --hairline:rgba(255,255,255,.11); --hairline-strong:rgba(255,255,255,.24);
+    --accent:#D99B62; --green:#5FB98B; --amber:#E0B45C; --grey:#6C7688;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  body{margin:0;background:var(--canvas);color:var(--text);
+       font-family:'Lato',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+       font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1120px;margin-inline:auto;padding:clamp(1.6rem,4vw,3.5rem)}
+  h1,h2,h3{font-weight:300;line-height:1.12;letter-spacing:-.02em;margin:0}
+  h1{font-size:clamp(2rem,4.6vw,3.1rem)}
+  a{color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(217,155,98,.35)}
+  a:hover{border-color:var(--accent)}
+
+  .top{border-bottom:1px solid var(--hairline);padding-bottom:2rem;margin-bottom:2.4rem}
+  .eyebrow{font-size:.7rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:.9rem}
+  .lede{color:var(--muted-2);max-width:75ch;margin-top:1rem;font-size:1.05rem}
+
+  .legend{display:flex;flex-wrap:wrap;gap:1.4rem;margin-top:1.6rem;font-size:.85rem;color:var(--muted)}
+  .dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:.5rem;vertical-align:baseline}
+  .d-done{background:var(--green)} .d-thin{background:var(--amber)} .d-none{background:var(--grey)}
+
+  .grp{margin:3rem 0 1.2rem;font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);
+       border-top:1px solid var(--hairline);padding-top:1.4rem}
+
+  .page{background:var(--panel);border:1px solid var(--hairline);margin-bottom:1.1rem}
+  .page-head{display:grid;grid-template-columns:1fr auto;gap:1rem;align-items:start;padding:1.3rem 1.5rem;border-bottom:1px solid var(--hairline)}
+  .purl{font-size:1.22rem;color:var(--text);font-weight:400;letter-spacing:.01em}
+  .purl .st{font-size:.85rem}
+  .ppurpose{color:var(--muted);font-size:.92rem;margin-top:.35rem;max-width:70ch}
+  .meta{text-align:right;white-space:nowrap;font-size:.75rem;color:var(--muted);letter-spacing:.06em}
+  .badge{display:inline-block;padding:.22rem .6rem;font-size:.66rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--hairline-strong);color:var(--muted-2)}
+  .b-done{color:var(--green);border-color:rgba(95,185,139,.4)}
+  .b-thin{color:var(--amber);border-color:rgba(224,180,92,.4)}
+  .b-none{color:var(--grey);border-color:rgba(108,118,136,.45)}
+
+  .body{padding:1.2rem 1.5rem 1.5rem}
+  .secs{font-size:.86rem;color:var(--muted);margin-bottom:1.1rem;line-height:1.9}
+  .secs b{color:var(--muted-2);font-weight:400}
+  .secs .n{color:var(--accent);font-weight:700;font-size:.74rem;letter-spacing:.08em}
+
+  .ask{background:var(--panel-2);border-left:2px solid var(--accent);padding:1rem 1.2rem;margin-top:.9rem}
+  .ask h4{margin:0 0 .6rem;font-size:.7rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+  .ask ul{margin:0;padding-left:1.15rem}
+  .ask li{color:var(--muted-2);margin-bottom:.45rem;font-size:.94rem}
+  .ask li:last-child{margin-bottom:0}
+  .nothing{color:var(--muted);font-size:.92rem;font-style:italic}
+
+  .foot{margin-top:3.5rem;border-top:1px solid var(--hairline);padding-top:1.6rem;color:var(--muted);font-size:.9rem}
+  .foot strong{color:var(--text);font-weight:700}
+
+  @media (max-width:720px){
+    .page-head{grid-template-columns:1fr}
+    .meta{text-align:left}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="top">
+    <div class="eyebrow">AmbreenQureshi.com · Content map · 3 August 2026</div>
+    <h1>Every page, and what I need for it.</h1>
+    <p class="lede">Ten pages are live. Below is what each one currently contains and, in the bronze
+    boxes, exactly what content would improve it. You do not need to write anything — voice notes,
+    bullet points or a rambling paragraph all work. Just tell me which page it belongs to.</p>
+    <div class="legend">
+      <span><span class="dot d-done"></span>Complete — nothing needed</span>
+      <span><span class="dot d-thin"></span>Live, but would be stronger with your input</span>
+      <span><span class="dot d-none"></span>Not built — needs your material to exist</span>
+    </div>
+  </div>
+
+  <div class="grp">Live pages · the core</div>
+
+  <div class="page">
+    <div class="page-head">
+      <div>
+        <div class="purl">ambreenqureshi.com<span class="st">/</span> &nbsp;<span class="badge b-done">Complete</span></div>
+        <div class="ppurpose">Homepage. Establishes who she is, the company record and the four topics she owns.</div>
+      </div>
+      <div class="meta">1,457 words<br>8 sections</div>
+    </div>
+    <div class="body">
+      <div class="secs">
+        <span class="n">01</span> <b>Meet Ambreen Qureshi</b> &nbsp; <span class="n">02</span> <b>Company Recognition</b> &nbsp;
+        <span class="n">03</span> <b>Leadership approach</b> &nbsp; <span class="n">04</span> <b>Amber Homes growth record</b> &nbsp;
+        <span class="n">05</span> <b>Women in Business (RAKBANK)</b> &nbsp; <span class="n">06</span> <b>Media</b> &nbsp;
+        <span class="n">07</span> <b>Known for</b> &nbsp; <span class="n">08</span> <b>FAQ</b>
+      </div>
+      <div class="ask">
+        <h4>Optional — would sharpen it</h4>
+        <ul>
+          <li>One line in Ambreen's own words about why she started the company. Right now the homepage describes her; a direct quote would let her speak.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="page-head">
+      <div>
+        <div class="purl">ambreenqureshi.com<span class="st">/about</span> &nbsp;<span class="badge b-thin">Would be stronger</span></div>
+        <div class="ppurpose">The canonical biography. This is what Google and AI models read first to understand who she is.</div>
+      </div>
+      <div class="meta">1,108 words<br>6 sections</div>
+    </div>
+    <div class="body">
+      <div class="secs">
+        <b>Biography</b> · <b>From gold medalist to founder</b> · <b>How she grows the company</b> ·
+        <b>What she is known for</b> · <b>Company development</b> · <b>Common questions</b>
+      </div>
+      <div class="ask">
+        <h4>What would make this page hers</h4>
+        <ul>
+          <li>Why real estate? She worked in technology, education and finance first — what made her switch, and when did she know it was right?</li>
+          <li>The 2017 decision. What made her leave a salary and start her own brokerage? Was there a specific moment?</li>
+          <li>The hardest year, and what nearly went wrong.</li>
+          <li>What she would tell herself in 2011.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="page-head">
+      <div>
+        <div class="purl">ambreenqureshi.com<span class="st">/timeline</span> &nbsp;<span class="badge b-thin">Would be stronger</span></div>
+        <div class="ppurpose">Dated chronology, 2011&ndash;2026, every milestone with a source. High value for AI answers, which favour dated facts.</div>
+      </div>
+      <div class="meta">711 words<br>13 milestones</div>
+    </div>
+    <div class="body">
+      <div class="secs">
+        <span class="n">01</span> <b>Career &amp; company chronology</b> &nbsp; · &nbsp; <b>On the 2011 start date</b> · <b>Company vs personal recognition</b>
+      </div>
+      <div class="ask">
+        <h4>Missing milestones — anything with a date I can add</h4>
+        <ul>
+          <li>First office, and the move to Burj Al Salam Tower — which years?</li>
+          <li>First hire, and the years the team crossed 10, 25, 50 people.</li>
+          <li>First AED 100 million year, or any revenue/volume milestone you are comfortable publishing.</li>
+          <li>Notable individual deals beyond the AED 125m plot already listed.</li>
+          <li>The launch stories for Amber Homes Interiors (2019) and Amber Holiday Homes (2021) &mdash; why each was started.</li>
+          <li>Any licence, registration or accreditation milestones.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="page-head">
+      <div>
+        <div class="purl">ambreenqureshi.com<span class="st">/awards</span> &nbsp;<span class="badge b-thin">Would be stronger</span></div>
+        <div class="ppurpose">The recognition record, reframed around her leadership role rather than repeating Amber's corporate copy.</div>
+      </div>
+      <div class="meta">997 words<br>5 sections</div>
+    </div>
+    <div class="body">
+      <div class="secs">
+        <span class="n">01</span> <b>Her role in the record</b> &nbsp; <span class="n">02</span> <b>Platinum Agency 2022&ndash;2025</b> &nbsp;
+        <span class="n">03</span> <b>Additional recognition</b> &nbsp; <span class="n">04</span> <b>RAKBANK feature</b> &nbsp;
+        <span class="n">05</span> <b>Record &amp; methodology</b>
+      </div>
+      <div class="ask">
+        <h4>The questions everyone asks but the page cannot yet answer</h4>
+        <ul>
+          <li><strong>What is Platinum actually measured on?</strong> Sales volume, service scores, compliance, a mix? This is the single most valuable thing you could tell me &mdash; nobody else has published it.</li>
+          <li>How many agencies get Platinum in a given year, and roughly how many compete for it?</li>
+          <li>The first Platinum year (2022) &mdash; what did the company do differently that year?</li>
+          <li>What had to change internally to repeat it four times?</li>
+          <li>What the Binghatti "outstanding service to clients" award was given for specifically.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="page-head">
+      <div>
+        <div class="purl">ambreenqureshi.com<span class="st">/media</span> &nbsp;<span class="badge b-thin">Would be stronger</span></div>
+        <div class="ppurpose">Every press mention with an original summary and a source link, plus a dated chronology.</div>
+      </div>
+      <div class="meta">1,159 words<br>16 entries</div>
+    </div>
+    <div class="body">
+      <div class="secs">
+        <span class="n">01</span> <b>Ambreen Qureshi features</b> &nbsp; <span class="n">02</span> <b>Company news &amp; coverage</b> &nbsp;
+        <span class="n">03</span> <b>Video</b> &nbsp; <span class="n">04</span> <b>Media chronology</b>
+      </div>
+      <div class="ask">
+        <h4>Send me anything not already listed</h4>
+        <ul>
+          <li>Interviews, podcasts or panels &mdash; publication and link.</li>
+          <li>Arabic or Urdu-language coverage.</li>
+          <li>Any coverage where <em>she</em> is the subject rather than the company &mdash; those are the most valuable entries on this page.</li>
+          <li>Upcoming or embargoed coverage I should leave space for.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="page-head">
+      <div>
+        <div class="purl">ambreenqureshi.com<span class="st">/press-kit</span> &nbsp;<span class="badge b-thin">Would be stronger</span></div>
+        <div class="ppurpose">Approved bios at three lengths, verified facts, downloadable images and interview topics &mdash; so third parties describe her consistently.</div>
+      </div>
+      <div class="meta">708 words<br>4 sections</div>
+    </div>
+    <div class="body">
+      <div class="secs">
+        <span class="n">01</span> <b>Approved biography (25/50/100 words)</b> &nbsp; <span class="n">02</span> <b>Verified facts</b> &nbsp;
+        <span class="n">03</span> <b>Photographs &amp; logos</b> &nbsp; <span class="n">04</span> <b>Interview topics</b>
+      </div>
+      <div class="ask">
+        <h4>Needs your sign-off and assets</h4>
+        <ul>
+          <li><strong>Approve or edit the three biographies</strong> &mdash; these are the words journalists will copy, so they should be exactly as she wants them.</li>
+          <li>High-resolution originals of the photographs. The current ones are web-sized; print and press want larger.</li>
+          <li>Any photograph she does <em>not</em> want used.</li>
+          <li>Topics to add or remove from the interview list.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="page-head">
+      <div>
+        <div class="purl">ambreenqureshi.com<span class="st">/evidence</span> &nbsp;<span class="badge b-thin">Two gaps</span></div>
+        <div class="ppurpose">The source register &mdash; every claim on the site with its evidence type, source link and verification date, plus a change log.</div>
+      </div>
+      <div class="meta">996 words<br>9 claims</div>
+    </div>
+    <div class="body">
+      <div class="secs">
+        <span class="n">01</span> <b>The source register</b> &nbsp; <span class="n">02</span> <b>Change log</b> &nbsp; · &nbsp;
+        <b>How to read this record</b> · <b>Methodology</b> · <b>Corrections</b>
+      </div>
+      <div class="ask">
+        <h4>Two claims currently rest on company records alone</h4>
+        <ul>
+          <li><strong>Gold medal in Economics</strong> &mdash; which year, and is there a certificate, convocation listing or announcement I can link to? This is the only education claim with no external source.</li>
+          <li><strong>RAKBANK feature</strong> &mdash; is there an official page on rakbank.ae, or only the Instagram reel? A link on the bank's own domain would strengthen both this page and the entity overall.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="grp">Live pages · functional</div>
+
+  <div class="page">
+    <div class="page-head">
+      <div>
+        <div class="purl">ambreenqureshi.com<span class="st">/contact</span> &nbsp;<span class="badge b-done">Complete</span></div>
+        <div class="ppurpose">Enquiry form with routing by type (property, client support, partnership, media, speaking), plus direct channels.</div>
+      </div>
+      <div class="meta">365 words</div>
+    </div>
+    <div class="body">
+      <p class="nothing">Nothing needed &mdash; though the form email delivery is still blocked by the amberhomes.ae mail filter. You need to choose Gmail-primary or Resend.</p>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="page-head">
+      <div>
+        <div class="purl">ambreenqureshi.com<span class="st">/privacy</span> &nbsp;&nbsp;
+        ambreenqureshi.com<span class="st">/terms</span> &nbsp;<span class="badge b-done">Complete</span></div>
+        <div class="ppurpose">Legal pages. Deliberately excluded from search indexing.</div>
+      </div>
+      <div class="meta">961 words</div>
+    </div>
+    <div class="body">
+      <p class="nothing">Nothing needed. Have a lawyer glance at them if you want, but they are plainly written and appropriately cautious.</p>
+    </div>
+  </div>
+
+  <div class="grp">Not built yet · these need your material to exist</div>
+
+  <div class="page">
+    <div class="page-head">
+      <div>
+        <div class="purl"><span class="st">/leadership/developer-relationships</span> &nbsp;<span class="badge b-none">Not built</span></div>
+        <div class="ppurpose">Pillar page 1. The strongest differentiator she has &mdash; four consecutive Platinum years is direct proof, and almost nobody writes honestly about how these relationships work.</div>
+      </div>
+      <div class="meta">Priority 1</div>
+    </div>
+    <div class="body">
+      <div class="ask">
+        <h4>Talk me through these and I will write the page</h4>
+        <ul>
+          <li>How the first developer relationship was won. Who said yes first, and why them?</li>
+          <li>What a developer actually looks for before granting allocations or early access.</li>
+          <li>A negotiation that went badly, and what changed afterwards.</li>
+          <li>What she does that other brokerages do not &mdash; specifically.</li>
+          <li>Roughly what share of sales comes through developer allocations.</li>
+          <li>How a relationship is maintained in a bad quarter, when volumes drop.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="page-head">
+      <div>
+        <div class="purl"><span class="st">/leadership/client-experience</span> &nbsp;<span class="badge b-none">Not built</span></div>
+        <div class="ppurpose">Pillar page 2. Distinct from anything on amberhomes.ae or saadwaqas.com, and the natural home for "client experience leadership real estate" searches.</div>
+      </div>
+      <div class="meta">Priority 2</div>
+    </div>
+    <div class="body">
+      <div class="ask">
+        <h4>The questions</h4>
+        <ul>
+          <li>The rule she will not break with a client, and the story behind it.</li>
+          <li>What happens between signing and handover that clients never see.</li>
+          <li>A time the company absorbed a cost or a loss to protect a relationship.</li>
+          <li>How a repeat investor's needs differ from a first-time buyer's.</li>
+          <li>The complaint she hears most often, and how it gets handled.</li>
+          <li>What she does personally versus what the team handles.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="page-head">
+      <div>
+        <div class="purl"><span class="st">/speaking</span> &nbsp;<span class="badge b-none">Not built</span></div>
+        <div class="ppurpose">Owns the "Ambreen Qureshi speaker" search and gives event organisers a booking route. Quick to build.</div>
+      </div>
+      <div class="meta">Quick win</div>
+    </div>
+    <div class="body">
+      <div class="ask">
+        <h4>Needs</h4>
+        <ul>
+          <li>Every event, panel, podcast or webinar she has appeared on &mdash; name, date, city, topic.</li>
+          <li>Photographs or programmes from any of them.</li>
+          <li>Whether she is available for speaking, and on what terms.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="page-head">
+      <div>
+        <div class="purl"><span class="st">/interviews/&lbrace;name&rbrace;</span> &nbsp;<span class="badge b-none">Not built</span></div>
+        <div class="ppurpose">One page per significant interview: original summary, themes and a source link. Rated high value for AI citation.</div>
+      </div>
+      <div class="meta">Needs material</div>
+    </div>
+    <div class="body">
+      <div class="ask">
+        <h4>Needs</h4>
+        <ul>
+          <li>A list of interviews worth their own page &mdash; publication, date, link.</li>
+          <li>Recordings, if you have them, so I can pull the themes accurately.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="page-head">
+      <div>
+        <div class="purl"><span class="st">/entrepreneurship/female-founder-dubai</span> &nbsp;<span class="badge b-none">Not built</span></div>
+        <div class="ppurpose">The RAKBANK feature gives this page independent proof most competitors cannot match. Targets "female real estate entrepreneur Dubai" &mdash; a query the audit found she has no visibility on.</div>
+      </div>
+      <div class="meta">High opportunity</div>
+    </div>
+    <div class="body">
+      <div class="ask">
+        <h4>The questions</h4>
+        <ul>
+          <li>What was actually harder as a woman starting a brokerage in Dubai in 2017 &mdash; specifics, not generalities.</li>
+          <li>A moment she was underestimated, and what happened.</li>
+          <li>What she tells women who want to start something here.</li>
+          <li>How the RAKBANK feature came about.</li>
+          <li>What she thinks has genuinely changed for women in Dubai property since 2011.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="page-head">
+      <div>
+        <div class="purl"><span class="st">/leadership/sales-leadership</span> &nbsp;
+          <span class="st">/leadership/team-culture</span> &nbsp;
+          <span class="st">/philosophy/operating-principles</span> &nbsp;<span class="badge b-none">Not built</span></div>
+        <div class="ppurpose">The remainder of the audit's roadmap. Worth building only once the first two pillars prove they earn impressions &mdash; I would rather have six strong pages than thirteen thin ones.</div>
+      </div>
+      <div class="meta">Later</div>
+    </div>
+    <div class="body">
+      <div class="ask">
+        <h4>If you want to get ahead</h4>
+        <ul>
+          <li>How she hires &mdash; the rule, the red flag, the question she always asks.</li>
+          <li>How new agents are trained in their first month.</li>
+          <li>Five to ten principles she actually runs the company by, each with a real example.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <p><strong>How to send it.</strong> Voice notes are ideal &mdash; she can talk for five minutes per topic and
+    I will do the rest. Text, bullet points, old documents, forwarded emails and WhatsApp screenshots all
+    work equally well. Just say which page it belongs to.</p>
+    <p style="margin-top:.9rem"><strong>If you only do one thing:</strong> the developer-relationships questions.
+    That page has the strongest evidence behind it, the least competition, and it is the one thing on this
+    list that no competitor could copy.</p>
+  </div>
+
+</div>
+</body>
+</html>
