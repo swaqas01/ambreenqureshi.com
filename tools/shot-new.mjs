@@ -28,7 +28,10 @@ const targets = [
   { name:'evidence-verify',path:'/evidence', sel:'.evidence-list' },
   { name:'evidence-changelog', path:'/evidence', sel:'.changelog' },
   { name:'media-chrono',   path:'/media',    sel:'.chrono' },
-  { name:'footer',         path:'/',         sel:'.footer-grid' }
+  { name:'footer',         path:'/',         sel:'.footer-grid' },
+  { name:'timeline',       path:'/timeline', sel:'.chrono' },
+  { name:'presskit-bio',   path:'/press-kit',sel:'.lead-list' },
+  { name:'presskit-facts', path:'/press-kit',sel:'.facts-table' }
 ];
 
 for (const w of [1440, 390]) {
@@ -48,7 +51,7 @@ for (const w of [1440, 390]) {
 
 // overflow regression check across every page and width
 for (const w of [320,375,390,768,1024,1440]) {
-  for (const path of ['/','/about','/awards','/media','/evidence','/contact','/privacy','/terms']) {
+  for (const path of ['/','/about','/awards','/media','/evidence','/timeline','/press-kit','/contact','/privacy','/terms']) {
     const ctx = await b.newContext({ viewport:{ width:w, height:900 } });
     const p = await ctx.newPage();
     await p.goto('http://localhost:8781'+path,{waitUntil:'domcontentloaded'}).catch(()=>{});

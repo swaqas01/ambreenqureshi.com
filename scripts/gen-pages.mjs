@@ -5,7 +5,7 @@
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { SITE, NAV, HOME, FACTS, AWARDS, MEDIA, FAQS, ARTICLES, EVIDENCE, ENQUIRY_TYPES, KNOWN_FOR, CHANGELOG } from './site-data.mjs';
+import { SITE, NAV, HOME, FACTS, AWARDS, MEDIA, FAQS, ARTICLES, EVIDENCE, ENQUIRY_TYPES, KNOWN_FOR, CHANGELOG, TIMELINE, PRESSKIT } from './site-data.mjs';
 import { esc, bb, head, header, footer, rail, pageHeader, faqBlock, ctaInline, personNode, orgNode, websiteNode, webpageNode, faqNode, IMG_RIGHTS } from './site-builders.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -517,6 +517,123 @@ ${ctaInline('Want a claim verified directly? Ask the team.')}
   write('/evidence', head({ title, desc, path: '/evidence', schema }) + header('') + body + footer(), { priority: '0.7' });
 }
 
+/* ============================================================ TIMELINE */
+{
+  const title = 'Career & Company Timeline | Ambreen Qureshi';
+  const desc = 'A dated chronology of Ambreen Qureshi’s career and Amber Homes Real Estate: entering Dubai real estate in 2011, founding the company in 2017, and the recognition record through 2026 — every milestone with a source.';
+  const years = [...new Set(TIMELINE.map(t => t.year))].sort().reverse();
+  const schema = { '@context': 'https://schema.org', '@graph': [
+    ...graphBase(),
+    webpageNode({ path: '/timeline', title, breadcrumb: [{ name: 'Home', path: '/' }, { name: 'Timeline', path: '/timeline' }] }),
+    {
+      '@type': 'ItemList',
+      '@id': SITE.origin + '/timeline#chronology',
+      name: 'Ambreen Qureshi — career and company chronology',
+      itemListOrder: 'https://schema.org/ItemListOrderAscending',
+      numberOfItems: TIMELINE.length,
+      itemListElement: TIMELINE.map((t, i) => ({
+        '@type': 'ListItem', position: i + 1, name: `${t.year} — ${t.title}`, description: t.text
+      }))
+    }
+  ]};
+  const body = `
+${pageHeader('Timeline', 'Fifteen years, in order.', 'Ambreen Qureshi entered Dubai real estate in 2011 and founded Amber Homes Real Estate in 2017. This is the dated record of what happened between then and now — each milestone with the source that evidences it.', '/assets/img/awards/amber-homes-platinum-trophy-2024-wide.webp')}
+  <section class="section">
+    <div class="container">
+      <div class="reveal">${rail('01', 'Career & company chronology')}
+        <ol class="chrono">
+${years.map(y => `          <li class="chrono-year">
+            <span class="cy-year">${y}</span>
+            <ul class="cy-items">
+${TIMELINE.filter(t => t.year === y).map(t => `              <li><span class="cy-outlet">${esc(t.title)}</span> <span class="cy-title">${esc(t.text)}</span> <a class="cy-src" href="${t.source.href}" rel="noopener${t.source.href.startsWith('http') ? ' nofollow' : ''}">${esc(t.source.label)}${t.source.href.startsWith('http') ? ' <span class="ext" aria-hidden="true">&#8599;</span>' : ''}</a></li>`).join('\n')}
+            </ul>
+          </li>`).join('\n')}
+        </ol>
+      </div>
+
+      <hr class="sep">
+      <div class="lead-list reveal">
+        <section class="lead-item">
+          <div class="lead-head"><h2>On the 2011 start date</h2></div>
+          <div class="lead-body">
+            <p>Ambreen entered Dubai real estate in <strong style="color:var(--text)">2011</strong>. Some external profiles have carried 2012; where they do, they are being corrected so that every source agrees. The chronology above uses 2011 throughout, and the correction is logged on the <a href="/evidence">Facts &amp; Sources</a> page.</p>
+          </div>
+        </section>
+        <section class="lead-item">
+          <div class="lead-head"><h2>Company milestones versus personal ones</h2></div>
+          <div class="lead-body">
+            <p>The awards in this chronology were earned by Amber Homes Real Estate as a company; Ambreen’s part in them is set out on the <a href="/awards">Awards &amp; Recognition</a> page. Personal recognition — the RAKBANK feature — is marked as such. The distinction is kept deliberately, because collapsing the two is how personal-brand sites lose credibility.</p>
+          </div>
+        </section>
+      </div>
+${ctaInline('Researching Ambreen’s background? The team can confirm any milestone directly.')}
+    </div>
+  </section>`;
+  write('/timeline', head({ title, desc, path: '/timeline', schema }) + header('') + body + footer(), { priority: '0.8' });
+}
+
+/* ============================================================ PRESS KIT */
+{
+  const title = 'Press Kit — Bio, Images & Facts | Ambreen Qureshi';
+  const desc = 'Press kit for Ambreen Qureshi, Founder and Managing Director of Amber Homes Real Estate: approved biographies in three lengths, verified facts, photographs, logos, interview topics and the media contact route.';
+  const schema = { '@context': 'https://schema.org', '@graph': [
+    ...graphBase(),
+    webpageNode({ path: '/press-kit', title, breadcrumb: [{ name: 'Home', path: '/' }, { name: 'Press Kit', path: '/press-kit' }] })
+  ]};
+  const body = `
+${pageHeader('Press Kit', 'Everything a journalist needs, in one place.', 'Approved biographies, verified facts, photographs and interview topics — so that what gets published about Ambreen Qureshi is accurate and consistent wherever it appears.', '/assets/img/awards/amber-homes-platinum-trophy-2025-wide.webp')}
+  <section class="section">
+    <div class="container">
+      <div class="reveal">${rail('01', 'Approved biography')}
+        <p class="lede lede-wide">Three lengths, all cleared for publication. Please use them as written — if you need a variation, ask and it will be supplied rather than paraphrased.</p>
+        <div class="lead-list">
+${PRESSKIT.bios.map(b => `          <section class="lead-item">
+            <div class="lead-head"><h2>${esc(b.len)}</h2></div>
+            <div class="lead-body"><p>${esc(b.text)}</p></div>
+          </section>`).join('\n')}
+        </div>
+      </div>
+
+      <hr class="sep">
+      <div class="reveal">${rail('02', 'Verified facts')}
+        <p class="lede lede-wide">Each of these is sourced on the <a href="/evidence">Facts &amp; Sources</a> page. Where a figure comes from company records rather than an independent source, that page says so.</p>
+        <table class="facts-table" aria-label="Press facts about Ambreen Qureshi">
+          <tr><th scope="row">Full name</th><td>Ambreen Qureshi</td></tr>
+          <tr><th scope="row">Role</th><td>Founder &amp; Managing Director, Amber Homes Real Estate</td></tr>
+          <tr><th scope="row">Based in</th><td>Dubai, United Arab Emirates</td></tr>
+          <tr><th scope="row">In Dubai real estate since</th><td>${FACTS.enteredRealEstate}</td></tr>
+          <tr><th scope="row">Company founded</th><td>${FACTS.founded} &middot; RERA ORN ${SITE.orn}</td></tr>
+          <tr><th scope="row">Broker licence</th><td>DLD BRN ${SITE.brn}</td></tr>
+          <tr><th scope="row">Education</th><td>Gold medalist, Master&rsquo;s in Economics &mdash; Government College (GC), Lahore</td></tr>
+          <tr><th scope="row">Group companies</th><td>Amber Homes Real Estate &middot; Amber Homes Interiors (${FACTS.interiorsYear}) &middot; Amber Holiday Homes (${FACTS.holidayHomesYear})</td></tr>
+          <tr><th scope="row">Company recognition</th><td>Platinum Agency for Meraas, Nakheel &amp; Dubai Holding for 4 Consecutive Years (${FACTS.platinumYears})</td></tr>
+          <tr><th scope="row">Personal feature</th><td>RAKBANK &ldquo;She Means Business&rdquo; campaign</td></tr>
+          <tr><th scope="row">Company website</th><td><a href="https://www.amberhomes.ae/" rel="noopener">amberhomes.ae<span class="ext" aria-hidden="true"> &#8599;</span></a></td></tr>
+        </table>
+      </div>
+
+      <hr class="sep">
+      <div class="reveal">${rail('03', 'Photographs & logos')}
+        <p class="lede lede-wide">Cleared for editorial use with credit to <strong>Amber Homes Real Estate</strong>. For a higher-resolution original or a different crop, ask &mdash; it will be sent.</p>
+        <ul class="known-list">
+${PRESSKIT.assets.map(a => `          <li class="known-item"><a href="${a.href}" download><span class="kn-label">${esc(a.label)}</span><span class="kn-text">${esc(a.note)}</span><span class="kn-arr" aria-hidden="true">&darr;</span></a></li>`).join('\n')}
+        </ul>
+        <p class="data-note" style="margin-top:1.8rem">Images are &copy; Amber Homes Real Estate. Editorial use with credit is welcome; commercial reuse needs written permission &mdash; see <a href="/terms">Terms</a> or ask via <a href="/contact">the contact page</a>.</p>
+      </div>
+
+      <hr class="sep">
+      <div class="reveal">${rail('04', 'Interview topics')}
+        <p class="lede lede-wide">Subjects Ambreen speaks on from direct experience rather than general commentary.</p>
+        <ul class="known-list">
+${PRESSKIT.topics.map(t => `          <li class="known-item"><a href="/contact"><span class="kn-label">${esc(t)}</span><span class="kn-arr" aria-hidden="true">&rarr;</span></a></li>`).join('\n')}
+        </ul>
+      </div>
+${ctaInline('Media, interview or speaking enquiry? Reach Ambreen’s team directly.')}
+    </div>
+  </section>`;
+  write('/press-kit', head({ title, desc, path: '/press-kit', schema }) + header('') + body + footer(), { priority: '0.7' });
+}
+
 /* ============================================================ CONTACT */
 {
   const title = 'Contact Ambreen Qureshi’s Team — Connect';
@@ -767,9 +884,11 @@ Company sales figures are cumulative business figures from company records, not 
 
 ## Key pages
 - /about — canonical biography and verified fact table
+- /timeline — dated career and company chronology, each milestone with its source
 - /awards — every recognition with year, exact wording, photograph and source
 - /media — RAKBANK "She Means Business" feature, Khaleej Times, Business Wire, video
-- /evidence — Facts & Sources register, methodology, corrections route
+- /press-kit — approved biographies (25/50/100 words), verified facts, images, interview topics
+- /evidence — Facts & Sources register, verification dates, change log, corrections route
 - Company website: https://www.amberhomes.ae/
 - /contact — contact Ambreen's team (office +971 4 368 4497 · ${SITE.email})
 

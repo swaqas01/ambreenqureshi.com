@@ -236,8 +236,9 @@ export function footer() {
         <a href="/about">About</a>
         <a href="/awards">Awards &amp; Recognition</a>
         <a href="/media">Media</a>
+        <a href="/timeline">Timeline</a>
+        <a href="/press-kit">Press Kit</a>
         <a href="/evidence">Facts &amp; Sources</a>
-        <a href="/contact">Contact</a>
       </div>
       <div class="footer-col">
         <h4>Amber Homes</h4>

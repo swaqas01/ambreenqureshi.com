@@ -12,9 +12,11 @@ Company sales figures are cumulative business figures from company records, not 
 
 ## Key pages
 - /about — canonical biography and verified fact table
+- /timeline — dated career and company chronology, each milestone with its source
 - /awards — every recognition with year, exact wording, photograph and source
 - /media — RAKBANK "She Means Business" feature, Khaleej Times, Business Wire, video
-- /evidence — Facts & Sources register, methodology, corrections route
+- /press-kit — approved biographies (25/50/100 words), verified facts, images, interview topics
+- /evidence — Facts & Sources register, verification dates, change log, corrections route
 - Company website: https://www.amberhomes.ae/
 - /contact — contact Ambreen's team (office +971 4 368 4497 · ambreen@amberhomes.ae)
 

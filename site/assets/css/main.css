@@ -523,3 +523,5 @@ main,.site-footer,.site-header{position:relative;z-index:1}
   .chrono-year{grid-template-columns:1fr;gap:.5rem}
   .cy-year{font-size:1.4rem}
 }
+.cy-src{display:inline-block;margin-top:.2rem;font-size:.8rem;color:var(--muted);border-bottom:1px solid var(--hairline-strong)}
+.cy-src:hover{color:var(--accent);border-color:var(--accent)}
